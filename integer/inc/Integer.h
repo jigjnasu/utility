@@ -1,5 +1,5 @@
-#ifndef PROJECT_EULER_COMMON_INTEGER_H_
-#define PROJECT_EULER_COMMON_INTEGER_H_
+#ifndef UTILITY_INTEGER_INTEGER_H_
+#define UTILITY_INTEGER_INTEGER_H_
 
 #include <string>
 
@@ -81,4 +81,4 @@ namespace utility {
     };
 };
 
-#endif // PROJECT_EULER_COMMON_INTEGER_H_
+#endif // UTILITY_INTEGER_INTEGER_H_

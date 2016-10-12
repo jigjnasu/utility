@@ -2,6 +2,7 @@
 #define UTILITY_MATHS_MATHS_H_
 
 #include <cmath>
+#include <cstdlib>
 
 namespace utility {
     namespace maths {
@@ -13,8 +14,19 @@ namespace utility {
 
             bool is_prime(const T& number) const;
             T power(const T& x, int y) const;
+
             T factorial(const std::size_t& n) const;
             T fibonacci(const std::size_t& n) const;
+
+            T gcd(const T& n, const T& d) const;
+
+            T max(const T& a, const T& b) const;
+            T min(const T& a, const T& b) const;
+
+            T random(const T& min, const T& max) const;
+
+        private:
+            T m_gcd(const T& n, const T& d) const;
         };
     };
 };
@@ -54,6 +66,8 @@ T um::Maths<T>::power(const T& x, int y) const {
 
 template <typename T>
 T um::Maths<T>::factorial(const std::size_t& n) const {
+    if (n <= 1)
+        return 1;
     T number = n;
     for (std::size_t i = n - 1; i >= 2; --i)
         number *= i;
@@ -77,6 +91,35 @@ T um::Maths<T>::fibonacci(const std::size_t& n) const {
     }
     
     return C;
+}
+
+template <typename T>
+T um::Maths<T>::gcd(const T& n, const T& d) const {
+    return m_gcd(max(n, d), min(n, d));
+}
+
+template <typename T>
+T um::Maths<T>::max(const T& a, const T& b) const {
+    return a > b ? a : b;
+}
+
+template <typename T>
+T um::Maths<T>::min(const T& a, const T& b) const {
+    return a < b ? a : b;
+}
+
+template <typename T>
+T um::Maths<T>::random(const T& min, const T& max) const {
+    return min + rand() % (max - min + 1);
+}
+
+template <typename T>
+T um::Maths<T>::m_gcd(const T& n, const T& d) const {
+    if (n % d == 0)
+        return d;
+    else
+        gcd(d, n % d);
+    return 0;
 }
 
 #endif // UTILITY_MATHS_MATHS_H_

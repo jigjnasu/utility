@@ -15,5 +15,8 @@ $(LIB): $(INTEGER_OBJ)
 objs/%.o: $(INTEGER_PATH)/%.cpp
 	$(GCC) $(CC_FLAGS) $(INTEGER_INC) -o $@ $<
 
+clean_obj:
+	rm -rf objs/*
+
 clean:
 	rm -rf objs/* ../lib/*

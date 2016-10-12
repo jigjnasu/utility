@@ -617,6 +617,14 @@ std::size_t ui::Integer::Size() const {
     return m_data.size();
 }
 
+// return the string normal.
+std::string ui::Integer::Get() const {
+    std::string number;
+    for (int i = m_data.size() - 1; i >= 0; --i)
+        number.push_back(m_data[i]);
+    return number;
+}
+
 // Get the reverse number
 std::string ui::Integer::GetReverse() const {
     return m_data;

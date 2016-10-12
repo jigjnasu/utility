@@ -47,6 +47,7 @@ namespace utility {
 
             void Print() const;
             std::size_t Size() const;
+            std::string Get() const;
             std::string GetReverse() const;
 
         private:

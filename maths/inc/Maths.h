@@ -13,7 +13,7 @@ namespace utility {
             ~Maths();
 
             bool is_prime(const T& number) const;
-            T power(const T& x, int y) const;
+            T power(T x, int y) const;
 
             T factorial(const std::size_t& n) const;
             T fibonacci(const std::size_t& n) const;
@@ -50,17 +50,14 @@ bool um::Maths<T>::is_prime(const T& number) const {
 }
 
 template <typename T>
-T um::Maths<T>::power(const T& x, int y) const {
-    if (y == 1) {
-        return x;
+T um::Maths<T>::power(T x, int y) const {
+    if (y == 0) return 1;
+    if (y % 2) {
+        T t = power(x, y / 2);
+        return x * t * t;
     } else {
-        if (y % 2) {
-            T number = power(x, y / 2);
-            return number * number * x;
-        } else {
-            T number = power(x, y / 2);
-            return number * number;
-        }
+        T t = power(x, y / 2);
+        return t * t;
     }
 }
 

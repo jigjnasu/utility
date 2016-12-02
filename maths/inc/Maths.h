@@ -3,6 +3,7 @@
 
 #include <cmath>
 #include <cstdlib>
+#include <vector>
 
 namespace utility {
     namespace maths {
@@ -13,6 +14,9 @@ namespace utility {
             ~Maths();
 
             bool is_prime(const T& number) const;
+            // Getting all the prime numbers from 2...n,
+            // where n is given
+            std::vector<T> get_prime_numbers(const std::size_t& N) const;
             T power(T x, int y) const;
 
             T factorial(const std::size_t& n) const;
@@ -47,6 +51,31 @@ bool um::Maths<T>::is_prime(const T& number) const {
         if (number % i == 0)
             return false;
     return true;
+}
+
+// This algorithm is based on Sieve of Eratosthenes
+// unmark the multiple of first prime numbers.
+template <typename T>
+std::vector<T> um::Maths<T>::get_prime_numbers(const std::size_t& N) const {
+    int status[N - 1] = {0};
+
+    for (std::size_t i = 0; i < N - 1; ++i) {
+        if (status[i] == 0) {
+            const int step = i + 2;
+            int j = i + step;
+            while (j < N - 1) {
+                status[j] = 1;
+                j += step;
+            }
+        }
+    }
+
+    std::vector<T> prime_numbers;
+    for (std::size_t i = 0; i < N - 1; ++i)
+        if (status[i] == 0)
+            prime_numbers.push_back(i + 2);
+    
+    return prime_numbers;
 }
 
 template <typename T>

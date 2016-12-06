@@ -267,6 +267,7 @@ ui::Integer ui::Integer::operator - (const Integer& rhs) {
     }
 }
 
+
 // Operator overloading of -
 // Arugment type std::string normal one "123", not reverse one,
 // which I use for arethmatic operations.
@@ -589,6 +590,63 @@ void ui::Integer::operator *= (int rhs) {
     }
 }
 
+// If current value > string argument
+// return true else false
+bool ui::Integer::operator > (const std::string& rhs) {
+    if (m_data.size() > rhs.size()) {
+        return true;
+    } else if (m_data.size() < rhs.size()) {
+        return false;
+    } else {
+        for (int i = m_data.size() - 1; i >= 0; --i)
+            if (m_data[i] > rhs[i])
+                return true;
+    }
+    
+    return false;
+}
+
+// If current value < string argument
+// return true else false
+bool ui::Integer::operator < (const std::string& rhs) {
+    if (m_data.size() < rhs.size()) {
+        return true;
+    } else if (m_data.size() > rhs.size()) {
+        return false;
+    } else {
+        for (int i = m_data.size() - 1; i >= 0; --i)
+            if (m_data[i] < rhs[i])
+                return true;        
+    }
+
+    return false;
+}
+
+// If current value == string arugment
+// return true else false
+bool ui::Integer::operator == (const std::string& rhs) {
+    if (m_data.size() != rhs.size())
+        return false;
+    for (std::size_t i = 0; i < m_data.size(); ++i)
+        if (m_data[i] != rhs[i])
+            return false;
+    
+    return true;
+}
+
+// If current value != string argument
+// return true else false
+bool ui::Integer::operator != (const std::string& rhs) {
+    if (m_data.size() != rhs.size())
+        return true;
+
+    for (std::size_t i = 0; i < m_data.size(); ++i)
+        if (m_data[i] == rhs[i])
+            return false;
+
+    return true;
+}
+
 /* Split function, which will split the high and low by a position.
    Example 123456789, and position is 3
    The high will be 123 and low will be 456789
@@ -847,63 +905,6 @@ void ui::Integer::m_subtract(std::string& A, const std::string& B) {
             A.erase(i);
         else
             break;
-}
-
-// If current value > string argument
-// return true else false
-bool ui::Integer::operator > (const std::string& rhs) {
-    if (m_data.size() > rhs.size()) {
-        return true;
-    } else if (m_data.size() < rhs.size()) {
-        return false;
-    } else {
-        for (int i = m_data.size() - 1; i >= 0; --i)
-            if (m_data[i] > rhs[i])
-                return true;
-    }
-    
-    return false;
-}
-
-// If current value < string argument
-// return true else false
-bool ui::Integer::operator < (const std::string& rhs) {
-    if (m_data.size() < rhs.size()) {
-        return true;
-    } else if (m_data.size() > rhs.size()) {
-        return false;
-    } else {
-        for (int i = m_data.size() - 1; i >= 0; --i)
-            if (m_data[i] < rhs[i])
-                return true;        
-    }
-
-    return false;
-}
-
-// If current value == string arugment
-// return true else false
-bool ui::Integer::operator == (const std::string& rhs) {
-    if (m_data.size() != rhs.size())
-        return false;
-    for (std::size_t i = 0; i < m_data.size(); ++i)
-        if (m_data[i] != rhs[i])
-            return false;
-    
-    return true;
-}
-
-// If current value != string argument
-// return true else false
-bool ui::Integer::operator != (const std::string& rhs) {
-    if (m_data.size() != rhs.size())
-        return true;
-
-    for (std::size_t i = 0; i < m_data.size(); ++i)
-        if (m_data[i] == rhs[i])
-            return false;
-
-    return true;
 }
 
 // copy the string data to the result from back to start

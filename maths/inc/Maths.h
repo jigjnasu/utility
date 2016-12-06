@@ -57,19 +57,18 @@ bool um::Maths<T>::is_prime(const T& number) const {
 // unmark the multiple of first prime numbers.
 template <typename T>
 std::vector<T> um::Maths<T>::get_prime_numbers(const std::size_t& N) const {
-    T status[N + 1] = {0};
-
+    std::vector<T> status;
     for (std::size_t i = 0; i <= N; ++i)
-        status[i] = i;
+        status.push_back(i);
 
-    for (std::size_t i = 2; i <= N; ++i)
+    for (std::size_t i = 2; i < status.size(); ++i)
         if (status[i] == i)
             for (std::size_t j = 2 * i; j <= N; j += i)
                 status[j] = 0;
 
     std::vector<T> prime_numbers;
-    for (std::size_t i = 2; i <= N; ++i)
-        if (status[i] == i)
+    for (std::size_t i = 2; i < status.size(); ++i)
+        if (status[i])
             prime_numbers.push_back(i);
     return prime_numbers;
 }

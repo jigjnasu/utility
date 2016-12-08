@@ -29,6 +29,8 @@ namespace utility {
 
             T random(const T& min, const T& max) const;
 
+            std::vector<T> get_phi(std::size_t n) const;
+
         private:
             T m_gcd(const T& n, const T& d) const;
         };
@@ -132,6 +134,24 @@ T um::Maths<T>::min(const T& a, const T& b) const {
 template <typename T>
 T um::Maths<T>::random(const T& min, const T& max) const {
     return min + rand() % (max - min + 1);
+}
+
+template <typename T>
+std::vector<T> um::Maths<T>::get_phi(std::size_t n) const {
+    std::vector<T> phi;
+    for (std::size_t i = 0;i <= n; ++i)
+        phi.push_back(i);
+
+    // Algorithm based on Sieve of Eratosthenes
+    for (std::size_t i = 2; i < phi.size(); ++i) {
+        if (phi[i] == i) {
+            phi[i] = i - 1;
+            for (std::size_t j = 2 * i; j < phi.size(); j += i)
+                phi[j] = (phi[j] * (i - 1)) / i;
+        }
+    }
+
+    return phi;
 }
 
 template <typename T>

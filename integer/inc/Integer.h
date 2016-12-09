@@ -1,3 +1,10 @@
+/*
+  Big integer implementation.
+  Has Kartsuba Multiplication where number goes beyond 60 bytes.
+  Author Rakesh Kumar @ cpp.rakesh@gmail.com
+  Date: Sep 18th, 2016
+ */
+
 #ifndef UTILITY_INTEGER_INTEGER_H_
 #define UTILITY_INTEGER_INTEGER_H_
 
@@ -48,12 +55,12 @@ namespace utility {
             bool operator == (const std::string& rhs);
             bool operator != (const std::string& rhs);            
 
-            void Split(int size, Integer& high, Integer& low) const;
+            void split(int size, Integer& high, Integer& low) const;
 
-            void Print() const;
-            std::size_t Size() const;
-            std::string Get() const;
-            std::string GetReverse() const;
+            void print() const;
+            std::size_t size() const;
+            std::string get() const;
+            std::string get_reverse() const;
 
         private:
             // It will hold the big number;

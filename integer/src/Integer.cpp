@@ -655,14 +655,14 @@ bool ui::Integer::operator != (const std::string& rhs) {
    and low will return from first part of the string
  */
 
-void ui::Integer::Split(int size, Integer& high, Integer& low) const {
+void ui::Integer::split(int size, Integer& high, Integer& low) const {
     const std::size_t length = m_data.size();
     low.m_data = m_data.substr(0, size);
     high.m_data = m_data.substr(size, length - size);
 }
 
 // Print the number
-void ui::Integer::Print() const {
+void ui::Integer::print() const {
     if (m_sign)
         printf("-");
     for (int i = m_data.size() - 1; i >= 0; --i)
@@ -671,12 +671,12 @@ void ui::Integer::Print() const {
 }
 
 // return the size of the number
-std::size_t ui::Integer::Size() const {
+std::size_t ui::Integer::size() const {
     return m_data.size();
 }
 
 // return the string normal.
-std::string ui::Integer::Get() const {
+std::string ui::Integer::get() const {
     std::string number;
     for (int i = m_data.size() - 1; i >= 0; --i)
         number.push_back(m_data[i]);
@@ -684,7 +684,7 @@ std::string ui::Integer::Get() const {
 }
 
 // Get the reverse number
-std::string ui::Integer::GetReverse() const {
+std::string ui::Integer::get_reverse() const {
     return m_data;
 }
 

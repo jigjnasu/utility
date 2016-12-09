@@ -32,7 +32,6 @@ namespace utility {
             std::vector<T> get_phi(std::size_t n) const;
 
             bool is_sqrt(const T& number) const;
-            bool is_cbrt(const T& number) const;
 
         private:
             T m_gcd(const T& n, const T& d) const;
@@ -159,14 +158,8 @@ std::vector<T> um::Maths<T>::get_phi(std::size_t n) const {
 
 template <typename T>
 bool um::Maths<T>::is_sqrt(const T& number) const {
-    const double sq = std::floor(std::sqrt(number));
-    return (sq * sq) == number;
-}
-
-template <typename T>
-bool um::Maths<T>::is_cbrt(const T& number) const {
-    const double cr = std::floor(std::cbrt(number));
-    return (cr * cr * cr) == number;
+    const double rt = std::floor(std::sqrt(number));
+    return (rt * rt) == number;
 }
 
 template <typename T>

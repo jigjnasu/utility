@@ -27,6 +27,8 @@ CC_FLAGS := -g -c -Wall -O3
 INCLUDE  := $(INTEGER_INC)
 INCLUDE  += $(TEST_SUITE_INC)
 
+INCLUDE += -I../maths/inc
+
 LIB := ../lib/libutility.a
 
 all: $(OBJ_FILES)

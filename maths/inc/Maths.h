@@ -4,7 +4,6 @@
 #include <cmath>
 #include <cstdlib>
 #include <vector>
-#include <map>
 
 namespace utility {
     namespace maths {
@@ -34,11 +33,11 @@ namespace utility {
 
             bool is_sqrt(const T& number) const;
 
-            std::map<int, int> get_continued_fractions(T N, T D) const;
+            std::vector<int> get_continued_fractions(T N, T D) const;
 
         private:
             T m_gcd(const T& n, const T& d) const;
-            
+            std::vector<int> m_get_contined_fractions(T N, T D) const;
         };
     };
 };
@@ -169,18 +168,18 @@ bool um::Maths<T>::is_sqrt(const T& number) const {
 // Please make sure that N > D, and then we can get proper solution.
 // Sulution is based on Euclid's GCD algorithm.
 template <typename T>
-std::map<int, int> um::Maths<T>::get_continued_fractions(T N, T D) const {
-    std::map<int, int> result;
-    while (1) {
-        result[D] = N / D;
-        if (D == 1)
-            break;
-        const T R = N % D;
-        N = D;
-        D = R;
+std::vector<int> um::Maths<T>::get_continued_fractions(T N, T D) const {
+    std::vector<int> fractions;
+    if (N >= D) {
+        fractions = m_get_contined_fractions(N, D);
+    } else {
+        fractions = m_get_contined_fractions(D, N);
+        fractions.insert(fractions.begin(), 0);
+        --fractions[fractions.size() - 1];
+        fractions.push_back(1);
     }
 
-    return result;
+    return fractions;
 }
 
 template <typename T>
@@ -190,6 +189,25 @@ T um::Maths<T>::m_gcd(const T& n, const T& d) const {
     else
         gcd(d, n % d);
     return 0;
+}
+
+template <typename T>
+std::vector<int> um::Maths<T>::m_get_contined_fractions(T N, T D) const {
+    std::vector<int> result;
+
+    while (1) {
+        result.push_back(N / D);
+        const T R = N % D;
+        N = D;
+        D = R;
+
+        if (D <= 1) {
+            result.push_back(N);
+            break;
+        }
+    }
+
+    return result;    
 }
 
 #endif // UTILITY_MATHS_MATHS_H_

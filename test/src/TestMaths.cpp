@@ -1,7 +1,7 @@
 #include "TestMaths.h"
 #include "Common.h"
 #include "Maths.h"
-#include <map>
+#include <vector>
 #include <cstdio>
 
 namespace ut = utility::test;
@@ -28,15 +28,15 @@ void ut::TestMaths::m_initialize_test_cases_dictionary() {
 
 void ut::TestMaths::m_test_get_continued_fractions() {
     um::Maths<int> maths;
-    const int N = 8398398;
-    const int D = 73681;
-    std::map<int, int> result = maths.get_continued_fractions(N, D);
+    const int N = 25;
+    const int D = 36;
+    std::vector<int> result = maths.get_continued_fractions(N, D);
 
     printf("Continued fraction for [%d] / [%d] is \n", N, D);
 
-    for (std::map<int, int>::const_iterator it = result.begin();
-         it != result.end(); ++it) {
-        printf("[%4d] has [%4d] complete fractions\n", it->first, it->second);
-    }
+    printf("[%d; ", result[0]);
+    for (std::size_t i = 1; i < result.size(); ++i)
+        printf("%d, ", result[i]);
+    printf("]\n");
 }
 

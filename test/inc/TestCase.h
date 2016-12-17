@@ -12,8 +12,8 @@ namespace utility {
     namespace test {
         class TestCase {
         public:
-            TestCase();
-            virtual ~TestCase();
+            TestCase() {};
+            virtual ~TestCase() {};
 
             virtual void execute(int test_case) const = 0;
         };

@@ -16,7 +16,8 @@ namespace utility {
             TestCommon();
             ~TestCommon();
 
-            void execute(int test_case) const;
+            void execute(int test_case);
+            void execute_all();
         };
     };
 };

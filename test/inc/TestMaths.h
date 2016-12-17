@@ -8,6 +8,7 @@
 #define UTILITY_TEST_INC_TEST_MATHS_H_
 
 #include "TestCase.h"
+#include <map>
 
 namespace utility {
     namespace test {
@@ -16,7 +17,17 @@ namespace utility {
             TestMaths();
             ~TestMaths();
 
-            void execute(int test_case) const;
+            void execute(int test_case);
+            void execute_all();
+
+            typedef void (TestMaths::*ptrFunc)();
+
+        private:
+            std::map<int, ptrFunc> m_test_cases_dictionary;
+
+            void m_initialize_test_cases_dictionary();
+
+            void m_test_get_continued_fractions();
         };
     };
 };

@@ -30,9 +30,9 @@ INCLUDE  += $(TEST_SUITE_INC)
 LIB := ../lib/libutility.a
 
 all: $(OBJ_FILES)
-	@echo "Generating Utility static library"
+	@echo "Generating Utility static library --> $(LIB)"
 	@$(LD_FLAGS) -o $(LIB) $(OBJ_PATH)/Integer.o
-	@echo "Generating Test Suite exe"
+	@echo "Generating Test Suite exe --> $(EXE)"
 	@$(GCC) -o $(EXE) $(OBJ_PATH)/*.o
 
 $(OBJ_PATH)/%.o : $(INTEGER_PATH)/%.cpp

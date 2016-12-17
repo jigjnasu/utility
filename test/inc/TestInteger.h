@@ -16,7 +16,8 @@ namespace utility {
             TestInteger();
             ~TestInteger();
 
-            void execute(int test_case) const;
+            void execute(int test_case);
+            void execute_all();
         };
     };
 };

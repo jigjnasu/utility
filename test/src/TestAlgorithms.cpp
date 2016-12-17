@@ -6,6 +6,10 @@ ut::TestAlgorithms::TestAlgorithms() {}
 
 ut::TestAlgorithms::~TestAlgorithms() {}
 
-void ut::TestAlgorithms::execute(int test_case) const {
+void ut::TestAlgorithms::execute(int test_case) {
+    
+}
+
+void ut::TestAlgorithms::execute_all() {
     
 }

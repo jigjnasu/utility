@@ -6,6 +6,10 @@ ut::TestString::TestString() {}
 
 ut::TestString::~TestString() {}
 
-void ut::TestString::execute(int test_case) const {
+void ut::TestString::execute(int test_case) {
+    
+}
+
+void ut::TestString::execute_all() {
     
 }

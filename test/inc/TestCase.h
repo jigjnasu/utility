@@ -15,7 +15,8 @@ namespace utility {
             TestCase() {};
             virtual ~TestCase() {};
 
-            virtual void execute(int test_case) const = 0;
+            virtual void execute(int test_case) = 0;
+            virtual void execute_all() = 0;
         };
     };
 };

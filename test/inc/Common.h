@@ -21,33 +21,39 @@ namespace utility {
 
         // All the test cases in Algorithms
         enum ALGORITHMS_TESTS {
-            TEST_SORTED_SEARCH         = 0x0000,
-            TEST_MERGE_SORT            = 0x0001,
-            TEST_QUICK_SORT            = 0x0002,
+            TEST_ALGORITMS_START       = 0x0000,
+            TEST_ALGORITMS_FINISH      = 0x0001,
         };
 
         // All the test cases in Common
         enum COMMON_TESTS {
+            TEST_COMMON_START          = 0x0000,
+            TEST_COMMON_FINISH         = 0x0001,            
         };
 
         // All the test cases in Integer
         enum INTEGER_TESTS {
-            
+            TEST_INTEGER_START         = 0x0000,
+            TEST_INTEGER_FINISH        = 0x0001,
         };
 
         // All the test cases in Maths
         enum MATHS_TESTS {
-            
+            TEST_MATHS_START             = 0x0000,
+            TEST_GET_CONTINUED_FRACTIONS = 0x0001,
+            TEST_MATHS_FINISH            = 0x0002,
         };
 
         // All the test cases in Permutation
         enum PERMUTATION_TESTS {
-            
+            TEST_PERMUTATION_START       = 0x0000,
+            TEST_PERMUTATION_FINISH      = 0x0001,
         };
 
         // All the test cases in String
         enum STRING_TESTS {
-            
+            TEST_STRING_START            = 0x0000,
+            TEST_STRING_FINISH           = 0x0001,
         };        
     };
 };

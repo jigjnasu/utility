@@ -6,6 +6,10 @@ ut::TestPermutation::TestPermutation() {}
 
 ut::TestPermutation::~TestPermutation() {}
 
-void ut::TestPermutation::execute(int test_case) const {
+void ut::TestPermutation::execute(int test_case) {
+    
+}
+
+void ut::TestPermutation::execute_all() {
     
 }

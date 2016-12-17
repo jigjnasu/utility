@@ -6,7 +6,10 @@ ut::TestInteger::TestInteger() {}
 
 ut::TestInteger::~TestInteger() {}
 
-void ut::TestInteger::execute(int test_case) const {
+void ut::TestInteger::execute(int test_case) {
     
 }
 
+void ut::TestInteger::execute_all() {
+    
+}

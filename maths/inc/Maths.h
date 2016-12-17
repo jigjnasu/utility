@@ -4,6 +4,7 @@
 #include <cmath>
 #include <cstdlib>
 #include <vector>
+#include <map>
 
 namespace utility {
     namespace maths {
@@ -33,8 +34,11 @@ namespace utility {
 
             bool is_sqrt(const T& number) const;
 
+            std::vector<int, int> get_continued_fractions(T N, T D) const;
+
         private:
             T m_gcd(const T& n, const T& d) const;
+            
         };
     };
 };
@@ -160,6 +164,17 @@ template <typename T>
 bool um::Maths<T>::is_sqrt(const T& number) const {
     const double rt = std::floor(std::sqrt(number));
     return (rt * rt) == number;
+}
+
+template <typename T>
+std::vector<int, int> um::Maths<T>::get_continued_fractions(const T& N, const T& D) const {
+    std::vector<int, int> result;
+    while (D != 1) {
+        result[D] = N / D;
+        const T R = N % D;
+        N = D;
+        D = R;
+    }
 }
 
 template <typename T>

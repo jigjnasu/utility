@@ -4,6 +4,9 @@
   Date: Dec 17th, 2016
 */
 
+#ifndef UTILITY_TEST_INC_COMMON_INC_H_
+#define UTILITY_TEST_INC_COMMON_INC_H_
+
 namespace utility {
     namespace test {
         // Total modules in the Utility, which can be tested
@@ -48,3 +51,5 @@ namespace utility {
         };        
     };
 };
+
+#endif // UTILITY_TEST_INC_COMMON_INC_H_

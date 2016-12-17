@@ -9,12 +9,14 @@
 INTEGER_PATH := ../integer/src
 INTEGER_SRC  := $(wildcard ../integer/src/*.cpp)
 INTEGER_INC  := -I../integer/inc
-INTEGER_OBJ  := $(addprefix objs/,$(notdir $(INTEGER_SRC:.cpp=.o)))
+OBJ_FILES    := $(addprefix objs/,$(notdir $(INTEGER_SRC:.cpp=.o)))
 
 TEST_SUITE_PATH := ../test/src
-TEST_SUITE_SRC  := $(wildcard ../integer/src/*.cpp)
+TEST_SUITE_SRC  := $(wildcard ../test/src/*.cpp)
 TEST_SUITE_INC  := -I../test/inc
-TEST_SUITE_OBJ  := $(addprefix objs/,$(notdir $(TEST_SUITE_SRC:.cpp=.o)))
+OBJ_FILES       += $(addprefix objs/,$(notdir $(TEST_SUITE_SRC:.cpp=.o)))
+
+OBJ_PATH       := objs
 
 EXE := test
 
@@ -22,19 +24,26 @@ GCC := g++
 LD_FLAGS := ar -cvq
 CC_FLAGS := -g -c -Wall -O3
 
+INCLUDE  := $(INTEGER_INC)
+INCLUDE  += $(TEST_SUITE_INC)
+
 LIB := ../lib/libutility.a
 
-$(LIB): $(INTEGER_OBJ) $(TEST_SUITE_OBJ)
-	$(LD_FLAGS) -o $@ $^
+all: $(OBJ_FILES)
+	@$(LD_FLAGS) -o $(LIB) $(OBJ_PATH)/Integer.o
+	@$(GCC) -o $(EXE) $(OBJ_PATH)/*.o
 
-objs/%.o: $(INTEGER_PATH)/%.cpp
-	$(GCC) $(CC_FLAGS) $(INTEGER_INC) -o $@ $<
+$(OBJ_PATH)/%.o : $(INTEGER_PATH)/%.cpp
+	@echo "Compiling --> $<"
+	@$(GCC) $(CC_FLAGS) $(INCLUDE) $< -o $@
 
-objs/%.o: $(TEST_SUITE_PATH)/%.cpp
-	$(GCC) $(CC_FLAGS) $(TEST_SUITE_INC) -o $@ $<
+$(OBJ_PATH)/%.o : $(TEST_SUITE_PATH)/%.cpp
+	@echo "Compiling --> $<"
+	@$(GCC) $(CC_FLAGS) $(INCLUDE) $< -o $@
 
-clean_obj:
-	rm -rf objs/*
+.PHONEY:
 
 clean:
-	rm -rf objs/* ../lib/* $EXE
+	rm -rf objs/* $(EXE) $(LIB)
+
+

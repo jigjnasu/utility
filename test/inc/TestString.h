@@ -4,6 +4,9 @@
   Date: Dec 17th, 2016
  */
 
+#ifndef UTILITY_TEST_INC_TEST_STRING_H_
+#define UTILITY_TEST_INC_TEST_STRING_H_
+
 #include "TestCase.h"
 
 namespace utility {
@@ -17,3 +20,6 @@ namespace utility {
         };
     };
 };
+
+
+#endif // UTILITY_TEST_INC_TEST_STRING_H_

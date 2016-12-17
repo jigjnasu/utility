@@ -1,4 +1,5 @@
 #include "TestFactory.h"
+#include "Common.h"
 #include "TestAlgorithms.h"
 #include "TestCommon.h"
 #include "TestInteger.h"
@@ -30,4 +31,6 @@ ut::TestCase* ut::TestFactory::get(int module) const {
     default:
         printf("Not a valid Test Utility Module\n");
     }
+
+    return 0;
 }

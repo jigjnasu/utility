@@ -28,9 +28,9 @@ void ut::TestMaths::m_initialize_test_cases_dictionary() {
 
 void ut::TestMaths::m_test_get_continued_fractions() {
     um::Maths<int> maths;
-    const int N = 45;
-    const int D = 16;
-    std::map<int, int> result = maths.get_continued_fractions(45, 16);
+    const int N = 8398398;
+    const int D = 73681;
+    std::map<int, int> result = maths.get_continued_fractions(N, D);
 
     printf("Continued fraction for [%d] / [%d] is \n", N, D);
 

@@ -166,6 +166,8 @@ bool um::Maths<T>::is_sqrt(const T& number) const {
     return (rt * rt) == number;
 }
 
+// Please make sure that N > D, and then we can get proper solution.
+// Sulution is based on Euclid's GCD algorithm.
 template <typename T>
 std::map<int, int> um::Maths<T>::get_continued_fractions(T N, T D) const {
     std::map<int, int> result;

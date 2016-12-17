@@ -3,3 +3,17 @@
   Author: Rakesh Kumar @ cpp.rakesh@gmail.com
   Date: Dec 17th, 2016
  */
+
+#include "TestCase.h"
+
+namespace utility {
+    namespace test {
+        class TestInteger : public TestCase {
+        public:
+            TestInteger();
+            ~TestInteger();
+
+            void execute(int test_case) const;
+        };
+    };
+};

@@ -8,7 +8,8 @@ namespace utility {
             TestFactory();
             ~TestFactory();
 
-            void execute(int test_case) const;
+            TestCase* get(int module) const;
+
         };
     };
 };

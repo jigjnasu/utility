@@ -34,7 +34,7 @@ namespace utility {
 
             bool is_sqrt(const T& number) const;
 
-            std::vector<int, int> get_continued_fractions(T N, T D) const;
+            std::map<int, int> get_continued_fractions(T N, T D) const;
 
         private:
             T m_gcd(const T& n, const T& d) const;
@@ -167,14 +167,18 @@ bool um::Maths<T>::is_sqrt(const T& number) const {
 }
 
 template <typename T>
-std::vector<int, int> um::Maths<T>::get_continued_fractions(const T& N, const T& D) const {
-    std::vector<int, int> result;
-    while (D != 1) {
+std::map<int, int> um::Maths<T>::get_continued_fractions(T N, T D) const {
+    std::map<int, int> result;
+    while (1) {
         result[D] = N / D;
+        if (D == 1)
+            break;
         const T R = N % D;
         N = D;
         D = R;
     }
+
+    return result;
 }
 
 template <typename T>

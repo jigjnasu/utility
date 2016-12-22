@@ -41,7 +41,8 @@ namespace utility {
         enum MATHS_TESTS {
             TEST_MATHS_START             = 0x0000,
             TEST_GET_CONTINUED_FRACTIONS = 0x0001,
-            TEST_MATHS_FINISH            = 0x0002,
+            TEST_GET_SQRT_CONTINUED_FRACTIONS = 0x0002,
+            TEST_MATHS_FINISH            = 0x0003,
         };
 
         // All the test cases in Permutation

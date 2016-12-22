@@ -24,6 +24,7 @@ void ut::TestMaths::execute_all() {
 
 void ut::TestMaths::m_initialize_test_cases_dictionary() {
     m_test_cases_dictionary[TEST_GET_CONTINUED_FRACTIONS] = &TestMaths::m_test_get_continued_fractions;
+    m_test_cases_dictionary[TEST_GET_SQRT_CONTINUED_FRACTIONS] = &TestMaths::m_test_get_sqrt_continued_fractions;
 }
 
 void ut::TestMaths::m_test_get_continued_fractions() {
@@ -40,3 +41,13 @@ void ut::TestMaths::m_test_get_continued_fractions() {
     printf("]\n");
 }
 
+void ut::TestMaths::m_test_get_sqrt_continued_fractions() {
+    um::Maths<int> maths;
+    for (int s = 2; s <= 10000; ++s) {
+        const std::vector<int> cf = maths.get_square_root_continued_fractions(s);
+        printf("SQRT[%d] has continued fractions ---> ", s);
+        for (std::size_t i = 0; i < cf.size(); ++i)
+            printf("%d ", cf[i]);
+        printf("\n");
+    }
+}

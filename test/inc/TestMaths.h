@@ -27,8 +27,9 @@ namespace utility {
 
             void m_initialize_test_cases_dictionary();
 
-            void m_test_get_continued_fractions();
-            void m_test_get_sqrt_continued_fractions();
+            void m_test_continued_fraction();
+            void m_test_sqrt_continued_fraction();
+            void m_test_e_continued_fraction();
         };
     };
 };

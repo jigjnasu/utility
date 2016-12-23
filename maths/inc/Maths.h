@@ -23,7 +23,7 @@ namespace utility {
             bool is_prime(const T& number) const;
             // Getting all the prime numbers from 2...n,
             // where n is given
-            std::vector<T> get_prime_numbers(const std::size_t& n) const;
+            std::vector<T> prime_numbers(const std::size_t& n) const;
             T power(T x, int y) const;
 
             T factorial(const std::size_t& n) const;
@@ -36,16 +36,17 @@ namespace utility {
 
             T random(const T& min, const T& max) const;
 
-            std::vector<T> get_phi(std::size_t n) const;
+            std::vector<T> phi(std::size_t n) const;
 
             bool is_sqrt(const T& number) const;
 
-            std::vector<int> get_continued_fractions(T n, T d) const;
-            std::vector<int> get_square_root_continued_fractions(T s) const;
+            std::vector<int> continued_fractions(T n, T d) const;
+            std::vector<int> square_root_continued_fractions(T s) const;
+            std::vector<int> e_continued_fractions(int n) const;
 
         private:
             T m_gcd(const T& n, const T& d) const;
-            std::vector<int> m_get_continued_fractions(T n, T d) const;
+            std::vector<int> m_continued_fractions(T n, T d) const;
         };
     };
 };
@@ -71,7 +72,7 @@ bool um::Maths<T>::is_prime(const T& number) const {
 // This algorithm is based on Sieve of Eratosthenes
 // unmark the multiple of first prime numbers.
 template <typename T>
-std::vector<T> um::Maths<T>::get_prime_numbers(const std::size_t& n) const {
+std::vector<T> um::Maths<T>::prime_numbers(const std::size_t& n) const {
     std::vector<T> status;
     for (std::size_t i = 0; i <= n; ++i)
         status.push_back(i);
@@ -150,7 +151,7 @@ T um::Maths<T>::random(const T& min, const T& max) const {
 }
 
 template <typename T>
-std::vector<T> um::Maths<T>::get_phi(std::size_t n) const {
+std::vector<T> um::Maths<T>::phi(std::size_t n) const {
     std::vector<T> phi;
     for (std::size_t i = 0;i <= n; ++i)
         phi.push_back(i);
@@ -176,12 +177,12 @@ bool um::Maths<T>::is_sqrt(const T& number) const {
 // Please make sure that N > D, and then we can get proper solution.
 // Sulution is based on Euclid's GCD algorithm.
 template <typename T>
-std::vector<int> um::Maths<T>::get_continued_fractions(T n, T d) const {
+std::vector<int> um::Maths<T>::continued_fractions(T n, T d) const {
     std::vector<int> fractions;
     if (n >= d) {
-        fractions = m_get_continued_fractions(n, d);
+        fractions = m_continued_fractions(n, d);
     } else {
-        fractions = m_get_continued_fractions(d, n);
+        fractions = m_continued_fractions(d, n);
         fractions.insert(fractions.begin(), 0);
         --fractions[fractions.size() - 1];
         fractions.push_back(1);
@@ -191,7 +192,7 @@ std::vector<int> um::Maths<T>::get_continued_fractions(T n, T d) const {
 }
 
 template <typename T>
-std::vector<int> um::Maths<T>::get_square_root_continued_fractions(T s) const {
+std::vector<int> um::Maths<T>::square_root_continued_fractions(T s) const {
     std::vector<int> fractions;
     const int a0 = std::sqrt(s);
     if (a0 * a0 == s)
@@ -213,6 +214,17 @@ std::vector<int> um::Maths<T>::get_square_root_continued_fractions(T s) const {
 }
 
 template <typename T>
+std::vector<int> um::Maths<T>::e_continued_fractions(int n) const {
+    std::vector<int> fractions;
+    fractions.push_back(2);
+
+    for (int i = 2; i <= n; ++i)
+        fractions.push_back((i % 3 == 0) ? (i / 3) * 2 : 1);
+
+    return fractions;
+}
+
+template <typename T>
 T um::Maths<T>::m_gcd(const T& n, const T& d) const {
     if (n % d == 0)
         return d;
@@ -222,7 +234,7 @@ T um::Maths<T>::m_gcd(const T& n, const T& d) const {
 }
 
 template <typename T>
-std::vector<int> um::Maths<T>::m_get_continued_fractions(T n, T d) const {
+std::vector<int> um::Maths<T>::m_continued_fractions(T n, T d) const {
     std::vector<int> result;
 
     while (1) {

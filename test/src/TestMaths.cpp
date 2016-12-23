@@ -23,15 +23,16 @@ void ut::TestMaths::execute_all() {
 }
 
 void ut::TestMaths::m_initialize_test_cases_dictionary() {
-    m_test_cases_dictionary[TEST_GET_CONTINUED_FRACTIONS] = &TestMaths::m_test_get_continued_fractions;
-    m_test_cases_dictionary[TEST_GET_SQRT_CONTINUED_FRACTIONS] = &TestMaths::m_test_get_sqrt_continued_fractions;
+    m_test_cases_dictionary[TEST_CONTINUED_FRACTION] = &TestMaths::m_test_continued_fraction;
+    m_test_cases_dictionary[TEST_SQRT_CONTINUED_FRACTION] = &TestMaths::m_test_sqrt_continued_fraction;
+    m_test_cases_dictionary[TEST_E_CONTINUED_FRACTION] = &TestMaths::m_test_e_continued_fraction;
 }
 
-void ut::TestMaths::m_test_get_continued_fractions() {
+void ut::TestMaths::m_test_continued_fraction() {
     um::Maths<int> maths;
     const int N = 25;
     const int D = 36;
-    std::vector<int> result = maths.get_continued_fractions(N, D);
+    std::vector<int> result = maths.continued_fractions(N, D);
 
     printf("Continued fraction for [%d] / [%d] is \n", N, D);
 
@@ -41,13 +42,24 @@ void ut::TestMaths::m_test_get_continued_fractions() {
     printf("]\n");
 }
 
-void ut::TestMaths::m_test_get_sqrt_continued_fractions() {
+void ut::TestMaths::m_test_sqrt_continued_fraction() {
     um::Maths<int> maths;
     for (int s = 2; s <= 10000; ++s) {
-        const std::vector<int> cf = maths.get_square_root_continued_fractions(s);
+        const std::vector<int> cf = maths.square_root_continued_fractions(s);
         printf("SQRT[%d] has continued fractions ---> ", s);
         for (std::size_t i = 0; i < cf.size(); ++i)
             printf("%d ", cf[i]);
         printf("\n");
     }
+}
+
+void ut::TestMaths::m_test_e_continued_fraction() {
+    um::Maths<int> maths;
+    const int n = 100;
+    const std::vector<int> fractions = maths.e_continued_fractions(n);
+
+    printf("[");
+    for (std::size_t i = 0; i < fractions.size(); ++i)
+        printf("%d ", fractions[i]);
+    printf("]\n");
 }

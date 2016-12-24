@@ -610,6 +610,35 @@ void ui::Integer::operator /= (int rhs) {
     m_divide(rhs, sign);
 }
 
+// Comparision operators
+bool ui::Integer::operator > (const Integer& rhs) {
+    if (m_data.size() > rhs.size()) {
+        return true;
+    } else if (m_data.size() < rhs.size()) {
+        return false;
+    } else {
+        for (int i = m_data.size() - 1; i >= 0; --i)
+            if (m_data[i] > rhs.m_data[i])
+                return true;
+    }
+
+    return false;
+}
+
+bool ui::Integer::operator < (const Integer& rhs) {
+    if (m_data.size() < rhs.size()) {
+        return true;
+    } else if (m_data.size() > rhs.size()) {
+        return false;
+    } else {
+        for (int i = m_data.size() - 1; i >= 0; --i)
+            if (m_data[i] < rhs[i])
+                return true;
+    }
+
+    return false;
+}
+
 // If current value > string argument
 // return true else false
 bool ui::Integer::operator > (const std::string& rhs) {

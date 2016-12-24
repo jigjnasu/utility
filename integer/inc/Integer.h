@@ -54,6 +54,9 @@ namespace utility {
             Integer operator / (int rhs);
             void operator /= (int rhs);
 
+            // Comparision operators
+            bool operator > (const Integer& rhs);
+            bool operator < (const Integer& rhs);
             bool operator > (const std::string& rhs);
             bool operator < (const std::string& rhs);
             bool operator == (const std::string& rhs);

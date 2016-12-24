@@ -27,6 +27,7 @@ void ut::TestMaths::m_initialize_test_cases_dictionary() {
     m_test_cases_dictionary[TEST_SQRT_CONTINUED_FRACTION] = &TestMaths::m_test_sqrt_continued_fraction;
     m_test_cases_dictionary[TEST_E_CONTINUED_FRACTION] = &TestMaths::m_test_e_continued_fraction;
     m_test_cases_dictionary[TEST_INT_SQRT] = &TestMaths::m_test_int_sqrt;
+    m_test_cases_dictionary[TEST_SQUARE_ROOT] = &TestMaths::m_test_square_root;
 }
 
 void ut::TestMaths::m_test_continued_fraction() {
@@ -72,4 +73,12 @@ void ut::TestMaths::m_test_int_sqrt() {
         const int n = maths.random(1, 100000);
         printf("int sqrt of [%8d] == [%8d]\n", n, maths.int_sqrt(n));
     }
+}
+
+void ut::Maths::m_test_square_root() {
+    um::Maths<int> maths;
+    int n = 2;
+    int limit = 100;
+    printf("Square root of [%d] == ", n );
+    maths.square_root(n, limit).print();
 }

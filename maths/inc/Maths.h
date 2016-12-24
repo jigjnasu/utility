@@ -220,8 +220,21 @@ T um::Maths<T>::int_sqrt(const T& number) const {
 // http://www.afjarvis.staff.shef.ac.uk/maths/jarvisspec02.pdf
 template <typename T>
 utility::integer::Integer um::Maths<T>::square_root(const T& n, const T& limit) const {
-    utility::integer::Integer number = 0;
-    return number;
+    utility::integer::Integer a(n * 5);
+    utility::integer::Integer b(5);
+
+    while (b.size() <= limit) {
+        if (a < b) {
+            a *= 100;
+            b /= 10;
+            b += 5;
+        } else {
+            a -= b;
+            b += 10;
+        }
+    }
+    
+    return b;
 }
 
 // Please make sure that N > D, and then we can get proper solution.

@@ -42,14 +42,14 @@ ui::Integer::Integer(int data) : m_sign(false) {
 
 // Copy constructor
 ui::Integer::Integer(const Integer& rhs) {
-    m_data.erase(m_data.begin(), m_data.end());
+    m_data_erase();
     m_sign = rhs.m_sign;
     m_data = rhs.m_data;
 }
 
 // Copy assignment operator
 ui::Integer& ui::Integer::operator = (const Integer& rhs) {
-    m_data.erase(m_data.begin(), m_data.end());
+    m_data_erase();
     m_sign = rhs.m_sign;
     m_data = rhs.m_data;
     return *this;
@@ -173,7 +173,7 @@ void ui::Integer::operator += (const Integer& rhs) {
         m_data = temp_rhs;
         m_sign = rhs.m_sign;        
     } else {
-        m_data.erase(m_data.begin(), m_data.end());
+        m_data_erase();
         m_data.push_back('0');
         m_sign = false;
     }    
@@ -207,7 +207,7 @@ void ui::Integer::operator += (const std::string& rhs) {
         m_data = temp_rhs;
         m_sign = sign;
     } else {
-        m_data.erase(m_data.begin(), m_data.end());
+        m_data_erase();
         m_data.push_back('0');
         m_sign = false;
     }    
@@ -240,7 +240,7 @@ void ui::Integer::operator += (int rhs) {
         m_data = temp_rhs;
         m_sign = sign;
     } else {
-        m_data.erase(m_data.begin(), m_data.end());
+        m_data_erase();
         m_data.push_back('0');
         m_sign = false;
     }    
@@ -342,7 +342,7 @@ void ui::Integer::operator -= (const Integer& rhs) {
         m_data = temp_rhs;
         m_sign = rhs.m_sign;
     } else {
-        m_data.erase(m_data.begin(), m_data.end());
+        m_data_erase();
         m_data.push_back('0');
         m_sign = false;
     }    
@@ -371,7 +371,7 @@ void ui::Integer::operator -= (const std::string& rhs) {
         m_data = temp_rhs;
         m_sign = sign;
     } else {
-        m_data.erase(m_data.begin(), m_data.end());        
+        m_data_erase();
         m_data.push_back('0');
         m_sign = false;
     }        
@@ -399,7 +399,7 @@ void ui::Integer::operator -= (int rhs) {
         m_data = temp_rhs;
         m_sign = sign;
     } else {
-        m_data.erase(m_data.begin(), m_data.end());
+        m_data_erase();
         m_data.push_back('0');
         m_sign = false;
     }    
@@ -588,6 +588,26 @@ void ui::Integer::operator *= (int rhs) {
         m_data.push_back((carry % 10) + '0');
         carry /= 10;
     }
+}
+
+// Operator overloading for /
+// Divide a number
+ui::Integer ui::Integer::operator / (int rhs) {
+    bool sign = false;
+    if (rhs < 0 || m_sign)
+        sign = true;
+
+    return m_divide_return(rhs, sign);
+}
+
+// Operator overloading for /=
+// Divide the number and store it
+void ui::Integer::operator /= (int rhs) {
+    bool sign = false;
+    if (rhs < 0 || m_sign)
+        sign = true;
+
+    m_divide(rhs, sign);
 }
 
 // If current value > string argument
@@ -907,6 +927,41 @@ void ui::Integer::m_subtract(std::string& A, const std::string& B) {
             break;
 }
 
+ui::Integer ui::Integer::m_divide_return(int rhs, bool sign) {
+    std::string number;
+    int i = m_data.size() - 1;
+    int n = 0;
+
+    while (n < rhs)
+        n = (n * 10) + (m_data[i--] - '0');
+    
+    while (i >= 0) {
+        number.push_back((n / rhs) + '0');
+        n %= rhs;
+        
+        int j = 0;
+        while (n < rhs) {
+            n = (n * 10) + (m_data[i--] - '0');
+            ++j;
+        }
+
+        while (j > 1) {
+            number.push_back('0');
+            --j;
+        }
+    }
+
+    if (n > rhs)
+        number.push_back((n / rhs) + '0');
+
+    return ui::Integer(number);
+}
+
+void ui::Integer::m_divide(int rhs, bool sign) {
+    const ui::Integer number = m_divide_return(rhs, sign);
+    *this = number;
+}
+
 // copy the string data to the result from back to start
 void ui::Integer::m_reverse_copy(const std::string& data, std::string& result, int start_pos) {
     for (int i = data.size() - 1; i >= start_pos; --i)
@@ -919,4 +974,9 @@ void ui::Integer::m_convert_to_reverse_string(int data, std::string& result) {
         result.push_back((data % 10) + '0');
         data /= 10;
     }
+}
+
+// erase all the data of m_data main container
+void ui::Integer::m_data_erase() {
+    m_data.erase(m_data.begin(), m_data.end());
 }

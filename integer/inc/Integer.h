@@ -3,7 +3,7 @@
   Has Kartsuba Multiplication where number goes beyond 60 bytes.
   Author Rakesh Kumar @ cpp.rakesh@gmail.com
   Date: Sep 18th, 2016
- */
+*/
 
 #ifndef UTILITY_INTEGER_INTEGER_H_
 #define UTILITY_INTEGER_INTEGER_H_
@@ -50,6 +50,10 @@ namespace utility {
             void operator *= (const std::string& rhs);
             void operator *= (int rhs);
 
+            // Division operators
+            Integer operator / (int rhs);
+            void operator /= (int rhs);
+
             bool operator > (const std::string& rhs);
             bool operator < (const std::string& rhs);
             bool operator == (const std::string& rhs);
@@ -82,9 +86,14 @@ namespace utility {
 
             std::string m_subtract_return(const std::string& A, const std::string& B);
             void m_subtract(std::string& A, const std::string& B);
+
+            Integer m_divide_return(int rhs, bool sign);
+            void m_divide(int rhs, bool sign);
         
             void m_reverse_copy(const std::string& data, std::string& result, int start_pos);
             void m_convert_to_reverse_string(int data, std::string& result);
+
+            void m_data_erase();
         };
     };
 };

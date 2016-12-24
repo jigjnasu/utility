@@ -8,8 +8,8 @@
 #ifndef UTILITY_MATHS_MATHS_H_
 #define UTILITY_MATHS_MATHS_H_
 
+#include "Integer.h"
 #include <cmath>
-#include <string>
 #include <cstdlib>
 #include <vector>
 
@@ -63,7 +63,7 @@ namespace utility {
             T int_sqrt(const T& number) const;
 
             // Calcuate the square root of a number till a finite number of decimal places
-            std::string square_root(const T& n, const T& limit) const;
+            utility::integer::Integer square_root(const T& n, const T& limit) const;
 
             // Calculate continued fractions of n / d
             std::vector<int> continued_fractions(T n, T d) const;
@@ -214,6 +214,14 @@ T um::Maths<T>::int_sqrt(const T& number) const {
     int x = 1;
     while (x * x < number) ++x;
     return x - 1;
+}
+
+// This algorithm is based on
+// http://www.afjarvis.staff.shef.ac.uk/maths/jarvisspec02.pdf
+template <typename T>
+utility::integer::Integer um::Maths<T>::square_root(const T& n, const T& limit) const {
+    utility::integer::Integer number = 0;
+    return number;
 }
 
 // Please make sure that N > D, and then we can get proper solution.

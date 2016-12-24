@@ -34,7 +34,8 @@ namespace utility {
         // All the test cases in Integer
         enum INTEGER_TESTS {
             TEST_INTEGER_START         = 0x0000,
-            TEST_INTEGER_FINISH        = 0x0001,
+            TEST_DIVIDE                = 0x0001,
+            TEST_INTEGER_FINISH        = 0x0002,
         };
 
         // All the test cases in Maths

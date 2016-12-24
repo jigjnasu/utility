@@ -42,14 +42,12 @@ ui::Integer::Integer(int data) : m_sign(false) {
 
 // Copy constructor
 ui::Integer::Integer(const Integer& rhs) {
-    m_data_erase();
     m_sign = rhs.m_sign;
     m_data = rhs.m_data;
 }
 
 // Copy assignment operator
 ui::Integer& ui::Integer::operator = (const Integer& rhs) {
-    m_data_erase();
     m_sign = rhs.m_sign;
     m_data = rhs.m_data;
     return *this;
@@ -70,11 +68,11 @@ ui::Integer ui::Integer::operator + (const Integer& rhs) {
     Integer number;
     if (*this > rhs) {
         number.m_sign = m_sign;
-        number.m_data = m_subtract_return(m_data, rhs.m_data);
+        number.m_data = m_subtract_return(*this, rhs);
         return number;
     } else if (*this < rhs) {
         number.m_sign = rhs.m_sign;
-        number.m_data = m_subtract_return(rhs.m_data, m_data);
+        number.m_data = m_subtract_return(rhs, *this);
         return number;
     } else {
         number.m_data.push_back('0');
@@ -86,10 +84,8 @@ ui::Integer ui::Integer::operator + (const Integer& rhs) {
 // Arugument is a normal string.
 ui::Integer ui::Integer::operator + (const std::string& rhs) {
     bool sign = false;
-    std::string temp_rhs = rhs;
     if (rhs[0] == '-') {
         sign = true;
-        temp_rhs = rhs.substr(1, rhs.size());
     }
     
     if (m_sign == false && sign == false)
@@ -102,13 +98,13 @@ ui::Integer ui::Integer::operator + (const std::string& rhs) {
     }
 
     Integer number;    
-    if (*this > temp_rhs) {
+    if (*this > rhs) {
         number.m_sign = m_sign;
-        number.m_data = m_subtract_return(m_data, temp_rhs);
+        number.m_data = m_subtract_return(*this, rhs);
         return number;
-    } else if (*this < temp_rhs) {
+    } else if (*this < rhs) {
         number.m_sign = sign;
-        number.m_data = m_subtract_return(temp_rhs, m_data);
+        number.m_data = m_subtract_return(rhs, *this);
         return number;
     } else {
         number.m_data.push_back('0');
@@ -137,11 +133,11 @@ ui::Integer ui::Integer::operator + (int rhs) {
     Integer number;
     if (*this > rhs) {
         number.m_sign = m_sign;
-        number.m_data = m_subtract_return(m_data, temp_rhs);
+        number.m_data = m_subtract_return(*this, rhs);
         return number;
     } else if (*this < rhs) {
         number.m_sign = sign;
-        number.m_data = m_subtract_return(temp_rhs, m_data);
+        number.m_data = m_subtract_return(rhs, *this);
         return number;
     } else {
         number.m_data.push_back('0');
@@ -161,11 +157,9 @@ void ui::Integer::operator += (const Integer& rhs) {
     }
 
     if (*this > rhs) {
-        m_subtract(m_data, rhs.m_data);
+        m_data = m_subtract_return(*this, rhs);
     } else if (*this < rhs) {
-        std::string temp_rhs = rhs.m_data;
-        m_subtract(temp_rhs, m_data);
-        m_data = temp_rhs;
+        m_data = m_subtract_return(rhs, *this);
         m_sign = rhs.m_sign;        
     } else {
         m_data_erase();
@@ -223,10 +217,9 @@ void ui::Integer::operator += (int rhs) {
     }
 
     if (*this > rhs) {
-        m_subtract(m_data, temp_rhs);
+        m_data = m_subtract_return(*this, rhs);
     } else if (*this < rhs) {
-        m_subtract(temp_rhs, m_data);
-        m_data = temp_rhs;
+        m_data = m_subtract_return(rhs, *this);
         m_sign = sign;
     } else {
         m_data_erase();
@@ -242,13 +235,13 @@ ui::Integer ui::Integer::operator - (const Integer& rhs) {
         return m_add_return(rhs);
 
     Integer number;
-    if (*this > rhs.m_data) {
+    if (*this > rhs) {
         number.m_sign = m_sign;
-        number.m_data = m_subtract_return(m_data, rhs.m_data);
+        number.m_data = m_subtract_return(*this, rhs);
         return number;
-    } else if (*this < rhs.m_data) {
+    } else if (*this < rhs) {
         number.m_sign = true;
-        number.m_data = m_subtract_return(rhs.m_data, m_data);
+        number.m_data = m_subtract_return(rhs, *this);
         return number;
     } else {
         number.m_data.push_back('0');
@@ -269,20 +262,14 @@ ui::Integer ui::Integer::operator - (const std::string& rhs) {
     if (m_sign == false && sign)
         return m_add_return(rhs, true);
 
-    std::string temp_rhs;
-    if (sign)
-        m_reverse_copy(rhs, temp_rhs, 1);
-    else
-        m_reverse_copy(rhs, temp_rhs, 0);
-
     Integer number;    
-    if (*this > temp_rhs) {
+    if (*this > rhs) {
         number.m_sign = m_sign;
-        number.m_data = m_subtract_return(m_data, temp_rhs);
+        number.m_data = m_subtract_return(*this, rhs);
         return number;
-    } else if (*this < temp_rhs) {
+    } else if (*this < rhs) {
         number.m_sign = sign;
-        number.m_data = m_subtract_return(temp_rhs, m_data);
+        number.m_data = m_subtract_return(rhs, *this);
         return number;
     } else {
         number.m_data.push_back('0');
@@ -299,17 +286,14 @@ ui::Integer ui::Integer::operator - (int rhs) {
         sign = true;
     }
 
-    std::string temp_rhs;
-    m_convert_to_reverse_string(rhs, temp_rhs);
-
     Integer number;
-    if (*this > temp_rhs) {
+    if (*this > rhs) {
         number.m_sign = m_sign;
-        number.m_data = m_subtract_return(m_data, temp_rhs);
+        number.m_data = m_subtract_return(*this, rhs);
         return number;
-    } else if (*this < temp_rhs) {
+    } else if (*this < rhs) {
         number.m_sign = sign;
-        number.m_data = m_subtract_return(temp_rhs, m_data);
+        number.m_data = m_subtract_return(rhs, *this);
         return number;
     } else {
         number.m_data.push_back('0');
@@ -1079,13 +1063,10 @@ void ui::Integer::m_add(int rhs) {
     }
 }
 
-// Subtract A - B and return the result.
-// Argument A and B both are reveresd strings
-std::string ui::Integer::m_subtract_return(const std::string& A, const std::string& B) {
-    Integer number;
-    std::string TA = A;
-    m_subtract(TA, B);
-    return TA;
+std::string ui::Integer::m_subtract_return(const Integer& A, const Integer& B) {
+    std::string lhs = A.m_data;
+    m_subtract(lhs, B.m_data);
+    return lhs;
 }
 
 // subtract A - B and store ito the A

@@ -101,7 +101,9 @@ namespace utility {
             void m_add(const std::string& rhs, bool is_sign);
             void m_add(int rhs);
 
-            std::string m_subtract_return(const std::string& A, const std::string& B);
+            // Always A - B, call this function when A > B, otherwise it won't give
+            // proper results.
+            std::string m_subtract_return(const Integer& A, const Integer& B);
             void m_subtract(std::string& A, const std::string& B);
 
             Integer m_divide_return(int rhs, bool sign);

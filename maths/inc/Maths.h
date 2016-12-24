@@ -64,7 +64,7 @@ namespace utility {
             T int_sqrt(const T& number) const;
 
             // Calcuate the square root of a number till a finite number of decimal places
-            utility::integer::Integer square_root(const T& n, const T& limit) const;
+            std::string square_root(const T& n, std::size_t limit) const;
 
             // Calculate continued fractions of n / d
             std::vector<int> continued_fractions(T n, T d) const;
@@ -220,36 +220,46 @@ T um::Maths<T>::int_sqrt(const T& number) const {
 // This algorithm is based on
 // http://www.afjarvis.staff.shef.ac.uk/maths/jarvisspec02.pdf
 template <typename T>
-utility::integer::Integer um::Maths<T>::square_root(const T& n, const T& limit) const {
+std::string um::Maths<T>::square_root(const T& n, std::size_t limit) const {
     utility::integer::Integer a(n * 5);
     utility::integer::Integer b(5);
+    utility::maths::Maths<utility::integer::Integer> maths;
+    utility::integer::Integer max = maths.power(10, limit + 1);
 
-    int i = 0;
-    while (i < limit) {
-        printf("-------------------------------------\n");
-        printf("a ===== ");
+    max.print();
+
+    while (b < max) {
+        printf("------------------------------------------------------\n");
+        printf("a === ");
         a.print();
-        printf("b ===== ");        
-        b.print();
-        printf("-------------------------------------\n");        
-
+        printf("b === ");
+        b.print();        
+        printf("------------------------------------------------------\n");
         if (a >= b) {
-            printf("a >= b\n");
             a -= b;
             b += 10;
         } else {
-            printf("else\n");
             a *= 100;
             
             b /= 10;
             b *= 100;
             b += 5;           
         }
-        
-        ++i;
     }
+
+    b.print();
+
+    T integral = int_sqrt(n);
+    int pos = 0;
+    while (integral) {
+        integral /= 10;
+        ++pos;
+    }
+
+    std::string number = b.get();
+    number.insert(pos, ".");
     
-    return b;
+    return number;
 }
 
 // Please make sure that N > D, and then we can get proper solution.

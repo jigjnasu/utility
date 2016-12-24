@@ -79,7 +79,6 @@ void ut::TestMaths::m_test_square_root() {
     um::Maths<int> maths;
     
     int n = 2;
-    std::size_t limit = 5;
-    printf("Square root of [%d] == ", n );
-    maths.square_root(n, limit).print();
+    std::size_t limit = 50;
+    printf("Square root of [%d] == [%s]\n", n, maths.square_root(n, limit).c_str());
 }

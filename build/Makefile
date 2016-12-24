@@ -16,6 +16,8 @@ TEST_SUITE_SRC  := $(wildcard ../test/src/*.cpp)
 TEST_SUITE_INC  := -I../test/inc
 OBJ_FILES       += $(addprefix objs/,$(notdir $(TEST_SUITE_SRC:.cpp=.o)))
 
+COMMON_INC  := -I../common/inc/
+
 OBJ_PATH       := objs
 
 EXE := test
@@ -26,6 +28,7 @@ CC_FLAGS := -g -c -Wall -O3
 
 INCLUDE  := $(INTEGER_INC)
 INCLUDE  += $(TEST_SUITE_INC)
+INCLUDE  += $(COMMON_INC)
 
 INCLUDE += -I../maths/inc
 

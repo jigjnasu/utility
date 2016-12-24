@@ -226,24 +226,26 @@ utility::integer::Integer um::Maths<T>::square_root(const T& n, const T& limit) 
 
     int i = 0;
     while (i < limit) {
+        printf("-------------------------------------\n");
         printf("a ===== ");
         a.print();
-        printf("b ===== ");
+        printf("b ===== ");        
         b.print();
-        
-        if (a < b) {
-            printf("a is < b\n");
+        printf("-------------------------------------\n");        
+
+        if (a >= b) {
+            printf("a >= b\n");
+            a -= b;
+            b += 10;
+        } else {
+            printf("else\n");
             a *= 100;
             
             b /= 10;
             b *= 100;
-            b += 5;
-        } else {
-            printf("a is >= b\n");
-            a -= b;
-            b += 10;
+            b += 5;           
         }
-
+        
         ++i;
     }
     

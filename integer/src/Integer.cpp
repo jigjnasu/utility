@@ -304,15 +304,12 @@ ui::Integer ui::Integer::operator - (int rhs) {
 // Operator overloading of -=
 // Argument type class object
 void ui::Integer::operator -= (const Integer& rhs) {
-    printf("m_sign == [%d] || rhs.m_sign == [%d]\n", m_sign, rhs.m_sign);
     if (m_sign == false && rhs.m_sign)
         return m_add(rhs);
 
     if (*this > rhs) {
-        printf("*this > rhs.m_data\n");
         m_subtract(m_data, rhs.m_data);
     } else if (*this < rhs) {
-        printf("*this < rhs.m_data\n");
         std::string temp_rhs = rhs.m_data;
         m_subtract(temp_rhs, m_data);
         m_data = temp_rhs;
@@ -975,7 +972,6 @@ ui::Integer ui::Integer::m_add_return(int rhs) {
 
 // Add number to the *this, argument type is class object
 void ui::Integer::m_add(const Integer& rhs) {
-    printf("m_add hasb been called\n");
     std::size_t i = 0;
     std::size_t j = 0;
 

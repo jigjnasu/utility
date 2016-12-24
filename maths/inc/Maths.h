@@ -12,6 +12,7 @@
 #include <cmath>
 #include <cstdlib>
 #include <vector>
+#include <cstdio>
 
 namespace utility {
     namespace maths {
@@ -223,15 +224,27 @@ utility::integer::Integer um::Maths<T>::square_root(const T& n, const T& limit) 
     utility::integer::Integer a(n * 5);
     utility::integer::Integer b(5);
 
-    while (b.size() <= limit) {
+    int i = 0;
+    while (i < limit) {
+        printf("a ===== ");
+        a.print();
+        printf("b ===== ");
+        b.print();
+        
         if (a < b) {
+            printf("a is < b\n");
             a *= 100;
+            
             b /= 10;
+            b *= 100;
             b += 5;
         } else {
+            printf("a is >= b\n");
             a -= b;
             b += 10;
         }
+
+        ++i;
     }
     
     return b;

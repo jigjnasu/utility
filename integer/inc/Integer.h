@@ -57,8 +57,22 @@ namespace utility {
             // Comparision operators
             bool operator > (const Integer& rhs);
             bool operator < (const Integer& rhs);
+
             bool operator > (const std::string& rhs);
             bool operator < (const std::string& rhs);
+
+            bool operator > (int rhs);
+            bool operator < (int rhs);
+
+            bool operator >= (const Integer& rhs);
+            bool operator <= (const Integer& rhs);
+
+            bool operator >= (const std::string& rhs);
+            bool operator <= (const std::string& rhs);
+
+            bool operator >= (int rhs);
+            bool operator <= (int rhs);
+            
             bool operator == (const std::string& rhs);
             bool operator != (const std::string& rhs);            
 

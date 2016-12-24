@@ -26,6 +26,7 @@ void ut::TestMaths::m_initialize_test_cases_dictionary() {
     m_test_cases_dictionary[TEST_CONTINUED_FRACTION] = &TestMaths::m_test_continued_fraction;
     m_test_cases_dictionary[TEST_SQRT_CONTINUED_FRACTION] = &TestMaths::m_test_sqrt_continued_fraction;
     m_test_cases_dictionary[TEST_E_CONTINUED_FRACTION] = &TestMaths::m_test_e_continued_fraction;
+    m_test_cases_dictionary[TEST_INT_SQRT] = &TestMaths::m_test_int_sqrt;
 }
 
 void ut::TestMaths::m_test_continued_fraction() {
@@ -62,4 +63,13 @@ void ut::TestMaths::m_test_e_continued_fraction() {
     for (std::size_t i = 0; i < fractions.size(); ++i)
         printf("%d ", fractions[i]);
     printf("]\n");
+}
+
+void ut::TestMaths::m_test_int_sqrt() {
+    um::Maths<int> maths;
+    
+    for (int i = 0; i < 50; ++i) {
+        const int n = maths.random(1, 100000);
+        printf("int sqrt of [%8d] == [%8d]\n", n, maths.int_sqrt(n));
+    }
 }

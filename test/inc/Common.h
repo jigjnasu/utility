@@ -43,7 +43,8 @@ namespace utility {
             TEST_CONTINUED_FRACTION       = 0x0001,
             TEST_SQRT_CONTINUED_FRACTION  = 0x0002,
             TEST_E_CONTINUED_FRACTION     = 0x0003,
-            TEST_MATHS_FINISH             = 0x0004,
+            TEST_INT_SQRT                 = 0x0004,
+            TEST_MATHS_FINISH             = 0x0005,
         };
 
         // All the test cases in Permutation

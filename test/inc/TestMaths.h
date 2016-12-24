@@ -30,6 +30,7 @@ namespace utility {
             void m_test_continued_fraction();
             void m_test_sqrt_continued_fraction();
             void m_test_e_continued_fraction();
+            void m_test_int_sqrt();
         };
     };
 };

@@ -8,7 +8,8 @@ int main() {
     ut::TestSuite suite;
     //suite.run(ut::UTILITY_MODULE_MATHS, ut::TEST_CONTINUED_FRACTION);
     //suite.run(ut::UTILITY_MODULE_MATHS, ut::TEST_SQRT_CONTINUED_FRACTION);
-    suite.run(ut::UTILITY_MODULE_MATHS, ut::TEST_E_CONTINUED_FRACTION);    
+    //suite.run(ut::UTILITY_MODULE_MATHS, ut::TEST_E_CONTINUED_FRACTION);
+    suite.run(ut::UTILITY_MODULE_MATHS, ut::TEST_INT_SQRT);    
     
     return 0;
 }

@@ -39,6 +39,7 @@ namespace utility {
             std::vector<T> phi(std::size_t n) const;
 
             bool is_sqrt(const T& number) const;
+            T int_sqrt(const T& number) const;
 
             std::vector<int> continued_fractions(T n, T d) const;
             std::vector<int> square_root_continued_fractions(T s) const;
@@ -172,6 +173,18 @@ template <typename T>
 bool um::Maths<T>::is_sqrt(const T& number) const {
     const double rt = std::floor(std::sqrt(number));
     return (rt * rt) == number;
+}
+
+// This function will return the closest integer of square root.
+// x ^ 2 < sqrt(n) < (x + 1) ^ 2
+// Example int_sqrt(27) = 5
+// 5 * 5 < 27 < 6 * 6
+
+template <typename T>
+T um::Maths<T>::int_sqrt(const T& number) const {
+    int x = 1;
+    while (x * x < number) ++x;
+    return x - 1;
 }
 
 // Please make sure that N > D, and then we can get proper solution.

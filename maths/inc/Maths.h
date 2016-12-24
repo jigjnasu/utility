@@ -9,6 +9,7 @@
 #define UTILITY_MATHS_MATHS_H_
 
 #include <cmath>
+#include <string>
 #include <cstdlib>
 #include <vector>
 
@@ -20,29 +21,57 @@ namespace utility {
             Maths();
             ~Maths();
 
+            // Wether the number is prime or not.
             bool is_prime(const T& number) const;
+            
             // Getting all the prime numbers from 2...n,
             // where n is given
+            // Algortim is based on Sieve of Eratosthenes
             std::vector<T> prime_numbers(const std::size_t& n) const;
+
+            // Calculate the power of x ^ y
             T power(T x, int y) const;
 
+            // Caluclate the factorial of a number
             T factorial(const std::size_t& n) const;
+
+            // Calculate the nth fibonacci number
             T fibonacci(const std::size_t& n) const;
 
+            // Find the GCD / HCF of two numbers
             T gcd(const T& n, const T& d) const;
 
+            // Find maximum between two numbers
             T max(const T& a, const T& b) const;
+
+            // Find the minmum of between two numbers
             T min(const T& a, const T& b) const;
 
+            // Calculate a random number between min and max, both included
             T random(const T& min, const T& max) const;
 
+            // Get all the phi of a number
+            // Algortim is based on Sieve of Eratosthenes
             std::vector<T> phi(std::size_t n) const;
 
-            bool is_sqrt(const T& number) const;
+            // Is the number is a perfect square
+            bool is_perfect_square(const T& number) const;
+
+            // Calculate the closest integer which is sqrt of the number
+            // x * x < number < (x + 1) * (x + 1)
+            // return x
             T int_sqrt(const T& number) const;
 
+            // Calcuate the square root of a number till a finite number of decimal places
+            std::string square_root(const T& n, const T& limit) const;
+
+            // Calculate continued fractions of n / d
             std::vector<int> continued_fractions(T n, T d) const;
+
+            // Calculate contined fraction of a square root
             std::vector<int> square_root_continued_fractions(T s) const;
+
+            // Calculate contined fraction for natural e
             std::vector<int> e_continued_fractions(int n) const;
 
         private:
@@ -170,7 +199,7 @@ std::vector<T> um::Maths<T>::phi(std::size_t n) const {
 }
 
 template <typename T>
-bool um::Maths<T>::is_sqrt(const T& number) const {
+bool um::Maths<T>::is_perfect_square(const T& number) const {
     const double rt = std::floor(std::sqrt(number));
     return (rt * rt) == number;
 }

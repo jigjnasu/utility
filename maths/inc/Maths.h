@@ -223,17 +223,19 @@ std::string um::Maths<T>::square_root(const T& n, std::size_t limit) const {
     utility::integer::Integer a(n * 5);
     utility::integer::Integer b(5);
     utility::maths::Maths<utility::integer::Integer> maths;
-    utility::integer::Integer max = maths.power(10, limit + 1);
+    //utility::integer::Integer max = maths.power(10, limit + 1);
 
-    while (b < max) {
+    while (1) {
         if (a >= b) {
             a -= b;
             b += 10;
         } else {
             a *= 100;
-
             b = ((b / 10) * 100) + 5;
         }
+
+        if (b.size() >= limit)
+            break;
     }
 
     T integral = int_sqrt(n);

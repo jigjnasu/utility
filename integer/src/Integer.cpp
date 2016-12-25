@@ -982,6 +982,7 @@ ui::Integer ui::Integer::m_divide_return(int rhs, bool sign) {
             n = (n * 10) + (m_data[i--] - '0');
             number.push_back('0');
         }
+        
         number.push_back((n / rhs) + '0');
         n %= rhs;
     }

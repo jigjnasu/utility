@@ -17,6 +17,7 @@ TEST_SUITE_INC  := -I../test/inc
 OBJ_FILES       += $(addprefix objs/,$(notdir $(TEST_SUITE_SRC:.cpp=.o)))
 
 COMMON_INC  := -I../common/inc/
+STRING_INC  := -I../../string/inc/
 
 OBJ_PATH       := objs
 
@@ -26,10 +27,10 @@ GCC := g++
 LD_FLAGS := ar -cvq
 CC_FLAGS := -g -c -Wall -O3
 
-INCLUDE  := $(INTEGER_INC)
-INCLUDE  += $(TEST_SUITE_INC)
-INCLUDE  += $(COMMON_INC)
-
+INCLUDE := $(INTEGER_INC)
+INCLUDE += $(TEST_SUITE_INC)
+INCLUDE += -I../common/inc
+INCLUDE += -I../string/inc 
 INCLUDE += -I../maths/inc
 
 LIB := ../lib/libutility.a

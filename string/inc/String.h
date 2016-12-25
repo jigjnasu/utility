@@ -1,6 +1,8 @@
 #ifndef UTILITY_STRING_STRING_H_
 #define UTILITY_STRING_STRING_H_
 
+#include <string>
+
 namespace utility {
     namespace string {
         template <typename T>

@@ -55,7 +55,7 @@ ui::Integer& ui::Integer::operator = (const Integer& rhs) {
 
 // Overloaded + operator
 // Arugument is class object
-ui::Integer ui::Integer::operator + (const Integer& rhs) {
+ui::Integer ui::Integer::operator + (const Integer& rhs) const {
     if (m_sign == false && rhs.m_sign == false)
         return m_add_return(rhs);
 
@@ -82,7 +82,7 @@ ui::Integer ui::Integer::operator + (const Integer& rhs) {
 
 // Overloading + operator
 // Arugument is a normal string.
-ui::Integer ui::Integer::operator + (const std::string& rhs) {
+ui::Integer ui::Integer::operator + (const std::string& rhs) const {
     bool sign = false;
     if (rhs[0] == '-') {
         sign = true;
@@ -114,7 +114,7 @@ ui::Integer ui::Integer::operator + (const std::string& rhs) {
 
 // Operator overloading +
 // Arugment is integer
-ui::Integer ui::Integer::operator + (int rhs) {
+ui::Integer ui::Integer::operator + (int rhs) const {
     int sign = false;
     if (rhs < 0) {
         sign = true;
@@ -230,7 +230,7 @@ void ui::Integer::operator += (int rhs) {
 
 // Operator overloading of -
 // Argument type class object.
-ui::Integer ui::Integer::operator - (const Integer& rhs) {
+ui::Integer ui::Integer::operator - (const Integer& rhs) const {
     if (m_sign == false && rhs.m_sign)
         return m_add_return(rhs);
 
@@ -253,7 +253,7 @@ ui::Integer ui::Integer::operator - (const Integer& rhs) {
 // Operator overloading of -
 // Arugment type std::string normal one "123", not reverse one,
 // which I use for arethmatic operations.
-ui::Integer ui::Integer::operator - (const std::string& rhs) {
+ui::Integer ui::Integer::operator - (const std::string& rhs) const {
     bool sign = false;
     
     if (rhs[0] == '-')
@@ -279,7 +279,7 @@ ui::Integer ui::Integer::operator - (const std::string& rhs) {
 
 // Operator overloading of -
 // Argument type int
-ui::Integer ui::Integer::operator - (int rhs) {
+ui::Integer ui::Integer::operator - (int rhs) const {
     bool sign = false;
     if (rhs < 0) {
         rhs *= -1;
@@ -308,8 +308,10 @@ void ui::Integer::operator -= (const Integer& rhs) {
         return m_add(rhs);
 
     if (*this > rhs) {
+        printf("Going from here 1\n");
         m_subtract(m_data, rhs.m_data);
     } else if (*this < rhs) {
+        printf("Going from here 2\n");
         std::string temp_rhs = rhs.m_data;
         m_subtract(temp_rhs, m_data);
         m_data = temp_rhs;
@@ -380,7 +382,7 @@ void ui::Integer::operator -= (int rhs) {
 
 // Operator overloading of *
 // Argument class object
-ui::Integer ui::Integer::operator * (const Integer& rhs) {
+ui::Integer ui::Integer::operator * (const Integer& rhs) const {
     Integer number;
     if (m_sign || rhs.m_sign)
         number.m_sign = true;
@@ -413,7 +415,7 @@ ui::Integer ui::Integer::operator * (const Integer& rhs) {
 
 // Operator overloading of *
 // Argument type std::string normal orientation
-ui::Integer ui::Integer::operator * (const std::string& rhs) {
+ui::Integer ui::Integer::operator * (const std::string& rhs) const {
     int stop = 0;
     Integer number;
     if (m_sign || rhs[0] == '-') {
@@ -449,7 +451,7 @@ ui::Integer ui::Integer::operator * (const std::string& rhs) {
 
 // Operator overloading *
 // Argument type int
-ui::Integer ui::Integer::operator * (int rhs) {
+ui::Integer ui::Integer::operator * (int rhs) const {
     Integer number;
     if (m_sign || rhs < 0) {
         number.m_sign = true;
@@ -584,260 +586,130 @@ void ui::Integer::operator /= (int rhs) {
 }
 
 // Comparision operators
-bool ui::Integer::operator > (const Integer& rhs) {
-    if (m_data.size() > rhs.size()) {
-        return true;
-    } else if (m_data.size() < rhs.size()) {
-        return false;
-    } else {
-        for (int i = m_data.size() - 1; i >= 0; --i)
-            if (m_data[i] > rhs.m_data[i])
-                return true;
-            else if (m_data[i] < rhs.m_data[i])
-                return false;
-    }
-
-    return false;
+bool ui::Integer::operator > (const Integer& rhs) const {
+    bool result = false;
+    if (m_more_than(rhs))
+        result = true;
+    
+    return result;
 }
 
-bool ui::Integer::operator < (const Integer& rhs) {
-    if (m_data.size() < rhs.size()) {
-        return true;
-    } else if (m_data.size() > rhs.size()) {
-        return false;
-    } else {
-        for (int i = m_data.size() - 1; i >= 0; --i)
-            if (m_data[i] < rhs.m_data[i])
-                return true;
-            else if (m_data[i] > rhs.m_data[i])
-                return false;
-    }
-
-    return false;    
+bool ui::Integer::operator < (const Integer& rhs) const {
+    bool result = false;
+    if (m_less_than(rhs))
+        result = true;
+    
+    return result;
 }
 
 // If current value > string argument
 // return true else false
-bool ui::Integer::operator > (const std::string& rhs) {
-    if (m_data.size() > rhs.size()) {
-        return true;
-    } else if (m_data.size() < rhs.size()) {
-        return false;
-    } else {
-        const int size = m_data.size() - 1;
-        for (int i = size; i >= 0; --i)
-            if (m_data[i] > rhs[size - i])
-                return true;
-            else if (m_data[i] < rhs[size - i])
-                return false;
-    }
+bool ui::Integer::operator > (const std::string& rhs) const {
+    bool result = false;
+    if (m_more_than(rhs))
+        result = true;
 
-    return false;
+    return result;
 }
 
 // If current value < string argument
 // return true else false
-bool ui::Integer::operator < (const std::string& rhs) {
-    if (m_data.size() < rhs.size()) {
-        return true;
-    } else if (m_data.size() > rhs.size()) {
-        return false;
-    } else {
-        const int size = m_data.size() - 1;
-        for (int i = size; i >= 0; --i)
-            if (m_data[i] < rhs[size - i])
-                return true;
-            else if (m_data[i] > rhs[size - i])
-                return false;
-    }
-
-    return false;
+bool ui::Integer::operator < (const std::string& rhs) const {
+    bool result = false;
+    if (m_less_than(rhs))
+        result = true;
+    
+    return result;
 }
 
-bool ui::Integer::operator > (int rhs) {
-    int i = m_data.size() - 1;
-    while (rhs && i >= 0) {
-        const int digit = rhs % 10;
-        if (m_data[i] - '0' > digit) {
-            return true;
-        } else if (m_data[i] - '0' < digit) {
-            return false;
-        } else {
-            // Nothing to do if digits are equal;
-        }
+bool ui::Integer::operator > (int rhs) const {
+    bool result = false;
+    if (m_more_than(rhs))
+        result = true;
+
+    return result;
+}
+
+bool ui::Integer::operator < (int rhs) const {
+    bool result = false;
+    if (m_less_than(rhs))
+        result = true;
+
+    return result;
+}
+
+bool ui::Integer::operator >= (const Integer& rhs) const {
+    bool result = false;
+    if (m_more_than(rhs) || m_equal_to(rhs))
+        result = true;
+
+    return result;
+}
+
+bool ui::Integer::operator <= (const Integer& rhs) const {
+    bool result = false;
+    if (m_less_than(rhs) || m_equal_to(rhs))
+        result = true;
         
-        rhs /= 10;
-        --i;
-    }
-
-    // Let's check the leftover
-    if (i >= 0)
-        return true;
-    if (rhs)
-        return false;
-    
-    return false;
+    return result;
 }
 
-bool ui::Integer::operator < (int rhs) {
-    int i = m_data.size() - 1;
-    while (rhs && i >= 0) {
-        const int digit = rhs % 10;
-        if (m_data[i] - '0' < digit) {
-            return true;
-        } else if (m_data[i] - '0' > digit) {
-            return false;
-        } else {
-            // Nothing to do if digits are equal;
-        }
-        
-        rhs /= 10;
-        --i;
-    }
+bool ui::Integer::operator >= (const std::string& rhs) const {
+    bool result = false;
+    if (m_more_than(rhs) || m_equal_to(rhs))
+        result = true;
 
-    // Let's check the leftover
-    if (i >= 0)
-        return false;
-    if (rhs)
-        return true;
-    
-    return false;
+    return result;
 }
 
-bool ui::Integer::operator >= (const Integer& rhs) {
-    if (m_data.size() > rhs.size()) {
-        return true;
-    } else if (m_data.size() < rhs.size()) {
-        return false;
-    } else {
-        for (int i = m_data.size() - 1; i >= 0; --i)
-            if (m_data[i] >= rhs.m_data[i])
-                return true;
-            else
-                return false;
-    }
-    
-    return false;
+bool ui::Integer::operator <= (const std::string& rhs) const {
+    bool result = false;
+    if (m_less_than(rhs) || m_equal_to(rhs))
+        result = true;
+
+    return result;
 }
 
-bool ui::Integer::operator <= (const Integer& rhs) {
-    if (m_data.size() < rhs.size()) {
-        return true;
-    } else if (m_data.size() > rhs.size()) {
-        return false;
-    } else {
-        for (int i = m_data.size() - 1; i >= 0; --i)
-            if (m_data[i] <= rhs.m_data[i])
-                return true;
-            else
-                return false;
-    }
-    
-    return false;
+bool ui::Integer::operator >= (int rhs) const {
+    bool result = false;
+    if (m_more_than(rhs) || m_equal_to(rhs))
+        result = true;
+
+    return result;
 }
 
-bool ui::Integer::operator >= (const std::string& rhs) {
-    if (m_data.size() > rhs.size()) {
-        return true;
-    } else if (m_data.size() < rhs.size()) {
-        return false;
-    } else {
-        const int size = m_data.size() - 1;
-        for (int i = size; i >= 0; --i)
-            if (m_data[i] >= rhs[size - i])
-                return true;
-            else
-                return false;
-    }
+bool ui::Integer::operator <= (int rhs) const {
+    bool result = false;
+    if (m_less_than(rhs) || m_equal_to(rhs))
+        result = true;
 
-    return false;
+    return result;
 }
 
-bool ui::Integer::operator <= (const std::string& rhs) {
-    if (m_data.size() < rhs.size()) {
-        return true;
-    } else if (m_data.size() > rhs.size()) {
-        return false;
-    } else {
-        const int size = m_data.size() - 1;
-        for (int i = size; i >= 0; --i)
-            if (m_data[i] <= rhs[size - i])
-                return true;
-            else
-                return false;
-    }
-
-    return false;
+bool ui::Integer::operator == (const Integer& rhs) const {
+    return m_equal_to(rhs);
 }
 
-bool ui::Integer::operator >= (int rhs) {
-    int i = m_data.size() - 1;
-    while (rhs && i >= 0) {
-        const int digit = rhs % 10;
-        if (m_data[i] - '0' >= digit)
-            return true;
-        else
-            return false;
-        
-        rhs /= 10;
-        --i;
-    }
-
-    // Let's check the leftover
-    if (i >= 0)
-        return true;
-    if (rhs)
-        return false;
-    
-    return false;
+bool ui::Integer::operator == (const std::string& rhs) const {
+    return m_equal_to(rhs);
 }
 
-bool ui::Integer::operator <= (int rhs) {
-    int i = m_data.size() - 1;
-    while (rhs && i >= 0) {
-        const int digit = rhs % 10;
-        if (m_data[i] - '0' <= digit)
-            return true;
-        else
-            return false;
-        
-        rhs /= 10;
-        --i;
-    }
-
-    // Let's check the leftover
-    if (i >= 0)
-        return true;
-    if (rhs)
-        return false;
-    
-    return false;
+bool ui::Integer::operator == (int rhs) const {
+    return m_equal_to(rhs);
 }
 
-// If current value == string arugment
-// return true else false
-bool ui::Integer::operator == (const std::string& rhs) {
-    if (m_data.size() != rhs.size())
-        return false;
-    for (std::size_t i = 0; i < m_data.size(); ++i)
-        if (m_data[i] != rhs[i])
-            return false;
-    
-    return true;
+bool ui::Integer::operator != (const Integer& rhs) const {
+    return !m_equal_to(rhs);
 }
 
-// If current value != string argument
-// return true else false
-bool ui::Integer::operator != (const std::string& rhs) {
-    if (m_data.size() != rhs.size())
-        return true;
-
-    for (std::size_t i = 0; i < m_data.size(); ++i)
-        if (m_data[i] == rhs[i])
-            return false;
-
-    return true;
+bool ui::Integer::operator != (const std::string& rhs) const {
+    return !m_equal_to(rhs);
 }
+
+bool ui::Integer::operator != (int rhs) const {
+    return !m_equal_to(rhs);
+}
+
 
 /* Split function, which will split the high and low by a position.
    Example 123456789, and position is 3
@@ -881,7 +753,7 @@ std::string ui::Integer::get_reverse() const {
 }
 
 // Add *this + class object
-ui::Integer ui::Integer::m_add_return(const Integer& rhs) {
+ui::Integer ui::Integer::m_add_return(const Integer& rhs) const {
     Integer number;
     std::size_t i = 0;
     std::size_t j = 0;
@@ -915,7 +787,7 @@ ui::Integer ui::Integer::m_add_return(const Integer& rhs) {
 
 // Add two numbers, where arugment is a string type with its sign mentioned
 // is_sign true means it is a negative number else it is a positive number
-ui::Integer ui::Integer::m_add_return(const std::string& rhs, bool is_sign) {
+ui::Integer ui::Integer::m_add_return(const std::string& rhs, bool is_sign) const {
     Integer number;
     int stop = 0;
     if (is_sign)
@@ -952,7 +824,7 @@ ui::Integer ui::Integer::m_add_return(const std::string& rhs, bool is_sign) {
 }
 
 // Add two numbers, where argument type is int
-ui::Integer ui::Integer::m_add_return(int rhs) {
+ui::Integer ui::Integer::m_add_return(int rhs) const {
     Integer number;
     int carry = rhs;
 
@@ -1059,7 +931,7 @@ void ui::Integer::m_add(int rhs) {
     }
 }
 
-std::string ui::Integer::m_subtract_return(const Integer& A, const Integer& B) {
+std::string ui::Integer::m_subtract_return(const Integer& A, const Integer& B) const {
     std::string lhs = A.m_data;
     m_subtract(lhs, B.m_data);
     return lhs;
@@ -1067,7 +939,7 @@ std::string ui::Integer::m_subtract_return(const Integer& A, const Integer& B) {
 
 // subtract A - B and store ito the A
 // Both A and B are strings.
-void ui::Integer::m_subtract(std::string& A, const std::string& B) {
+void ui::Integer::m_subtract(std::string& A, const std::string& B) const {
     std::size_t i = 0;
 
     while (i < A.size() && i < B.size()) {
@@ -1103,32 +975,86 @@ ui::Integer ui::Integer::m_divide_return(int rhs, bool sign) {
 
     while (n < rhs)
         n = (n * 10) + (m_data[i--] - '0');
-    
+    number.push_back((n / rhs) + '0');
+    n %= rhs;
+
     while (i >= 0) {
+        n = (n * 10) + (m_data[i--] - '0');
+        while (n < rhs && i >= 0) {
+            n = (n * 10) + (m_data[i--] - '0');
+            number.push_back('0');
+        }
         number.push_back((n / rhs) + '0');
         n %= rhs;
-        
-        int j = 0;
-        while (n < rhs) {
-            n = (n * 10) + (m_data[i--] - '0');
-            ++j;
-        }
-
-        while (j > 1) {
-            number.push_back('0');
-            --j;
-        }
     }
 
     if (n > rhs)
         number.push_back((n / rhs) + '0');
 
-    return ui::Integer(number);
+    Integer num(number);
+    num.m_sign = sign;
+    return num;
 }
 
 void ui::Integer::m_divide(int rhs, bool sign) {
     const ui::Integer number = m_divide_return(rhs, sign);
     *this = number;
+    m_sign = sign;
+}
+
+// This function will compare two Integers and will tell >
+bool ui::Integer::m_more_than(const Integer& rhs) const {
+    if (m_data.size() > rhs.size()) {
+        return true;
+    } else if (m_data.size() < rhs.size()) {
+        return false;
+    } else {
+        for (int i = m_data.size() - 1; i >= 0; --i) {
+            if (m_data[i] > rhs.m_data[i])
+                return true;
+            else if (m_data[i] < rhs.m_data[i])
+                return false;
+        }
+    }
+
+    return false;
+}
+
+// Return the result of a < b
+bool ui::Integer::m_less_than(const Integer& rhs) const {
+    if (m_data.size() < rhs.size()) {
+        return true;
+    } else if (m_data.size() > rhs.size()) {
+        return false;
+    } else {
+        for (int i = m_data.size() - 1; i >= 0; --i) {
+            if (m_data[i] < rhs.m_data[i])
+                return true;
+            else if (m_data[i] > rhs.m_data[i])
+                return false;
+        }
+    }
+
+    return false;
+}
+
+bool ui::Integer::m_equal_to(const Integer& rhs) const {
+    if (m_data.size() != rhs.size()) {
+        return false;
+    } else {
+        int i = 0;
+        int j = m_data.size() - 1;
+        while (i <= j) {
+            if (m_data[i] != rhs.m_data[i])
+                return false;
+            if (m_data[j] != rhs.m_data[j])
+                return false;
+            ++i;
+            --j;
+        }
+    }
+
+    return true;
 }
 
 // copy the string data to the result from back to start

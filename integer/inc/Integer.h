@@ -24,27 +24,27 @@ namespace utility {
             Integer& operator = (const Integer& rhs);
 
             // Addition operators
-            Integer operator + (const Integer& rhs);
-            Integer operator + (const std::string& rhs);
-            Integer operator + (int rhs);
+            Integer operator + (const Integer& rhs) const;
+            Integer operator + (const std::string& rhs) const;
+            Integer operator + (int rhs) const;
 
             void operator += (const Integer& rhs);
             void operator += (const std::string& rhs);
             void operator += (int rhs);
 
             // Subtraction operators
-            Integer operator - (const Integer& rhs);
-            Integer operator - (const std::string& rhs);
-            Integer operator - (int rhs);
+            Integer operator - (const Integer& rhs) const;
+            Integer operator - (const std::string& rhs) const;
+            Integer operator - (int rhs) const;
 
             void operator -= (const Integer& rhs);
             void operator -= (const std::string& rhs);
             void operator -= (int rhs);
 
             // Multiplication operators
-            Integer operator * (const Integer& rhs);
-            Integer operator * (const std::string& rhs);
-            Integer operator * (int rhs);
+            Integer operator * (const Integer& rhs) const;
+            Integer operator * (const std::string& rhs) const;
+            Integer operator * (int rhs) const;
 
             void operator *= (const Integer& rhs);
             void operator *= (const std::string& rhs);
@@ -55,26 +55,31 @@ namespace utility {
             void operator /= (int rhs);
 
             // Comparision operators
-            bool operator > (const Integer& rhs);
-            bool operator < (const Integer& rhs);
+            bool operator > (const Integer& rhs) const;
+            bool operator < (const Integer& rhs) const;
 
-            bool operator > (const std::string& rhs);
-            bool operator < (const std::string& rhs);
+            bool operator > (const std::string& rhs) const;
+            bool operator < (const std::string& rhs) const;
 
-            bool operator > (int rhs);
-            bool operator < (int rhs);
+            bool operator > (int rhs) const;
+            bool operator < (int rhs) const;
 
-            bool operator >= (const Integer& rhs);
-            bool operator <= (const Integer& rhs);
+            bool operator >= (const Integer& rhs) const;
+            bool operator <= (const Integer& rhs) const;
 
-            bool operator >= (const std::string& rhs);
-            bool operator <= (const std::string& rhs);
+            bool operator >= (const std::string& rhs) const;
+            bool operator <= (const std::string& rhs) const;
 
-            bool operator >= (int rhs);
-            bool operator <= (int rhs);
-            
-            bool operator == (const std::string& rhs);
-            bool operator != (const std::string& rhs);            
+            bool operator >= (int rhs) const;
+            bool operator <= (int rhs) const;
+
+            bool operator == (const Integer& rhs) const;
+            bool operator == (const std::string& rhs) const;
+            bool operator == (int rhs) const;
+
+            bool operator != (const Integer& rhs) const;
+            bool operator != (const std::string& rhs) const;
+            bool operator != (int rhs) const;
 
             void split(int size, Integer& high, Integer& low) const;
 
@@ -93,9 +98,9 @@ namespace utility {
             bool m_sign;
 
             // These functions will eventually add the two numbers
-            Integer m_add_return(const Integer& rhs);
-            Integer m_add_return(const std::string& rhs, bool is_sign);
-            Integer m_add_return(int rhs);
+            Integer m_add_return(const Integer& rhs) const;
+            Integer m_add_return(const std::string& rhs, bool is_sign) const;
+            Integer m_add_return(int rhs) const;
 
             void m_add(const Integer& rhs);
             void m_add(const std::string& rhs, bool is_sign);
@@ -103,12 +108,16 @@ namespace utility {
 
             // Always A - B, call this function when A > B, otherwise it won't give
             // proper results.
-            std::string m_subtract_return(const Integer& A, const Integer& B);
-            void m_subtract(std::string& A, const std::string& B);
+            std::string m_subtract_return(const Integer& A, const Integer& B) const;
+            void m_subtract(std::string& A, const std::string& B) const;
 
             Integer m_divide_return(int rhs, bool sign);
             void m_divide(int rhs, bool sign);
-        
+
+            bool m_more_than(const Integer& rhs) const;
+            bool m_less_than(const Integer& rhs) const;
+            bool m_equal_to(const Integer& rhs) const;
+
             void m_reverse_copy(const std::string& data, std::string& result, int start_pos);
             void m_convert_to_reverse_string(int data, std::string& result);
 

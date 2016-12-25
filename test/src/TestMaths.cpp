@@ -5,6 +5,7 @@
 #include "Maths.h"
 #include <vector>
 #include <cstdio>
+#include <ctime>
 
 namespace ut = utility::test;
 namespace um = utility::maths;
@@ -78,13 +79,11 @@ void ut::TestMaths::m_test_int_sqrt() {
 }
 
 void ut::TestMaths::m_test_square_root() {
+    std::clock_t start = clock();
     um::Maths<int> maths;
     
     int n = 2;
-    std::size_t limit = 10000;
-    const std::string sq = maths.square_root(n, limit);
-    printf("Square root of [%d] == [%s] || size == [%lu]\n", n, sq.c_str(), sq.size());
-    std::size_t pos = sq.find(".");
-    utility::string::String<int> str;
-    printf("sum == [%d]\n", str.sum_of_digits(sq.substr(pos + 1, 100)));
+    std::size_t limit = 100000;
+    printf("Square root of [%d] -->\n[%s]\n", n, maths.square_root(n, limit).c_str());
+    printf("Execution time == [%.8f] seconds\n", (clock() - start) / static_cast<double>(CLOCKS_PER_SEC));
 }

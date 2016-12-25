@@ -308,10 +308,8 @@ void ui::Integer::operator -= (const Integer& rhs) {
         return m_add(rhs);
 
     if (*this > rhs) {
-        printf("Going from here 1\n");
         m_subtract(m_data, rhs.m_data);
     } else if (*this < rhs) {
-        printf("Going from here 2\n");
         std::string temp_rhs = rhs.m_data;
         m_subtract(temp_rhs, m_data);
         m_data = temp_rhs;

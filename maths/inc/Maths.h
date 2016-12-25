@@ -12,7 +12,6 @@
 #include <cmath>
 #include <cstdlib>
 #include <vector>
-#include <cstdio>
 
 namespace utility {
     namespace maths {
@@ -227,32 +226,14 @@ std::string um::Maths<T>::square_root(const T& n, std::size_t limit) const {
     utility::integer::Integer max = maths.power(10, limit + 1);
 
     while (b < max) {
-#if 0
-        printf("-------------------------------------\n");
-        printf("a --> ");
-        a.print();
-        printf("b --> ");
-        b.print();
-        printf("-------------------------------------\n");        
-#endif
         if (a >= b) {
-            printf("a >= b\n");
             a -= b;
             b += 10;
         } else {
-            printf("a >= b else\n");
             a *= 100;
 
             b = ((b / 10) * 100) + 5;
         }
-#if 0
-        printf("------------- After -------------\n");
-        printf("a --> ");
-        a.print();
-        printf("b --> ");
-        b.print();        
-        printf("------------- After -------------\n");
-#endif
     }
 
     T integral = int_sqrt(n);

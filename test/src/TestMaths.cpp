@@ -81,11 +81,10 @@ void ut::TestMaths::m_test_square_root() {
     um::Maths<int> maths;
     
     int n = 2;
-    std::size_t limit = 100;
+    std::size_t limit = 10000;
     const std::string sq = maths.square_root(n, limit);
     printf("Square root of [%d] == [%s] || size == [%lu]\n", n, sq.c_str(), sq.size());
     std::size_t pos = sq.find(".");
     utility::string::String<int> str;
     printf("sum == [%d]\n", str.sum_of_digits(sq.substr(pos + 1, 100)));
-    printf("%s\n", sq.substr(pos + 1, 100).c_str());
 }

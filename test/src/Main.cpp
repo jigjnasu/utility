@@ -23,7 +23,8 @@ void test_maths() {
     //suite.run(module, ut::TEST_SQRT_CONTINUED_FRACTION);
     //suite.run(module, ut::TEST_E_CONTINUED_FRACTION);
     //suite.run(module, ut::TEST_INT_SQRT);
-    suite.run(module, ut::TEST_SQUARE_ROOT);
+    //suite.run(module, ut::TEST_SQUARE_ROOT);
+    suite.run(module, ut::TEST_ORDERED_FRACTIONS);    
 }
 
 void test_permutation() {

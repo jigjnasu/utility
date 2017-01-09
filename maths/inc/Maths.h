@@ -9,6 +9,7 @@
 #define UTILITY_MATHS_MATHS_H_
 
 #include "Integer.h"
+#include "Fraction.h"
 #include <cmath>
 #include <cstdlib>
 #include <vector>
@@ -73,6 +74,10 @@ namespace utility {
 
             // Calculate contined fraction for natural e
             std::vector<int> e_continued_fractions(int n) const;
+
+            // Generate the Ferry Sequence(ordered) to generate all the fractions between
+            // 0 / 1 and 1 / 1, where d <= n
+            std::vector< utility::maths::Fraction<T> > ordered_fractions(int n) const;
 
         private:
             T m_gcd(const T& n, const T& d) const;
@@ -299,12 +304,47 @@ std::vector<int> um::Maths<T>::e_continued_fractions(int n) const {
     return fractions;
 }
 
+// This function is based on Farey Sequence.
+// Please refer to https://en.wikipedia.org/wiki/Farey_sequence
+// For the algorithm
+template <typename T>
+std::vector< um::Fraction<T> > um::Maths<T>::ordered_fractions(int n) const {
+    std::vector< Fraction<T> > fractions;
+    // First two elements, and then we will generate the next one from these.
+    double a = 0;
+    double b = 1;
+
+    double c = 1;
+    double d = n;
+
+    fractions.push_back(Fraction<T>(a, b));
+    fractions.push_back(Fraction<T>(c, d));    
+
+    // This is the next sequence based on the previous one.
+    double p = 0.0f;
+    double q = 0.0f;
+
+    while (q != 1.0f) {
+        p = std::floor((n + b) / d) * c - a;
+        q = std::floor((n + b) / d) * d - b;
+
+        fractions.push_back(Fraction<T>(p, q));
+        
+        a = c;
+        b = d;        
+        c = p;
+        d = q;
+    }
+
+    return fractions;
+}
+
 template <typename T>
 T um::Maths<T>::m_gcd(const T& n, const T& d) const {
     if (n % d == 0)
         return d;
-    else
-        gcd(d, n % d);
+    else if (n % d > 0)
+        return gcd(d, n % d);
     return 0;
 }
 

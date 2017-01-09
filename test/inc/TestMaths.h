@@ -32,6 +32,7 @@ namespace utility {
             void m_test_e_continued_fraction();
             void m_test_int_sqrt();
             void m_test_square_root();
+            void m_test_ordered_fractions();
         };
     };
 };

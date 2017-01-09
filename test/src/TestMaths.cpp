@@ -5,6 +5,7 @@
 #include "Maths.h"
 #include <vector>
 #include <cstdio>
+#include <iostream>
 #include <ctime>
 
 namespace ut = utility::test;
@@ -31,6 +32,7 @@ void ut::TestMaths::m_initialize_test_cases_dictionary() {
     m_test_cases_dictionary[TEST_E_CONTINUED_FRACTION] = &TestMaths::m_test_e_continued_fraction;
     m_test_cases_dictionary[TEST_INT_SQRT] = &TestMaths::m_test_int_sqrt;
     m_test_cases_dictionary[TEST_SQUARE_ROOT] = &TestMaths::m_test_square_root;
+    m_test_cases_dictionary[TEST_ORDERED_FRACTIONS] = &TestMaths::m_test_ordered_fractions;    
 }
 
 void ut::TestMaths::m_test_continued_fraction() {
@@ -86,4 +88,16 @@ void ut::TestMaths::m_test_square_root() {
     std::size_t limit = 100000;
     printf("Square root of [%d] -->\n[%s]\n", n, maths.square_root(n, limit).c_str());
     printf("Execution time == [%.8f] seconds\n", (clock() - start) / static_cast<double>(CLOCKS_PER_SEC));
+}
+
+void ut::TestMaths::m_test_ordered_fractions() {
+    std::clock_t start = clock();
+    um::Maths<int> maths;
+    const int n = 100;
+    std::vector< um::Fraction<int> > fractions = maths.ordered_fractions(n);
+
+    for (std::size_t i = 0; i < fractions.size(); ++i)
+        fractions[i].print();
+
+    printf("Execution time == [%.8f] seconds\n", (clock() - start) / static_cast<double>(CLOCKS_PER_SEC));    
 }

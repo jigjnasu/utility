@@ -14,7 +14,7 @@ namespace utility {
     namespace algorithms {
         namespace sort {
             template <typename T>
-                class MergeSort {
+            class MergeSort {
             public:
                 MergeSort();
                 ~MergeSort();

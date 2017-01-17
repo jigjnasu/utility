@@ -1,5 +1,5 @@
-#ifndef UTILITY_ALGORITHMS_SEARCH_SORTED_SEARCH_H_
-#define UTILITY_ALGORITHMS_SEARCH_SORTED_SEARCH_H_
+#ifndef UTILITY_ALGORITHMS_SEARCH_BINARY_SEARCH_H_
+#define UTILITY_ALGORITHMS_SEARCH_BINARY_SEARCH_H_
 
 #include <vector>
 
@@ -24,10 +24,10 @@ namespace utility {
 namespace ua = utility::algorithms::search;
 
 template <typename T>
-ua::BinarySearch<T>::SortedSearch() {}
+ua::BinarySearch<T>::BinarySearch() {}
 
 template <typename T>
-ua::BinarySearch<T>::~SortedSearch() {}
+ua::BinarySearch<T>::~BinarySearch() {}
 
 template <typename T>
 bool ua::BinarySearch<T>::search(const std::vector<T>& data, const T& key) const {
@@ -47,4 +47,4 @@ bool ua::BinarySearch<T>::search(const std::vector<T>& data, const T& key) const
     }
 }
 
-#endif // UTILITY_ALGORITHMS_SEARCH_SORTED_SEARCH_H_
+#endif // UTILITY_ALGORITHMS_SEARCH_BINARY_SEARCH_H_

@@ -32,7 +32,8 @@ void ut::TestMaths::m_initialize_test_cases_dictionary() {
     m_test_cases_dictionary[TEST_E_CONTINUED_FRACTION] = &TestMaths::m_test_e_continued_fraction;
     m_test_cases_dictionary[TEST_INT_SQRT] = &TestMaths::m_test_int_sqrt;
     m_test_cases_dictionary[TEST_SQUARE_ROOT] = &TestMaths::m_test_square_root;
-    m_test_cases_dictionary[TEST_ORDERED_FRACTIONS] = &TestMaths::m_test_ordered_fractions;    
+    m_test_cases_dictionary[TEST_ORDERED_FRACTIONS] = &TestMaths::m_test_ordered_fractions;
+    m_test_cases_dictionary[TEST_UNIQUE_RANDOM] = &TestMaths::m_test_unique_random;
 }
 
 void ut::TestMaths::m_test_continued_fraction() {
@@ -100,4 +101,20 @@ void ut::TestMaths::m_test_ordered_fractions() {
         fractions[i].print();
 
     printf("Execution time == [%.8f] seconds\n", (clock() - start) / static_cast<double>(CLOCKS_PER_SEC));    
+}
+
+void ut::TestMaths::m_test_unique_random() {
+    utility::maths::Maths<int> maths;
+    // Five different test cases
+    for (int i = 0; i < 5; ++i) {
+        const int max = maths.random(1, 100);
+        printf("Unique random numbers between [1] and [%d] are\n", max);
+        m_print_vector(maths.unique_random(max));
+    }
+}
+
+void ut::TestMaths::m_print_vector(const std::vector<int>& list) {
+    for (std::size_t i = 0; i < list.size(); ++i)
+        printf("%d ", list[i]);
+    printf("\n");
 }

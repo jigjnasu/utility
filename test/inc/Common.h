@@ -47,7 +47,8 @@ namespace utility {
             TEST_INT_SQRT                 = 0x0004,
             TEST_SQUARE_ROOT              = 0x0005,
             TEST_ORDERED_FRACTIONS        = 0x0006,
-            TEST_MATHS_FINISH             = 0x0007,
+            TEST_UNIQUE_RANDOM            = 0x0007,
+            TEST_MATHS_FINISH             = 0x0008,
         };
 
         // All the test cases in Permutation

@@ -9,6 +9,7 @@
 
 #include "TestCase.h"
 #include <map>
+#include <vector>
 
 namespace utility {
     namespace test {
@@ -33,6 +34,9 @@ namespace utility {
             void m_test_int_sqrt();
             void m_test_square_root();
             void m_test_ordered_fractions();
+            void m_test_unique_random();
+
+            void m_print_vector(const std::vector<int>& list);
         };
     };
 };

@@ -24,7 +24,8 @@ void test_maths() {
     //suite.run(module, ut::TEST_E_CONTINUED_FRACTION);
     //suite.run(module, ut::TEST_INT_SQRT);
     //suite.run(module, ut::TEST_SQUARE_ROOT);
-    suite.run(module, ut::TEST_ORDERED_FRACTIONS);    
+    //suite.run(module, ut::TEST_ORDERED_FRACTIONS);
+    suite.run(module, ut::TEST_UNIQUE_RANDOM);
 }
 
 void test_permutation() {

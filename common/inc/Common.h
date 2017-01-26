@@ -22,7 +22,7 @@ namespace utility {
             // Till then I can have a std::string argumented one.
             bool is_palindrome(const std::string& number) const;
             bool is_pandigital(std::string number, bool is_start_with_zero) const;
-            
+
         private:
             bool m_is_pandigital_0_to_9(std::string number) const;
             bool m_is_pandigital_1_to_9(std::string number) const;

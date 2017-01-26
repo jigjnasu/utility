@@ -48,8 +48,14 @@ namespace utility {
             // Find the minmum of between two numbers
             T min(const T& a, const T& b) const;
 
+            // Swap two objects
+            void swap(T& A, T& B) const;
+
             // Calculate a random number between min and max, both included
             T random(const T& min, const T& max) const;
+
+            // This function will generate a unique array of numbers between 1 and max
+            std::vector<T> unique_random(int max) const;
 
             // Get all the phi of a number
             // Algortim is based on Sieve of Eratosthenes
@@ -181,8 +187,30 @@ T um::Maths<T>::min(const T& a, const T& b) const {
 }
 
 template <typename T>
+void um::Maths<T>::swap(T& A, T& B) const {
+    T t = A;
+    A = B;
+    B = t;
+}
+
+template <typename T>
 T um::Maths<T>::random(const T& min, const T& max) const {
     return min + rand() % (max - min + 1);
+}
+
+template <typename T>
+std::vector<T> um::Maths<T>::unique_random(int max) const {
+    std::vector<T> numbers;
+    for (int i = 1; i <= max; ++i)
+        numbers.push_back(i);
+
+    for (int i = numbers.size() - 1; i > 0; --i) {
+        const int k = random(1, i);
+        if (k != i)
+            swap(numbers[i], numbers[k]);
+    }
+    
+    return numbers;
 }
 
 template <typename T>

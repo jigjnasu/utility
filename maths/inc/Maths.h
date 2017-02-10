@@ -57,6 +57,9 @@ namespace utility {
             // This function will generate a unique array of numbers between 1 and max
             std::vector<T> unique_random(int max) const;
 
+            // Get a std::vector of n elements random between min and max
+            std::vector<T> random_vector(int n, int min, int max) const;
+
             // Get all the phi of a number
             // Algortim is based on Sieve of Eratosthenes
             std::vector<T> phi(std::size_t n) const;
@@ -211,6 +214,14 @@ std::vector<T> um::Maths<T>::unique_random(int max) const {
     }
     
     return numbers;
+}
+
+template <typename T>
+std::vector<T> um::random_vector(int n, int min, int max) const {
+    std::vector<T> list;
+    for (int i = 0; i < n; ++i)
+        list.push_back(min, max);
+    return list;
 }
 
 template <typename T>

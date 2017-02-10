@@ -220,7 +220,7 @@ template <typename T>
 std::vector<T> um::Maths<T>::random_vector(int n, int min, int max) const {
     std::vector<T> list;
     for (int i = 0; i < n; ++i)
-        list.push_back(min, max);
+        list.push_back(random(min, max));
     return list;
 }
 

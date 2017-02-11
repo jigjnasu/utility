@@ -8,6 +8,8 @@
 #define UTILITY_TEST_INC_TEST_ALGORITHMS_H_
 
 #include "TestCase.h"
+#include <map>
+#include <vector>
 
 namespace utility {
     namespace test {
@@ -18,6 +20,20 @@ namespace utility {
 
             void execute(int test_case);
             void execute_all();
+
+            typedef void (TestAlgorithms::*ptrFunc)();
+        private:
+            std::map<int, ptrFunc> m_test_cases_dictionary;
+
+            void m_initialize_test_cases_dictionary();
+
+            void m_test_sort_bubble();
+            void m_test_sort_insertion();
+            void m_test_sort_selection();
+            void m_test_sort_merge();
+            void m_test_sort_quick();
+
+            void m_print(const std::vector<int>& data);
         };
     };
 };

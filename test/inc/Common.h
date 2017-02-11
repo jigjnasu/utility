@@ -21,8 +21,13 @@ namespace utility {
 
         // All the test cases in Algorithms
         enum ALGORITHMS_TESTS {
-            TEST_ALGORITMS_START       = 0x0000,
-            TEST_ALGORITMS_FINISH      = 0x0001,
+            TEST_ALGORITMS_START          = 0x0000,
+            TEST_ALGORITMS_SORT_BUBBLE    = 0x0001,
+            TEST_ALGORITMS_SORT_INSERTION = 0x0002,
+            TEST_ALGORITMS_SORT_SELECTION = 0x0003,
+            TEST_ALGORITMS_SORT_MERGE     = 0x0004,
+            TEST_ALGORITMS_SORT_QUICK     = 0x0005,            
+            TEST_ALGORITMS_FINISH         = 0x0006,
         };
 
         // All the test cases in Common

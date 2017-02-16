@@ -15,7 +15,7 @@ namespace utility {
                 BinarySearch();
                 ~BinarySearch();
 
-                bool search(const std::vector<T>& data, const T& key) const;
+                int search(const std::vector<T>& data, const T& key) const;
             };
         };
     };
@@ -30,21 +30,29 @@ template <typename T>
 ua::BinarySearch<T>::~BinarySearch() {}
 
 template <typename T>
-bool ua::BinarySearch<T>::search(const std::vector<T>& data, const T& key) const {
-    std::size_t start = 0;
-    std::size_t end = data.size() - 1;
-    
-    while (1) {
-        const std::size_t mid = (start + end) >> 1;
-        if (data[mid] == key)
-            return true;
-        if (start >= end)
-            return false;
-        if (key > data[mid])
+int ua::BinarySearch<T>::search(const std::vector<T>& data, const T& key) const {
+    int start = 0;
+    int end = data.size() - 1;
+
+    while (start < end) {
+        if (key == data[start])
+            return start + 1;
+        if (key == data[end])
+            return end + 1;
+        const int mid = (start + end) >> 1;
+
+        if (key == data[mid]) {
+            return mid + 1;
+        } else if (key < data[mid]) {
+            ++start;
+            end = mid - 1;
+        } else {
             start = mid + 1;
-        else
-            end = mid;
+            --end;
+        }
     }
+    
+    return 0;
 }
 
 #endif // UTILITY_ALGORITHMS_SEARCH_BINARY_SEARCH_H_

@@ -34,7 +34,7 @@ int ua::BinarySearch<T>::search(const std::vector<T>& data, const T& key) const 
     int start = 0;
     int end = data.size() - 1;
 
-    while (start < end) {
+    while (start <= end) {
         if (key == data[start])
             return start + 1;
         if (key == data[end])

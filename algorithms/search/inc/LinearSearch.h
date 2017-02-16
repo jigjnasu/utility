@@ -1,6 +1,8 @@
 #ifndef UTILITY_ALGORITHMS_SEARCH_LINEAR_SEARCH_H_
 #define UTILITY_ALGORITHMS_SEARCH_LINEAR_SEARCH_H_
 
+#include <vector>
+
 namespace utility {
     namespace algorithms {
         namespace search {
@@ -10,7 +12,7 @@ namespace utility {
                 LinearSearch();
                 ~LinearSearch();
 
-                bool search(const std::vector<T>& data, const T& key) const;
+                int search(const std::vector<T>& data, const T& key) const;
             };
         };
     };
@@ -25,12 +27,12 @@ template <typename T>
 ua::LinearSearch<T>::~LinearSearch() {}
 
 template <typename T>
-bool ua::LinearSearch<T>::search(const std::vector<T>& data, const T& key) const {
+int ua::LinearSearch<T>::search(const std::vector<T>& data, const T& key) const {
     for (std::size_t i = 0; i < data.size(); ++i)
         if (key == data[i])
-            return true;
+            return i + 1;
 
-    return false;
+    return 0;
 }
 
 #endif // UTILITY_ALGORITHMS_SEARCH_LINEAR_SEARCH_H_

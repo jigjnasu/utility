@@ -21,36 +21,39 @@ namespace utility {
 namespace ua = utility::algorithms::search;
 
 template <typename T>
-ua::NSearch::NSearch() {}
+ua::NSearch<T>::NSearch() {}
 
 template <typename T>
-ua::NSearch::~NSearch() {}
+ua::NSearch<T>::~NSearch() {}
 
 template <typename T>
-int ua::NSearch::search(const std::vector<T>& data, const T& key, int n) const {
+int ua::NSearch<T>::search(const std::vector<T>& data, const T& key, int n) const {
     int start = 0;
     int end = data.size() - 1;
 
-    while (start < end) {
+    while (start <= end) {
+        bool should_check = true;
         const int split = (end - start) / n;
-        for (int i = 0; i < n - 1; ++i)
-            if (key == data[start + i * split])
-                return start + i * split + 1;
+
+        for (int i = 0; i < n; ++i)
+            if (key == data[start + (i * split)])
+                return start + (i * split) + 1;
 
         if (key == data[end])
             return end + 1;
 
-        for (int i = 1; i < n - 1; ++i) {
-            if (key < data[start + i * split]) {
-                start += (i - 1) * split + 1;
-                end = i * split - 1;
+        if (key > data[start + (n - 1) * split]) {
+            start = start +  (n - 1) * split + 1;
+            --end;
+            continue;
+        }
+            
+        for (int i = 1; i < n; ++i) {
+            if (key < data[start + (i * split)]) {
+                end = start + (i * split) - 1;
+                start = start + ((i - 1) * split) + 1;                
                 break;
             }
-        }
-
-        if (key < data[end]) {
-            start += (n - 1) * split + 1;
-            --end;
         }
     }
     

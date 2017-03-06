@@ -32,7 +32,6 @@ int ua::NSearch<T>::search(const std::vector<T>& data, const T& key, int n) cons
     int end = data.size() - 1;
 
     while (start <= end) {
-        bool should_check = true;
         const int split = (end - start) / n;
 
         for (int i = 0; i < n; ++i)
@@ -46,13 +45,12 @@ int ua::NSearch<T>::search(const std::vector<T>& data, const T& key, int n) cons
             start = start +  (n - 1) * split + 1;
             --end;
             continue;
-        }
-            
-        for (int i = 1; i < n; ++i) {
-            if (key < data[start + (i * split)]) {
-                end = start + (i * split) - 1;
-                start = start + ((i - 1) * split) + 1;                
-                break;
+        } else {
+            for (int i = 1; i < n; ++i) {
+                if (key < data[start + (i * split)]) {
+                    end = start + (i * split) - 1;
+                    start = start + ((i - 1) * split) + 1;                
+                }
             }
         }
     }

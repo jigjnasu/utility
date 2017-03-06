@@ -35,6 +35,7 @@ namespace utility {
             void m_test_square_root();
             void m_test_ordered_fractions();
             void m_test_unique_random();
+            void m_test_to_binary();
 
             void m_print_vector(const std::vector<int>& list);
         };

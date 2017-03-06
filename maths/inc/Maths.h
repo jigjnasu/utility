@@ -88,9 +88,6 @@ namespace utility {
             // 0 / 1 and 1 / 1, where d <= n
             std::vector< utility::maths::Fraction<T> > ordered_fractions(int n) const;
 
-            // Functions related with integer representations.
-            std::string to_binary(T n) const;
-
         private:
             T m_gcd(const T& n, const T& d) const;
             std::vector<int> m_continued_fractions(T n, T d) const;

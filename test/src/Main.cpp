@@ -26,7 +26,6 @@ void test_integer() {
 void test_maths() {
     const ut::UTILITY_MODULES module = ut::UTILITY_MODULE_MATHS;
     ut::TestSuite suite;
-#if 0
     suite.run(module, ut::TEST_CONTINUED_FRACTION);
     suite.run(module, ut::TEST_SQRT_CONTINUED_FRACTION);
     suite.run(module, ut::TEST_E_CONTINUED_FRACTION);
@@ -34,8 +33,6 @@ void test_maths() {
     suite.run(module, ut::TEST_SQUARE_ROOT);
     suite.run(module, ut::TEST_ORDERED_FRACTIONS);
     suite.run(module, ut::TEST_UNIQUE_RANDOM);
-#endif
-    suite.run(module, ut::TEST_TO_BINARY);    
 }
 
 void test_permutation() {

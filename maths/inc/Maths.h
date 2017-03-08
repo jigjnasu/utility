@@ -379,17 +379,6 @@ std::vector< um::Fraction<T> > um::Maths<T>::ordered_fractions(int n) const {
 }
 
 template <typename T>
-std::string um::Maths<T>::to_binary(T n) const {
-    std::string number;
-    while (n) {
-        number.push_back((n % 2) + '0');
-        n /= 2;
-    }
-    
-    return number;
-}
-
-template <typename T>
 T um::Maths<T>::m_gcd(const T& n, const T& d) const {
     if (n % d == 0)
         return d;

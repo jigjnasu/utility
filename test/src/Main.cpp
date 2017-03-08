@@ -45,7 +45,7 @@ int main() {
     //test_algorithms();
     //test_common();
     //test_integer();
-    test_maths();
+    //test_maths();
     //test_permutation();
     //test_string();
     

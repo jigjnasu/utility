@@ -6,7 +6,9 @@
 namespace ut = utility::test;
 namespace un = utility::maths::number;
 
-ut::TestNumber::TestNumber() {}
+ut::TestNumber::TestNumber() {
+    m_initialize_test_cases_dictionary();
+}
 
 ut::TestNumber::~TestNumber() {}
 

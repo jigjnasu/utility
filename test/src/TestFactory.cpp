@@ -6,6 +6,7 @@
 #include "TestMaths.h"
 #include "TestPermutation.h"
 #include "TestString.h"
+#include "TestNumber.h"
 #include <cstdio>
 
 namespace ut = utility::test;
@@ -28,6 +29,8 @@ ut::TestCase* ut::TestFactory::get(int module) const {
         return new ut::TestPermutation;
     case ut::UTILITY_MODULE_STRING:
         return new ut::TestString;
+    case ut::UTILITY_MODULE_NUMBER:
+        return new ut::TestNumber;
     default:
         printf("Not a valid Test Utility Module\n");
     }

@@ -47,6 +47,9 @@ void test_number() {
     ut::TestSuite suite;
 
     suite.run(module, ut::TEST_NUMBER_BINARY);
+    suite.run(module, ut::TEST_NUMBER_OCTAL);
+    suite.run(module, ut::TEST_NUMBER_DECIMAL);
+    suite.run(module, ut::TEST_NUMBER_HEXA_DECIMAL);    
 }
 
 int main() {

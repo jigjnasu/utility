@@ -39,7 +39,8 @@ std::string un::Octal::from(const std::string& n) const {
         
         number += binary;
     }
-        
+
+    return number;
 }
 
 void un::Octal::m_swap(char& a, char& b) const {

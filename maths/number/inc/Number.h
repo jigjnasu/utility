@@ -19,7 +19,7 @@ namespace utility {
                 Binary      = 2,
                 Octal       = 8,
                 Decimal     = 10,
-                Hexadecimal = 16,
+                HexaDecimal = 16,
             };
             
             class Number {

@@ -4,6 +4,8 @@
   Date: March 8th, 2017
  */
 
+#include <string>
+
 #ifndef UTILITY_MATHS_NUMBER_INC_HEXA_DECIMAL_H_
 #define UTILITY_MATHS_NUMBER_INC_HEXA_DECIMAL_H_
 

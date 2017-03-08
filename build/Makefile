@@ -16,6 +16,11 @@ TEST_SUITE_SRC  := $(wildcard ../test/src/*.cpp)
 TEST_SUITE_INC  := -I../test/inc
 OBJ_FILES       += $(addprefix objs/,$(notdir $(TEST_SUITE_SRC:.cpp=.o)))
 
+NUMBER_PATH := ../maths/number/src
+NUMBER_SRC  := $(wildcard ../maths/number/src/*.cpp)
+NUMBER_INC  := -I../maths/number/inc
+OBJ_FILES   += $(addprefix objs/,$(notdir $(NUMBER_SRC:.cpp=.o)))
+
 OBJ_PATH       := objs
 
 EXE := test
@@ -46,6 +51,10 @@ $(OBJ_PATH)/%.o : $(INTEGER_PATH)/%.cpp
 	@$(GCC) $(CC_FLAGS) $(INCLUDE) $< -o $@
 
 $(OBJ_PATH)/%.o : $(TEST_SUITE_PATH)/%.cpp
+	@echo "Compiling --> $<"
+	@$(GCC) $(CC_FLAGS) $(INCLUDE) $< -o $@
+
+$(OBJ_PATH)/%.o : $(NUMBER_PATH)/%.cpp
 	@echo "Compiling --> $<"
 	@$(GCC) $(CC_FLAGS) $(INCLUDE) $< -o $@
 

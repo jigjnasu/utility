@@ -18,7 +18,7 @@ namespace utility {
                 ~Decimal();
 
                 int to(const std::string& n) const;
-                std::string from(int n) const
+                std::string from(int n) const;
             };
         };
     };

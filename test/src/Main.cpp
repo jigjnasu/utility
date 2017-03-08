@@ -26,6 +26,7 @@ void test_integer() {
 void test_maths() {
     const ut::UTILITY_MODULES module = ut::UTILITY_MODULE_MATHS;
     ut::TestSuite suite;
+    
     suite.run(module, ut::TEST_CONTINUED_FRACTION);
     suite.run(module, ut::TEST_SQRT_CONTINUED_FRACTION);
     suite.run(module, ut::TEST_E_CONTINUED_FRACTION);
@@ -42,7 +43,10 @@ void test_string() {
 }
 
 void test_number() {
-    
+    const ut::UTILITY_MODULES module = ut::UTILITY_MODULE_NUMBER;
+    ut::TestSuite suite;
+
+    suite.run(module, ut::TEST_NUMBER_BINARY);
 }
 
 int main() {

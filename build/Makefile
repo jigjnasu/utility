@@ -16,9 +16,6 @@ TEST_SUITE_SRC  := $(wildcard ../test/src/*.cpp)
 TEST_SUITE_INC  := -I../test/inc
 OBJ_FILES       += $(addprefix objs/,$(notdir $(TEST_SUITE_SRC:.cpp=.o)))
 
-COMMON_INC  := -I../common/inc/
-STRING_INC  := -I../../string/inc/
-
 OBJ_PATH       := objs
 
 EXE := test
@@ -34,6 +31,7 @@ INCLUDE += -I../string/inc
 INCLUDE += -I../maths/inc
 INCLUDE += -I../algorithms/sort/inc/
 INCLUDE += -I../algorithms/search/inc/
+INCLUDE += -I../maths/number/inc
 
 LIB := ../lib/libutility.a
 

@@ -1,4 +1,6 @@
 #include "TestNumber.h"
+#include "Common.h"
+#include "Number.h"
 #include <cstdio>
 
 namespace ut = utility::test;
@@ -14,7 +16,7 @@ void ut::TestNumber::execute(int test_case) {
 }
 
 void ut::TestNumber::execute_all() {
-    for (int i = TEST_NUMBER_START + 1; i < TEST_NUMBER_FINISH; ++i)
+    for (int i = ut::TEST_NUMBER_START + 1; i < TEST_NUMBER_FINISH; ++i)
         if (m_test_cases_dictionary[i])
             (*this.*m_test_cases_dictionary[i])();
 }

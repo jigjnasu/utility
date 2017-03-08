@@ -27,7 +27,7 @@ namespace utility {
                 Number();
                 ~Number();
 
-                std::string convert(Base to, base from, const std::string& n) const;
+                std::string convert(Base to, Base from, const std::string& n) const;
 
             private:
                 std::string m_octal(Base to, Base from, const std::string& n) const;

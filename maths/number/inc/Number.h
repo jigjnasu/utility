@@ -16,10 +16,10 @@ namespace utility {
     namespace maths {
         namespace number {
             enum Base {
-                Binary      = 2,
-                Octal       = 8,
-                Decimal     = 10,
-                HexaDecimal = 16,
+                base_binary       = 2,
+                base_octal        = 8,
+                base_decimal      = 10,
+                base_hexa_decimal = 16,
             };
             
             class Number {

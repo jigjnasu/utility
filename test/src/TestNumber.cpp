@@ -31,18 +31,18 @@ void ut::TestNumber::m_initialize_test_cases_dictionary() {
 }
 
 void ut::TestNumber::m_test_binary() {
-    printf("Testing Binary\n");
 }
 
 void ut::TestNumber::m_test_octal() {
-    printf("Testing Octal\n");
+    un::Number number;
+    const std::string n = "23726";
+    printf("Octal == [%s] || Binary == [%s]\n",
+           n.c_str(), number.convert(un::base_binary, un::base_octal, n).c_str());
 }
 
 void ut::TestNumber::m_test_decimal() {
-    printf("Testing Decimal\n");
 }
 
 void ut::TestNumber::m_test_hexa_decimal() {
-    printf("Testing Hexa Decimal\n");
 }
 

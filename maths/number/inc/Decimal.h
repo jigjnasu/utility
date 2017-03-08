@@ -19,6 +19,10 @@ namespace utility {
 
                 int to(const std::string& n) const;
                 std::string from(int n) const;
+
+            private:
+                void m_reverse(std::string& n) const;
+                void m_swap(char& a, char& b) const;
             };
         };
     };

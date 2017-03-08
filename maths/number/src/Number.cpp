@@ -12,11 +12,11 @@ un::Number::~Number() {}
 
 std::string un::Number::convert(un::Base to, un::Base from,
                                 const std::string& n) const {
-    if (un::Octal == to || un::Octal == from)
+    if (un::base_octal == to || un::base_octal == from)
         return m_octal(to, from, n);
-    if (un::Decimal == to || un::Decimal == from)
+    if (un::base_decimal == to || un::base_decimal == from)
         return m_decimal(to, from, n);
-    if (un::HexaDecimal == to || un::HexaDecimal == from)
+    if (un::base_hexa_decimal == to || un::base_hexa_decimal == from)
         return m_hexa_decimal(to, from, n);
 
     return std::string("");
@@ -25,7 +25,9 @@ std::string un::Number::convert(un::Base to, un::Base from,
 std::string un::Number::m_octal(un::Base to, un::Base from,
                                 const std::string& n) const {
     std::string number;
-    printf("Inside m_octal for octal conversions\n");
+    un::Octal octal;
+    if (un::base_binary == to)
+        number = octal.from(n);
     return number;
 }
 

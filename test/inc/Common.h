@@ -17,6 +17,7 @@ namespace utility {
             UTILITY_MODULE_MATHS       = 0x0003,
             UTILITY_MODULE_PERMUTATION = 0x0004,
             UTILITY_MODULE_STRING      = 0x0005,
+            UTILITY_MODULE_NUMBER      = 0x0006,
         };
 
         // All the test cases in Algorithms
@@ -66,7 +67,16 @@ namespace utility {
         enum STRING_TESTS {
             TEST_STRING_START            = 0x0000,
             TEST_STRING_FINISH           = 0x0001,
-        };        
+        };
+
+        enum NUMBER_TESTS {
+            TEST_NUMBER_START            = 0x0000,
+            TEST_NUMBER_BINARY           = 0x0001,
+            TEST_NUMBER_OCTAL            = 0x0002,
+            TEST_NUMBER_DECIMAL          = 0x0003,
+            TEST_NUMBER_HEXA_DECIMAL     = 0x0004,
+            TEST_NUMBER_FINISH           = 0x0005,
+        };
     };
 };
 

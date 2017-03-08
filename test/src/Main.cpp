@@ -41,6 +41,10 @@ void test_permutation() {
 void test_string() {
 }
 
+void test_number() {
+    
+}
+
 int main() {
     //test_algorithms();
     //test_common();
@@ -48,6 +52,7 @@ int main() {
     //test_maths();
     //test_permutation();
     //test_string();
+    test_number();
     
     return 0;
 }

@@ -36,7 +36,7 @@ std::string un::Octal::from(const std::string& n) const {
             binary.push_back('0');
 
         m_swap(binary[0], binary[2]);
-        
+
         number += binary;
     }
 

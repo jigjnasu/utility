@@ -28,6 +28,8 @@ std::string un::Number::m_octal(un::Base to, un::Base from,
     un::Octal octal;
     if (un::base_binary == to)
         number = octal.from(n);
+    if (un::base_binary == from)
+        number = octal.to(n);
     return number;
 }
 

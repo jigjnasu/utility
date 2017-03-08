@@ -10,7 +10,7 @@
 
 #include "TestCase.h"
 #include <map>
-#include <vector>
+#include <string>
 
 namespace utility {
     namespace test {
@@ -33,6 +33,8 @@ namespace utility {
             void m_test_octal();
             void m_test_decimal();
             void m_test_hexa_decimal();
+
+            void m_print_octal_binary(const std::string& n);
         };
     };
 };

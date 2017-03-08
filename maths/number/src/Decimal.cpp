@@ -8,8 +8,10 @@ un::Decimal::~Decimal() {}
 
 int un::Decimal::to(const std::string& n) const {
     int number = 0;
-    for (std::size_t i = 0; i < n.size(); ++i)
-        number += (1 << i);
+    const int size = n.size() - 1;
+    for (int i = size; i >= 0; --i)
+        if (n[i] == '1')
+            number += (1 << (size - i));
     
     return number;
 }
@@ -21,8 +23,6 @@ std::string un::Decimal::from(int n) const {
         number.push_back((n % 2) + '0');
         n /= 2;
     }
-
-    m_reverse(number);
 
     return number;
 }

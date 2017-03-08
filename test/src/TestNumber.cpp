@@ -35,9 +35,17 @@ void ut::TestNumber::m_test_binary() {
 
 void ut::TestNumber::m_test_octal() {
     un::Number number;
-    const std::string n = "23726";
-    printf("Octal == [%s] || Binary == [%s]\n",
-           n.c_str(), number.convert(un::base_binary, un::base_octal, n).c_str());
+    const std::string n = "01234567";
+    const std::string b = number.convert(un::base_binary, un::base_octal, n);
+    printf("Octal == [%s] || Binary == [", n.c_str());
+    m_print_octal_binary(b);
+    printf("]\n");
+
+    const std::string n1 = "0001010110100101110111";
+    const std::string o = number.convert(un::base_octal, un::base_binary, n1);
+    printf("Binary == [");
+    m_print_octal_binary(n1);
+    printf("] || Octal == [%s]\n", o.c_str());    
 }
 
 void ut::TestNumber::m_test_decimal() {
@@ -46,3 +54,23 @@ void ut::TestNumber::m_test_decimal() {
 void ut::TestNumber::m_test_hexa_decimal() {
 }
 
+void ut::TestNumber::m_print_octal_binary(const std::string& n) {
+    std::size_t i = 0;
+
+    while (i < (n.size() % 3)) {
+        printf("%c", n[i]);
+        ++i;
+    }
+
+    if (i)
+        printf(" ");
+    
+    while (i < n.size()) {
+        if (((i) % 3) == 0)
+            printf("%c ", n[i]);
+        else
+            printf("%c", n[i]);
+
+        ++i;
+    }
+}

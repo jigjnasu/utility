@@ -34,24 +34,44 @@ void ut::TestNumber::m_test_binary() {
 }
 
 void ut::TestNumber::m_test_octal() {
+    printf("------------------------------------------------------------------------\n");
     un::Number number;
     const std::string n = "01234567";
     const std::string b = number.convert(un::base_binary, un::base_octal, n);
     printf("Octal == [%s] || Binary == [", n.c_str());
     m_print_octal_binary(b);
     printf("]\n");
+    printf("------------------------------------------------------------------------\n");
 
+    printf("------------------------------------------------------------------------\n");
     const std::string n1 = "0001010110100101110111";
     const std::string o = number.convert(un::base_octal, un::base_binary, n1);
     printf("Binary == [");
     m_print_octal_binary(n1);
-    printf("] || Octal == [%s]\n", o.c_str());    
+    printf("] || Octal == [%s]\n", o.c_str());
+    printf("------------------------------------------------------------------------\n");
 }
 
 void ut::TestNumber::m_test_decimal() {
 }
 
 void ut::TestNumber::m_test_hexa_decimal() {
+    printf("------------------------------------------------------------------------\n");
+    un::Number number;
+    const std::string n = "0123456789ABCDEF";
+    const std::string b = number.convert(un::base_binary, un::base_hexa_decimal, n);
+    printf("Hexadecimal == [%s] || Binary == [", n.c_str());
+    m_print_hexadecimal_binary(b);
+    printf("]\n");
+    printf("------------------------------------------------------------------------\n");    
+
+    printf("------------------------------------------------------------------------\n");
+    const std::string n1 = "000010010001101000101011001111000100111010111100110111101111";
+    const std::string h = number.convert(un::base_hexa_decimal, un::base_binary, n1);
+    printf("Binary == [");
+    m_print_hexadecimal_binary(n1);
+    printf("] || Hexadecimal == [%s]\n", h.c_str());
+    printf("------------------------------------------------------------------------\n");
 }
 
 void ut::TestNumber::m_print_octal_binary(const std::string& n) const {

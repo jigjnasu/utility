@@ -3,6 +3,8 @@
 
 namespace un = utility::maths::number;
 
+const int bit_block = 3;
+
 un::Octal::Octal() {}
 
 un::Octal::~Octal() {}
@@ -10,14 +12,14 @@ un::Octal::~Octal() {}
 std::string un::Octal::to(const std::string& n) const {
     un::Decimal decimal;
     std::string number;
-    std::size_t i = n.size() % 3;
+    std::size_t i = n.size() % bit_block;
 
     if (i)
         number.push_back(decimal.to(n.substr(0, i)) + '0');
 
     while (i < n.size()) {
-        number.push_back(decimal.to(n.substr(i, 3)) + '0');
-        i += 3;
+        number.push_back(decimal.to(n.substr(i, bit_block)) + '0');
+        i += bit_block;
     }
 
     return number;
@@ -32,7 +34,7 @@ std::string un::Octal::from(const std::string& n) const {
         // As the octal number exapnsion is 3 bits block.
         // Make leading zeros as well.
         const std::size_t size = binary.size();
-        for (std::size_t i = 0; i < 3 - size; ++i)            
+        for (std::size_t i = 0; i < bit_block - size; ++i)            
             binary.push_back('0');
 
         m_swap(binary[0], binary[2]);

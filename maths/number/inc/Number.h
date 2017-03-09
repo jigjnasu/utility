@@ -32,7 +32,7 @@ namespace utility {
             private:
                 std::string m_octal(Base to, Base from, const std::string& n) const;
                 std::string m_decimal(Base to, Base from, const std::string& n) const;
-                std::string m_hexa_decimal(Base to, Base from, const std::string& n) const;    
+                std::string m_hexa_decimal(Base to, Base from, const std::string& n) const;
             };
         };
     };

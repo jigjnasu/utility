@@ -34,7 +34,8 @@ namespace utility {
             void m_test_decimal();
             void m_test_hexa_decimal();
 
-            void m_print_octal_binary(const std::string& n);
+            void m_print_octal_binary(const std::string& n) const;
+            void m_print_hexadecimal_binary(const std::string& n) const;
         };
     };
 };

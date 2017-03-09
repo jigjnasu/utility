@@ -54,23 +54,42 @@ void ut::TestNumber::m_test_decimal() {
 void ut::TestNumber::m_test_hexa_decimal() {
 }
 
-void ut::TestNumber::m_print_octal_binary(const std::string& n) {
-    std::size_t i = 0;
+void ut::TestNumber::m_print_octal_binary(const std::string& n) const {
+    const int bit_block = 3;
+    const size_t offset = n.size() % bit_block;
 
-    while (i < (n.size() % 3)) {
-        printf("%c", n[i]);
-        ++i;
+    std::size_t i = 0;
+    if (offset) {
+        while (i < offset)
+            printf("%c", n[i++]);
+        printf(" ");
     }
 
-    if (i)
-        printf(" ");
-    
     while (i < n.size()) {
-        if (((i) % 3) == 0)
+        if (((i - offset) + 1) % bit_block == 0)
             printf("%c ", n[i]);
         else
             printf("%c", n[i]);
-
         ++i;
+    }   
+}
+
+void ut::TestNumber::m_print_hexadecimal_binary(const std::string& n) const {
+    const int bit_block = 4;
+    const size_t offset = n.size() % bit_block;
+
+    std::size_t i = 0;
+    if (offset) {
+        while (i < offset)
+            printf("%c", n[i++]);
+        printf(" ");
     }
+
+    while (i < n.size()) {
+        if (((i - offset) + 1) % bit_block == 0)
+            printf("%c ", n[i]);
+        else
+            printf("%c", n[i]);
+        ++i;
+    }    
 }

@@ -41,6 +41,13 @@ std::string un::Number::m_decimal(un::Base to, un::Base from,
 
 std::string un::Number::m_hexa_decimal(un::Base to, un::Base from,
                                        const std::string& n) const {
+    un::HexaDecimal hexa;
     std::string number;
+
+    if (un::base_binary == to)
+        number = hexa.from(n);
+    if (un::base_binary == from)
+        number = hexa.to(n);
+    
     return number;
 }

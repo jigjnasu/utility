@@ -15,13 +15,14 @@ std::string un::HexaDecimal::to(const std::string& n) const {
     std::string number;
     un::Decimal decimal;
 
-    const std::size_t i = n.size() % bit_block;
+    std::size_t i = n.size() % bit_block;
 
     if (i)
-        number.push_back(decimal.to(n.substr(0, i)) + '0');
+        number.push_back(hexadecimal_digits[decimal.to(n.substr(0, i))]);
 
     while (i < n.size()) {
-        number.push_back(decimal.to(n.substr(i, bit_block)) + '0');
+        number.push_back(hexadecimal_digits[decimal.to(n.substr(i, bit_block))]);
+        i += bit_block;
     }
 
     return number;
@@ -30,7 +31,6 @@ std::string un::HexaDecimal::to(const std::string& n) const {
 std::string un::HexaDecimal::from(const std::string& n) const {
     std::string number;
     un::Decimal decimal;
-
 
     for (std::size_t i = 0; i < n.size(); ++i) {
         // Take the decimal value of the hexadecimal digit

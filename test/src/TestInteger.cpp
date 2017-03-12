@@ -1,6 +1,6 @@
 #include "TestInteger.h"
 #include "Maths.h"
-#include "Common.h"
+#include "TestSuiteCommon.h"
 #include "Integer.h"
 #include <cstdio>
 

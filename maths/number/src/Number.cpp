@@ -2,9 +2,11 @@
 #include "Octal.h"
 #include "Decimal.h"
 #include "HexaDecimal.h"
+#include "Common.h"
 #include <cstdio>
 
 namespace un = utility::maths::number;
+namespace uc = utility::common;
 
 un::Number::Number() {}
 
@@ -36,6 +38,14 @@ std::string un::Number::m_octal(un::Base to, un::Base from,
 std::string un::Number::m_decimal(un::Base to, un::Base from,
                                   const std::string& n) const {
     std::string number;
+    uc::Common<int> common;
+    un::Decimal decimal;
+    
+    if (un::base_binary == from)
+        number = common.to_string(decimal.to(n));
+    if (un::base_binary == to)
+        number = decimal.from(common.to_number(n));
+    
     return number;
 }
 

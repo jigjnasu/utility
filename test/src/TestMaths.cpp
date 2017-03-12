@@ -1,6 +1,6 @@
 #include "TestMaths.h"
 #include "Integer.h"
-#include "Common.h"
+#include "TestSuiteCommon.h"
 #include "String.h"
 #include "Maths.h"
 #include <vector>

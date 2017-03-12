@@ -1,5 +1,5 @@
 #include "TestFactory.h"
-#include "Common.h"
+#include "TestSuiteCommon.h"
 #include "TestAlgorithms.h"
 #include "TestCommon.h"
 #include "TestInteger.h"

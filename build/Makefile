@@ -34,9 +34,9 @@ INCLUDE += $(TEST_SUITE_INC)
 INCLUDE += -I../common/inc
 INCLUDE += -I../string/inc 
 INCLUDE += -I../maths/inc
+INCLUDE += -I../maths/number/inc
 INCLUDE += -I../algorithms/sort/inc/
 INCLUDE += -I../algorithms/search/inc/
-INCLUDE += -I../maths/number/inc
 
 LIB := ../lib/libutility.a
 

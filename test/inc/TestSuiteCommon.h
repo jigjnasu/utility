@@ -4,8 +4,8 @@
   Date: Dec 17th, 2016
 */
 
-#ifndef UTILITY_TEST_INC_COMMON_INC_H_
-#define UTILITY_TEST_INC_COMMON_INC_H_
+#ifndef UTILITY_TEST_INC_TEST_SUITE_COMMON_H_
+#define UTILITY_TEST_INC_TEST_SUITE_COMMON_H_
 
 namespace utility {
     namespace test {
@@ -80,4 +80,4 @@ namespace utility {
     };
 };
 
-#endif // UTILITY_TEST_INC_COMMON_INC_H_
+#endif // UTILITY_TEST_INC_TEST_SUITE_COMMON_H_

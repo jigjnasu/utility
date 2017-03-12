@@ -5,7 +5,7 @@
 #include "MergeSort.h"
 #include "QuickSort.h"
 #include "Maths.h"
-#include "Common.h"
+#include "TestSuiteCommon.h"
 #include <cstdio>
 #include <ctime>
 

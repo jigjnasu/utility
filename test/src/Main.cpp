@@ -1,5 +1,5 @@
 #include "TestSuite.h"
-#include "Common.h"
+#include "TestSuiteCommon.h"
 #include <cstdio>
 
 namespace ut = utility::test;

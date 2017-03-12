@@ -34,15 +34,31 @@ void ut::TestNumber::m_test_binary() {
     un::Number number;
 
     // Binary to Octal
+    printf("------------------------------------------------------------------------\n");
+    const std::string b1 = "0001010110100101110111";
+    const std::string o = number.convert(un::base_octal, un::base_binary, b1);
+    printf("Binary == [");
+    m_print_octal_binary(b1);
+    printf("] || Octal == [%s]\n", o.c_str());
+    printf("------------------------------------------------------------------------\n");    
 
     // Binary to Decimal
+    
 
     // Binary to Hexadecimal
+    printf("------------------------------------------------------------------------\n");
+    const std::string b2 = "0000100100011010001010110011110001001101010111100110111101111";
+    const std::string h = number.convert(un::base_hexa_decimal, un::base_binary, b2);
+    printf("Binary == [");
+    m_print_hexadecimal_binary(b2);
+    printf("] || Hexadecimal == [%s]\n", h.c_str());
+    printf("------------------------------------------------------------------------\n");    
 }
 
 void ut::TestNumber::m_test_octal() {
     un::Number number;
-    
+
+    // Octal to Binary
     printf("------------------------------------------------------------------------\n");    
     const std::string n = "01234567";
     const std::string b = number.convert(un::base_binary, un::base_octal, n);
@@ -51,6 +67,7 @@ void ut::TestNumber::m_test_octal() {
     printf("]\n");
     printf("------------------------------------------------------------------------\n");
 
+    // Binary to Octal
     printf("------------------------------------------------------------------------\n");
     const std::string n1 = "0001010110100101110111";
     const std::string o = number.convert(un::base_octal, un::base_binary, n1);
@@ -66,6 +83,7 @@ void ut::TestNumber::m_test_decimal() {
 void ut::TestNumber::m_test_hexa_decimal() {
     un::Number number;
 
+    // Hexadecimal to Binary
     printf("------------------------------------------------------------------------\n");
     const std::string n = "0123456789ABCDEF";
     const std::string b = number.convert(un::base_binary, un::base_hexa_decimal, n);
@@ -74,6 +92,7 @@ void ut::TestNumber::m_test_hexa_decimal() {
     printf("]\n");
     printf("------------------------------------------------------------------------\n");    
 
+    // Binary to Hexadecimal
     printf("------------------------------------------------------------------------\n");
     const std::string n1 = "0000100100011010001010110011110001001101010111100110111101111";
     const std::string h = number.convert(un::base_hexa_decimal, un::base_binary, n1);

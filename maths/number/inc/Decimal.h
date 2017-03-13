@@ -18,7 +18,9 @@ namespace utility {
                 ~Decimal();
 
                 int to(const std::string& n) const;
-                std::string from(int n) const;
+                std::string fro(int n) const;
+                std::string octal(int n) const;
+                std::string hexadecimal(int n) const;
 
             private:
                 void m_reverse(std::string& n) const;

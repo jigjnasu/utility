@@ -30,9 +30,11 @@ namespace utility {
                 std::string convert(Base to, Base from, const std::string& n) const;
 
             private:
-                std::string m_octal(Base to, Base from, const std::string& n) const;
-                std::string m_decimal(Base to, Base from, const std::string& n) const;
-                std::string m_hexa_decimal(Base to, Base from, const std::string& n) const;
+                std::string m_octal_to_hexadecimal(const std::string& n) const;
+                std::string m_hexadecimal_to_octal(const std::string& n) const;
+
+                void m_reverse(std::string& n) const;
+                void m_swap(char& a, char& b) const;
             };
         };
     };

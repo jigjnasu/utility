@@ -1,6 +1,6 @@
 #include "HexaDecimal.h"
 #include "Decimal.h"
-#include <string>
+#include "Maths.h"
 
 namespace un = utility::maths::number;
 
@@ -28,13 +28,13 @@ std::string un::HexaDecimal::to(const std::string& n) const {
     return number;
 }
 
-std::string un::HexaDecimal::from(const std::string& n) const {
+std::string un::HexaDecimal::fro(const std::string& n) const {
     std::string number;
     un::Decimal decimal;
 
     for (std::size_t i = 0; i < n.size(); ++i) {
         // Take the decimal value of the hexadecimal digit
-        std::string binary = decimal.from(hexadecimal_digits.find(n[i]));
+        std::string binary = decimal.fro(hexadecimal_digits.find(n[i]));
 
         // Put leading zeros accortind to 4 bit block size
         const std::size_t size = binary.size();
@@ -51,6 +51,14 @@ std::string un::HexaDecimal::from(const std::string& n) const {
     return number;
 }
 
+int un::HexaDecimal::decimal(const std::string& n) const {
+    utility::maths::Maths<int> maths;
+    int number = 0;
+    for (int i = n.size() - 1; i >= 0; --i)
+        number += ((hexadecimal_digits.find(n[i])) * maths.power(16, n.size() - 1 - i));
+
+    return number;
+}
 
 void un::HexaDecimal::m_swap(char& a, char& b) const {
     const char t = a;

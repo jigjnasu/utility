@@ -1,5 +1,6 @@
 #include "Octal.h"
 #include "Decimal.h"
+#include "Maths.h"
 
 namespace un = utility::maths::number;
 
@@ -25,11 +26,11 @@ std::string un::Octal::to(const std::string& n) const {
     return number;
 }
 
-std::string un::Octal::from(const std::string& n) const {
+std::string un::Octal::fro(const std::string& n) const {
     un::Decimal decimal;
     std::string number;
     for (std::size_t i = 0; i < n.size(); ++i) {
-        std::string binary = decimal.from(n[i] - '0');
+        std::string binary = decimal.fro(n[i] - '0');
 
         // As the octal number exapnsion is 3 bits block.
         // Make leading zeros as well.
@@ -41,6 +42,15 @@ std::string un::Octal::from(const std::string& n) const {
 
         number += binary;
     }
+
+    return number;
+}
+
+int un::Octal::decimal(const std::string& n) const {
+    utility::maths::Maths<int> maths;
+    int number = 0;
+    for (int i = n.size() - 1; i >= 0; --i)
+        number += ((n[i] - '0') * maths.power(8, n.size() - 1 - i));
 
     return number;
 }

@@ -18,7 +18,8 @@ namespace utility {
                 ~HexaDecimal();
 
                 std::string to(const std::string& n) const;
-                std::string from(const std::string& n) const;
+                std::string fro(const std::string& n) const;
+                int decimal(const std::string& n) const;
 
             private:
                 void m_swap(char& a, char& b) const;

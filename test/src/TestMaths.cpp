@@ -34,6 +34,7 @@ void ut::TestMaths::m_initialize_test_cases_dictionary() {
     m_test_cases_dictionary[TEST_SQUARE_ROOT] = &TestMaths::m_test_square_root;
     m_test_cases_dictionary[TEST_ORDERED_FRACTIONS] = &TestMaths::m_test_ordered_fractions;
     m_test_cases_dictionary[TEST_UNIQUE_RANDOM] = &TestMaths::m_test_unique_random;
+    m_test_cases_dictionary[TEST_CANTOR_EXPANSION] = &TestMaths::m_test_cantor_expansion;    
 }
 
 void ut::TestMaths::m_test_continued_fraction() {
@@ -111,6 +112,11 @@ void ut::TestMaths::m_test_unique_random() {
         printf("Unique random numbers between [1] and [%d] are\n", max);
         m_print_vector(maths.unique_random(max));
     }
+}
+
+void ut::TestMaths::m_test_cantor_expansion() {
+    maths::Maths<utility::integer::Integer> maths;
+    maths.cantor_expansion(1000).print();
 }
 
 void ut::TestMaths::m_print_vector(const std::vector<int>& list) {

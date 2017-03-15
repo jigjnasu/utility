@@ -88,6 +88,10 @@ namespace utility {
             // 0 / 1 and 1 / 1, where d <= n
             std::vector< utility::maths::Fraction<T> > ordered_fractions(int n) const;
 
+            // Calculate the cantor expension of n
+            // expansaion = n!.n + n - 1.(n - 1)! + .... + 2. 2! + 1.1!
+            T cantor_expansion(int n) const;
+
         private:
             T m_gcd(const T& n, const T& d) const;
             std::vector<int> m_continued_fractions(T n, T d) const;
@@ -172,6 +176,18 @@ T um::Maths<T>::fibonacci(const std::size_t& n) const {
     }
     
     return C;
+}
+
+template <typename T>
+T um::Maths<T>::cantor_expansion(int n) const {
+    T result(0);
+    T fact(1);
+    for (int i = 1; i <= n; ++i) {
+        fact *= i;
+        result += (fact * i);
+    }
+    
+    return result;
 }
 
 template <typename T>

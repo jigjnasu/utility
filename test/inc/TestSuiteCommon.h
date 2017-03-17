@@ -47,15 +47,16 @@ namespace utility {
         // All the test cases in Maths
         enum MATHS_TESTS {
             TEST_MATHS_START              = 0x0000,
-            TEST_CONTINUED_FRACTION       = 0x0001,
-            TEST_SQRT_CONTINUED_FRACTION  = 0x0002,
-            TEST_E_CONTINUED_FRACTION     = 0x0003,
-            TEST_INT_SQRT                 = 0x0004,
-            TEST_SQUARE_ROOT              = 0x0005,
-            TEST_ORDERED_FRACTIONS        = 0x0006,
-            TEST_UNIQUE_RANDOM            = 0x0007,
-            TEST_CANTOR_EXPANSION         = 0x0008,
-            TEST_MATHS_FINISH             = 0x0009,
+            TEST_FACTORIAL                = 0x0001,
+            TEST_CONTINUED_FRACTION       = 0x0002,
+            TEST_SQRT_CONTINUED_FRACTION  = 0x0003,
+            TEST_E_CONTINUED_FRACTION     = 0x0004,
+            TEST_INT_SQRT                 = 0x0005,
+            TEST_SQUARE_ROOT              = 0x0006,
+            TEST_ORDERED_FRACTIONS        = 0x0008,
+            TEST_UNIQUE_RANDOM            = 0x0008,
+            TEST_CANTOR_EXPANSION         = 0x0009,
+            TEST_MATHS_FINISH             = 0x0010,
         };
 
         // All the test cases in Permutation

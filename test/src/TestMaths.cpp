@@ -27,6 +27,7 @@ void ut::TestMaths::execute_all() {
 }
 
 void ut::TestMaths::m_initialize_test_cases_dictionary() {
+    m_test_cases_dictionary[TEST_FACTORIAL] = &TestMaths::m_test_factorial;
     m_test_cases_dictionary[TEST_CONTINUED_FRACTION] = &TestMaths::m_test_continued_fraction;
     m_test_cases_dictionary[TEST_SQRT_CONTINUED_FRACTION] = &TestMaths::m_test_sqrt_continued_fraction;
     m_test_cases_dictionary[TEST_E_CONTINUED_FRACTION] = &TestMaths::m_test_e_continued_fraction;
@@ -35,6 +36,12 @@ void ut::TestMaths::m_initialize_test_cases_dictionary() {
     m_test_cases_dictionary[TEST_ORDERED_FRACTIONS] = &TestMaths::m_test_ordered_fractions;
     m_test_cases_dictionary[TEST_UNIQUE_RANDOM] = &TestMaths::m_test_unique_random;
     m_test_cases_dictionary[TEST_CANTOR_EXPANSION] = &TestMaths::m_test_cantor_expansion;    
+}
+
+void ut::TestMaths::m_test_factorial() {
+    um::Maths<utility::integer::Integer> maths;
+    printf("100! == ");
+    maths.factorial(100).print();
 }
 
 void ut::TestMaths::m_test_continued_fraction() {

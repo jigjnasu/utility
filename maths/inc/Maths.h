@@ -60,9 +60,18 @@ namespace utility {
             // Get a std::vector of n elements random between min and max
             std::vector<T> random_vector(int n, int min, int max) const;
 
-            // Get all the phi of a number
+            // Get the phi, Euler totient function
+            std::size_t phi(std::size_t n) const;
+
+            // Get all the phi till a number
             // Algortim is based on Sieve of Eratosthenes
-            std::vector<T> phi(std::size_t n) const;
+            std::vector<T> phi_all(std::size_t n) const;
+
+            // Factors of all phi, totient n
+            // Which is co-prime to the n
+            std::vector<T> phi_factors(std::size_t n) const;
+
+            // Get all the possible co-primes of a p
 
             // Is the number is a perfect square
             bool is_perfect_square(const T& number) const;
@@ -241,7 +250,13 @@ std::vector<T> um::Maths<T>::random_vector(int n, int min, int max) const {
 }
 
 template <typename T>
-std::vector<T> um::Maths<T>::phi(std::size_t n) const {
+std::size_t um::Maths<T>::phi(std::size_t n) const {
+    const std::vector<T> list = phi_all(n);
+    return list[list.size() - 1];
+}
+
+template <typename T>
+std::vector<T> um::Maths<T>::phi_all(std::size_t n) const {
     std::vector<T> phi;
     for (std::size_t i = 0;i <= n; ++i)
         phi.push_back(i);
@@ -256,6 +271,17 @@ std::vector<T> um::Maths<T>::phi(std::size_t n) const {
     }
 
     return phi;
+}
+
+template <typename T>
+std::vector<T> um::Maths<T>::phi_factors(std::size_t n) const {
+    std::vector<T> factors;
+    factors.push_back(1);
+    for (std::size_t i = 2; i <= n; ++i)
+        if (gcd(i, n) == 1)
+            factors.push_back(i);
+    
+    return factors;
 }
 
 template <typename T>

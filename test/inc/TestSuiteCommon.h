@@ -56,6 +56,7 @@ namespace utility {
             TEST_ORDERED_FRACTIONS        = 0x0008,
             TEST_UNIQUE_RANDOM            = 0x0008,
             TEST_CANTOR_EXPANSION         = 0x0009,
+            TEST_PHI                      = 0x000A,
             TEST_MATHS_FINISH             = 0x0010,
         };
 

@@ -37,7 +37,9 @@ namespace utility {
             void m_test_ordered_fractions();
             void m_test_unique_random();
             void m_test_cantor_expansion();
-
+            void m_test_phi();
+            void m_test_phi_all(std::size_t n);
+            void m_test_phi_factors(std::size_t n);
             void m_print_vector(const std::vector<int>& list);
         };
     };

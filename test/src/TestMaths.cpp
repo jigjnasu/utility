@@ -35,7 +35,8 @@ void ut::TestMaths::m_initialize_test_cases_dictionary() {
     m_test_cases_dictionary[TEST_SQUARE_ROOT] = &TestMaths::m_test_square_root;
     m_test_cases_dictionary[TEST_ORDERED_FRACTIONS] = &TestMaths::m_test_ordered_fractions;
     m_test_cases_dictionary[TEST_UNIQUE_RANDOM] = &TestMaths::m_test_unique_random;
-    m_test_cases_dictionary[TEST_CANTOR_EXPANSION] = &TestMaths::m_test_cantor_expansion;    
+    m_test_cases_dictionary[TEST_CANTOR_EXPANSION] = &TestMaths::m_test_cantor_expansion;
+    m_test_cases_dictionary[TEST_PHI] = &TestMaths::m_test_phi;
 }
 
 void ut::TestMaths::m_test_factorial() {
@@ -130,4 +131,35 @@ void ut::TestMaths::m_print_vector(const std::vector<int>& list) {
     for (std::size_t i = 0; i < list.size(); ++i)
         printf("%d ", list[i]);
     printf("\n");
+}
+
+void ut::TestMaths::m_test_phi() {
+    utility::maths::Maths<std::size_t> maths;
+    for (std::size_t i = 2; i < 20; ++i) {
+        printf("-------------------------------------------------\n");
+        printf("----------- Phi(%5lu) == [%5lu] ---------------\n", i, maths.phi(i));
+        m_test_phi_all(i);
+        m_test_phi_factors(i);
+        printf("-------------------------------------------------\n");
+    }
+}
+
+void ut::TestMaths::m_test_phi_all(std::size_t n) {
+    utility::maths::Maths<std::size_t> maths;
+    const std::vector<std::size_t> list = maths.phi_all(n);
+    printf("-------------------------------------------------\n");
+    printf("These are phi from 2 <= phi(i) <= [%lu]\n", n);
+    for (std::size_t i = 2; i < list.size(); ++i)
+        printf("%lu ", list[i]);
+    printf("\n-------------------------------------------------\n");
+}
+
+void ut::TestMaths::m_test_phi_factors(std::size_t n) {
+    utility::maths::Maths<std::size_t> maths;
+    const std::vector<std::size_t> factors = maths.phi_factors(n);
+    printf("-------------------------------------------------\n");
+    printf("These are factors which are co-prime to [%lu]\n", n);
+    for (std::size_t i = 0; i < factors.size(); ++i)
+        printf("%lu ", factors[i]);
+    printf("\n-------------------------------------------------\n");    
 }

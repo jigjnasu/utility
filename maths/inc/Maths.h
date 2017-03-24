@@ -61,7 +61,7 @@ namespace utility {
             std::vector<T> random_vector(int n, int min, int max) const;
 
             // Get the phi, Euler totient function
-            std::size_t phi(std::size_t n) const;
+            T phi(T n) const;
 
             // Get all the phi till a number
             // Algortim is based on Sieve of Eratosthenes
@@ -250,7 +250,7 @@ std::vector<T> um::Maths<T>::random_vector(int n, int min, int max) const {
 }
 
 template <typename T>
-std::size_t um::Maths<T>::phi(std::size_t n) const {
+T um::Maths<T>::phi(T n) const {
     const std::vector<T> list = phi_all(n);
     return list[list.size() - 1];
 }

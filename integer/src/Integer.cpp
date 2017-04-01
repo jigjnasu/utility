@@ -29,6 +29,9 @@ ui::Integer::Integer(const std::string& data) : m_sign(false) {
 // Parameterized constrcutor
 // Initialize class with an int value
 ui::Integer::Integer(int data) : m_sign(false) {
+    if (data == 0)
+        m_data.push_back('0');
+    
     if (data < 0) {
         m_sign = true;
         data *= -1;

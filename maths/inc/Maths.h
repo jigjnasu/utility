@@ -101,6 +101,12 @@ namespace utility {
             // expansaion = n!.n + n - 1.(n - 1)! + .... + 2. 2! + 1.1!
             T cantor_expansion(int n) const;
 
+            // Calculate the Bionomail Coefficient
+            // (n, k) = (1 + x) ^ n, to find the coefficient of x^k.
+            // Which is equal to (n, k) = n! / (n - k)!.k!
+            // There is no need of calculating !, in this case we can use DP to solve it.
+            T binomial(T n, T k) const;
+
         private:
             T m_gcd(const T& n, const T& d) const;
             std::vector<int> m_continued_fractions(T n, T d) const;
@@ -197,6 +203,21 @@ T um::Maths<T>::cantor_expansion(int n) const {
     }
     
     return result;
+}
+
+template <typename T>
+T um::Maths<T>::binomial(T n, T k) const {
+    std::vector<T> C;
+    for (T i = 0; i <= k; ++i)
+        C.push_back(0);
+
+    C[0] = 1;
+
+    for (int i = 1; i <= n; ++i)
+        for (int j = min(i, k); j > 0; --j)
+            C[j] += C[j - 1];
+
+    return C[k];
 }
 
 template <typename T>

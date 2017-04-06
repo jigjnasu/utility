@@ -57,7 +57,8 @@ namespace utility {
             TEST_UNIQUE_RANDOM            = 0x0008,
             TEST_CANTOR_EXPANSION         = 0x0009,
             TEST_PHI                      = 0x000A,
-            TEST_MATHS_FINISH             = 0x0010,
+            TEST_BINOMIAL_COEFFICIENT     = 0x000B,
+            TEST_MATHS_FINISH             = 0x000C,
         };
 
         // All the test cases in Permutation

@@ -36,8 +36,9 @@ void test_maths() {
     suite.run(module, ut::TEST_ORDERED_FRACTIONS);
     suite.run(module, ut::TEST_UNIQUE_RANDOM);
     suite.run(module, ut::TEST_CANTOR_EXPANSION);
-#endif
     suite.run(module, ut::TEST_PHI);
+#endif
+    suite.run(module, ut::TEST_BINOMIAL_COEFFICIENT);
 }
 
 void test_permutation() {

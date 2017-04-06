@@ -37,6 +37,7 @@ void ut::TestMaths::m_initialize_test_cases_dictionary() {
     m_test_cases_dictionary[TEST_UNIQUE_RANDOM] = &TestMaths::m_test_unique_random;
     m_test_cases_dictionary[TEST_CANTOR_EXPANSION] = &TestMaths::m_test_cantor_expansion;
     m_test_cases_dictionary[TEST_PHI] = &TestMaths::m_test_phi;
+    m_test_cases_dictionary[TEST_BINOMIAL_COEFFICIENT] = &TestMaths::m_test_binomial_coefficient;
 }
 
 void ut::TestMaths::m_test_factorial() {
@@ -127,12 +128,6 @@ void ut::TestMaths::m_test_cantor_expansion() {
     maths.cantor_expansion(1000).print();
 }
 
-void ut::TestMaths::m_print_vector(const std::vector<int>& list) {
-    for (std::size_t i = 0; i < list.size(); ++i)
-        printf("%d ", list[i]);
-    printf("\n");
-}
-
 void ut::TestMaths::m_test_phi() {
     utility::maths::Maths<std::size_t> maths;
     for (std::size_t i = 2; i < 20; ++i) {
@@ -162,4 +157,21 @@ void ut::TestMaths::m_test_phi_factors(std::size_t n) {
     for (std::size_t i = 0; i < factors.size(); ++i)
         printf("%lu ", factors[i]);
     printf("\n-------------------------------------------------\n");    
+}
+
+void ut::TestMaths::m_test_binomial_coefficient() {
+    utility::maths::Maths<int> maths;
+    printf("-------------------------------------------------\n");
+    for (int t = 0; t < 10; ++t) {
+        const int n = maths.random(15, 30);
+        const int k = maths.random(2, 14);
+        printf("Binomial Coefficient (%2d, %2d) == [%2d]\n", n, k, maths.binomial(n, k));
+    }
+    printf("-------------------------------------------------\n");
+}
+
+void ut::TestMaths::m_print_vector(const std::vector<int>& list) {
+    for (std::size_t i = 0; i < list.size(); ++i)
+        printf("%d ", list[i]);
+    printf("\n");
 }

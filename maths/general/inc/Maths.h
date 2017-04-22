@@ -5,8 +5,8 @@
   Date: Dec 22, 2016
  */
 
-#ifndef UTILITY_MATHS_MATHS_H_
-#define UTILITY_MATHS_MATHS_H_
+#ifndef UTILITY_MATHS_GENERAL_MATHS_H_
+#define UTILITY_MATHS_GENERAL_MATHS_H_
 
 #include "Integer.h"
 #include "Fraction.h"
@@ -469,4 +469,4 @@ std::vector<int> um::Maths<T>::m_continued_fractions(T n, T d) const {
     return result;    
 }
 
-#endif // UTILITY_MATHS_MATHS_H_
+#endif // UTILITY_MATHS_GENERAL_MATHS_H_

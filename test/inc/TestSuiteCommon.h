@@ -1,5 +1,5 @@
 /*
-  This file has all the common things to be used in Utility Test Suites
+1;4205;0c  This file has all the common things to be used in Utility Test Suites
   Author: Rakesh Kumar @ cpp.rakesh@gmail.com
   Date: Dec 17th, 2016
 */
@@ -58,7 +58,8 @@ namespace utility {
             TEST_CANTOR_EXPANSION         = 0x0009,
             TEST_PHI                      = 0x000A,
             TEST_BINOMIAL_COEFFICIENT     = 0x000B,
-            TEST_MATHS_FINISH             = 0x000C,
+            TEST_CHINESE_REMAINDER        = 0x000C,
+            TEST_MATHS_FINISH             = 0x000D,
         };
 
         // All the test cases in Permutation

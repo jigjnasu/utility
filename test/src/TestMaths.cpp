@@ -3,6 +3,8 @@
 #include "TestSuiteCommon.h"
 #include "String.h"
 #include "Maths.h"
+#include "Modulo.h"
+#include "Equation.h"
 #include <vector>
 #include <cstdio>
 #include <iostream>
@@ -38,6 +40,7 @@ void ut::TestMaths::m_initialize_test_cases_dictionary() {
     m_test_cases_dictionary[TEST_CANTOR_EXPANSION] = &TestMaths::m_test_cantor_expansion;
     m_test_cases_dictionary[TEST_PHI] = &TestMaths::m_test_phi;
     m_test_cases_dictionary[TEST_BINOMIAL_COEFFICIENT] = &TestMaths::m_test_binomial_coefficient;
+    m_test_cases_dictionary[TEST_CHINESE_REMAINDER] = &TestMaths::m_test_chinese_remainder;
 }
 
 void ut::TestMaths::m_test_factorial() {
@@ -169,6 +172,21 @@ void ut::TestMaths::m_test_binomial_coefficient() {
     }
     printf("-------------------------------------------------\n");
 }
+
+void ut::TestMaths::m_test_chinese_remainder() {
+    std::vector<utility::maths::Equation> equations;
+    utility::maths::Equation e1(2, 3);
+    utility::maths::Equation e2(1, 4);
+    utility::maths::Equation e3(3, 5);
+
+    equations.push_back(e1);
+    equations.push_back(e2);
+    equations.push_back(e3);
+
+    utility::maths::Modulo mod;
+    printf("%d\n", mod.chinese_remainder(equations));
+}
+
 
 void ut::TestMaths::m_print_vector(const std::vector<int>& list) {
     for (std::size_t i = 0; i < list.size(); ++i)

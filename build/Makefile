@@ -21,6 +21,11 @@ NUMBER_SRC  := $(wildcard ../maths/number/src/*.cpp)
 NUMBER_INC  := -I../maths/number/inc
 OBJ_FILES   += $(addprefix objs/,$(notdir $(NUMBER_SRC:.cpp=.o)))
 
+MODULO_PATH := ../maths/modulo/src
+MODULO_SRC  := $(wildcard ../maths/modulo/src/*.cpp)
+MODULO_INC  := -I../maths/modulo/inc
+OBJ_FILES   += $(addprefix objs/,$(notdir $(MODULO_SRC:.cpp=.o)))
+
 OBJ_PATH       := objs
 
 EXE := test
@@ -35,6 +40,7 @@ INCLUDE += -I../common/inc
 INCLUDE += -I../string/inc 
 INCLUDE += -I../maths/general/inc
 INCLUDE += -I../maths/number/inc
+INCLUDE += -I../maths/modulo/inc
 INCLUDE += -I../algorithms/sort/inc/
 INCLUDE += -I../algorithms/search/inc/
 
@@ -55,6 +61,10 @@ $(OBJ_PATH)/%.o : $(TEST_SUITE_PATH)/%.cpp
 	@$(GCC) $(CC_FLAGS) $(INCLUDE) $< -o $@
 
 $(OBJ_PATH)/%.o : $(NUMBER_PATH)/%.cpp
+	@echo "Compiling --> $<"
+	@$(GCC) $(CC_FLAGS) $(INCLUDE) $< -o $@
+
+$(OBJ_PATH)/%.o : $(MODULO_PATH)/%.cpp
 	@echo "Compiling --> $<"
 	@$(GCC) $(CC_FLAGS) $(INCLUDE) $< -o $@
 

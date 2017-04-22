@@ -26,7 +26,6 @@ void test_integer() {
 void test_maths() {
     const ut::UTILITY_MODULES module = ut::UTILITY_MODULE_MATHS;
     ut::TestSuite suite;
-#if 0
     suite.run(module, ut::TEST_FACTORIAL);
     suite.run(module, ut::TEST_CONTINUED_FRACTION);
     suite.run(module, ut::TEST_SQRT_CONTINUED_FRACTION);
@@ -37,7 +36,6 @@ void test_maths() {
     suite.run(module, ut::TEST_UNIQUE_RANDOM);
     suite.run(module, ut::TEST_CANTOR_EXPANSION);
     suite.run(module, ut::TEST_PHI);
-#endif
     suite.run(module, ut::TEST_BINOMIAL_COEFFICIENT);
 }
 
@@ -58,13 +56,13 @@ void test_number() {
 }
 
 int main() {
-    //test_algorithms();
-    //test_common();
-    //test_integer();
+    test_algorithms();
+    test_common();
+    test_integer();
     test_maths();
-    //test_permutation();
-    //test_string();
-    //test_number();
+    test_permutation();
+    test_string();
+    test_number();
     
     return 0;
 }

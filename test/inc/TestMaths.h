@@ -42,6 +42,7 @@ namespace utility {
             void m_test_phi_factors(std::size_t n);
             void m_test_binomial_coefficient();
             void m_test_chinese_remainder();
+            void m_test_modulo_inverse();
             
             void m_print_vector(const std::vector<int>& list);
         };

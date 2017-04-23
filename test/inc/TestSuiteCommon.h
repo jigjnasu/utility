@@ -59,7 +59,8 @@ namespace utility {
             TEST_PHI                      = 0x000A,
             TEST_BINOMIAL_COEFFICIENT     = 0x000B,
             TEST_CHINESE_REMAINDER        = 0x000C,
-            TEST_MATHS_FINISH             = 0x000D,
+            TEST_MODULO_INVERSE           = 0x000D,
+            TEST_MATHS_FINISH             = 0x000E,
         };
 
         // All the test cases in Permutation

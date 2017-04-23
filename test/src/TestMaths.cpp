@@ -10,25 +10,24 @@
 #include <iostream>
 #include <ctime>
 
-namespace ut = utility::test;
 namespace um = utility::maths;
 
-ut::TestMaths::TestMaths() {
+utility::test::TestMaths::TestMaths() {
     m_initialize_test_cases_dictionary();
 }
 
-ut::TestMaths::~TestMaths() {}
+utility::test::TestMaths::~TestMaths() {}
 
-void ut::TestMaths::execute(int test_case) {
+void utility::test::TestMaths::execute(int test_case) {
     if (m_test_cases_dictionary[test_case])
         (*this.*m_test_cases_dictionary[test_case])();
 }
 
-void ut::TestMaths::execute_all() {
+void utility::test::TestMaths::execute_all() {
     
 }
 
-void ut::TestMaths::m_initialize_test_cases_dictionary() {
+void utility::test::TestMaths::m_initialize_test_cases_dictionary() {
     m_test_cases_dictionary[TEST_FACTORIAL] = &TestMaths::m_test_factorial;
     m_test_cases_dictionary[TEST_CONTINUED_FRACTION] = &TestMaths::m_test_continued_fraction;
     m_test_cases_dictionary[TEST_SQRT_CONTINUED_FRACTION] = &TestMaths::m_test_sqrt_continued_fraction;
@@ -41,16 +40,17 @@ void ut::TestMaths::m_initialize_test_cases_dictionary() {
     m_test_cases_dictionary[TEST_PHI] = &TestMaths::m_test_phi;
     m_test_cases_dictionary[TEST_BINOMIAL_COEFFICIENT] = &TestMaths::m_test_binomial_coefficient;
     m_test_cases_dictionary[TEST_CHINESE_REMAINDER] = &TestMaths::m_test_chinese_remainder;
+    m_test_cases_dictionary[TEST_MODULO_INVERSE] = &TestMaths::m_test_modulo_inverse;
 }
 
-void ut::TestMaths::m_test_factorial() {
-    um::Maths<utility::integer::Integer> maths;
+void utility::test::TestMaths::m_test_factorial() {
+    utility::maths::Maths<utility::integer::Integer> maths;
     printf("100! == ");
     maths.factorial(100).print();
 }
 
-void ut::TestMaths::m_test_continued_fraction() {
-    um::Maths<int> maths;
+void utility::test::TestMaths::m_test_continued_fraction() {
+    utility::maths::Maths<int> maths;
     const int N = 25;
     const int D = 36;
     std::vector<int> result = maths.continued_fractions(N, D);
@@ -63,8 +63,8 @@ void ut::TestMaths::m_test_continued_fraction() {
     printf("]\n");
 }
 
-void ut::TestMaths::m_test_sqrt_continued_fraction() {
-    um::Maths<int> maths;
+void utility::test::TestMaths::m_test_sqrt_continued_fraction() {
+    utility::maths::Maths<int> maths;
     for (int s = 2; s <= 10000; ++s) {
         const std::vector<int> cf = maths.square_root_continued_fractions(s);
         printf("SQRT[%d] has continued fractions ---> ", s);
@@ -74,8 +74,8 @@ void ut::TestMaths::m_test_sqrt_continued_fraction() {
     }
 }
 
-void ut::TestMaths::m_test_e_continued_fraction() {
-    um::Maths<int> maths;
+void utility::test::TestMaths::m_test_e_continued_fraction() {
+    utility::maths::Maths<int> maths;
     const int n = 100;
     const std::vector<int> fractions = maths.e_continued_fractions(n);
 
@@ -85,8 +85,8 @@ void ut::TestMaths::m_test_e_continued_fraction() {
     printf("]\n");
 }
 
-void ut::TestMaths::m_test_int_sqrt() {
-    um::Maths<int> maths;
+void utility::test::TestMaths::m_test_int_sqrt() {
+    utility::maths::Maths<int> maths;
     
     for (int i = 0; i < 50; ++i) {
         const int n = maths.random(1, 100000);
@@ -94,9 +94,9 @@ void ut::TestMaths::m_test_int_sqrt() {
     }
 }
 
-void ut::TestMaths::m_test_square_root() {
+void utility::test::TestMaths::m_test_square_root() {
     std::clock_t start = clock();
-    um::Maths<int> maths;
+    utility::maths::Maths<int> maths;
     
     int n = 2;
     std::size_t limit = 100000;
@@ -104,11 +104,11 @@ void ut::TestMaths::m_test_square_root() {
     printf("Execution time == [%.8f] seconds\n", (clock() - start) / static_cast<double>(CLOCKS_PER_SEC));
 }
 
-void ut::TestMaths::m_test_ordered_fractions() {
+void utility::test::TestMaths::m_test_ordered_fractions() {
     std::clock_t start = clock();
-    um::Maths<int> maths;
+    utility::maths::Maths<int> maths;
     const int n = 100;
-    std::vector< um::Fraction<int> > fractions = maths.ordered_fractions(n);
+    std::vector< utility::maths::Fraction<int> > fractions = maths.ordered_fractions(n);
 
     for (std::size_t i = 0; i < fractions.size(); ++i)
         fractions[i].print();
@@ -116,7 +116,7 @@ void ut::TestMaths::m_test_ordered_fractions() {
     printf("Execution time == [%.8f] seconds\n", (clock() - start) / static_cast<double>(CLOCKS_PER_SEC));    
 }
 
-void ut::TestMaths::m_test_unique_random() {
+void utility::test::TestMaths::m_test_unique_random() {
     utility::maths::Maths<int> maths;
     // Five different test cases
     for (int i = 0; i < 5; ++i) {
@@ -126,12 +126,12 @@ void ut::TestMaths::m_test_unique_random() {
     }
 }
 
-void ut::TestMaths::m_test_cantor_expansion() {
+void utility::test::TestMaths::m_test_cantor_expansion() {
     maths::Maths<utility::integer::Integer> maths;
     maths.cantor_expansion(1000).print();
 }
 
-void ut::TestMaths::m_test_phi() {
+void utility::test::TestMaths::m_test_phi() {
     utility::maths::Maths<std::size_t> maths;
     for (std::size_t i = 2; i < 20; ++i) {
         printf("-------------------------------------------------\n");
@@ -142,7 +142,7 @@ void ut::TestMaths::m_test_phi() {
     }
 }
 
-void ut::TestMaths::m_test_phi_all(std::size_t n) {
+void utility::test::TestMaths::m_test_phi_all(std::size_t n) {
     utility::maths::Maths<std::size_t> maths;
     const std::vector<std::size_t> list = maths.phi_all(n);
     printf("-------------------------------------------------\n");
@@ -152,7 +152,7 @@ void ut::TestMaths::m_test_phi_all(std::size_t n) {
     printf("\n-------------------------------------------------\n");
 }
 
-void ut::TestMaths::m_test_phi_factors(std::size_t n) {
+void utility::test::TestMaths::m_test_phi_factors(std::size_t n) {
     utility::maths::Maths<std::size_t> maths;
     const std::vector<std::size_t> factors = maths.phi_factors(n);
     printf("-------------------------------------------------\n");
@@ -162,7 +162,7 @@ void ut::TestMaths::m_test_phi_factors(std::size_t n) {
     printf("\n-------------------------------------------------\n");    
 }
 
-void ut::TestMaths::m_test_binomial_coefficient() {
+void utility::test::TestMaths::m_test_binomial_coefficient() {
     utility::maths::Maths<int> maths;
     printf("-------------------------------------------------\n");
     for (int t = 0; t < 10; ++t) {
@@ -173,7 +173,7 @@ void ut::TestMaths::m_test_binomial_coefficient() {
     printf("-------------------------------------------------\n");
 }
 
-void ut::TestMaths::m_test_chinese_remainder() {
+void utility::test::TestMaths::m_test_chinese_remainder() {
     utility::maths::Modulo mod;
 
     // Test case 1
@@ -221,8 +221,14 @@ void ut::TestMaths::m_test_chinese_remainder() {
     printf("--------------------------- test case 2 -----------------------------\n");
 }
 
+void utility::test::TestMaths::m_test_modulo_inverse() {
+    int a = 108;
+    int m = 21;
+    utility::maths::Modulo mod;
+    printf("Inverse of [%d (mod %d)] == [%d]\n", a, m, mod.naive_inverse(a, m));
+}
 
-void ut::TestMaths::m_print_vector(const std::vector<int>& list) {
+void utility::test::TestMaths::m_print_vector(const std::vector<int>& list) {
     for (std::size_t i = 0; i < list.size(); ++i)
         printf("%d ", list[i]);
     printf("\n");

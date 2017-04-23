@@ -38,8 +38,9 @@ void test_maths() {
     suite.run(module, ut::TEST_CANTOR_EXPANSION);
     suite.run(module, ut::TEST_PHI);
     suite.run(module, ut::TEST_BINOMIAL_COEFFICIENT);
-#endif
     suite.run(module, ut::TEST_CHINESE_REMAINDER);    
+#endif
+    suite.run(module, ut::TEST_MODULO_INVERSE);    
 }
 
 void test_permutation() {

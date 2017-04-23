@@ -174,17 +174,51 @@ void ut::TestMaths::m_test_binomial_coefficient() {
 }
 
 void ut::TestMaths::m_test_chinese_remainder() {
-    std::vector<utility::maths::Equation> equations;
-    utility::maths::Equation e1(2, 3);
-    utility::maths::Equation e2(1, 4);
-    utility::maths::Equation e3(3, 5);
-
-    equations.push_back(e1);
-    equations.push_back(e2);
-    equations.push_back(e3);
-
     utility::maths::Modulo mod;
-    printf("%d\n", mod.chinese_remainder(equations));
+
+    // Test case 1
+    std::vector<utility::maths::Equation> equations1;
+    utility::maths::Equation e11(2, 3);
+    utility::maths::Equation e12(1, 4);
+    utility::maths::Equation e13(3, 5);
+
+    equations1.push_back(e11);
+    equations1.push_back(e12);
+    equations1.push_back(e13);
+
+    printf("--------------------------- test case 1 -----------------------------\n");
+    for (std::size_t i = 0; i < equations1.size(); ++i) {
+        printf("x == ");
+        equations1[i].print();
+    }
+    int m1 = 1;
+    const int x1 = mod.chinese_remainder(equations1, m1);
+    printf("---------------------------- result ---------------------------------\n");
+    printf("x == %d (mod %d)\n", x1, m1);
+    printf("--------------------------- test case 1 -----------------------------\n");
+
+    // Test case 2
+    std::vector<utility::maths::Equation> equations2;
+    utility::maths::Equation e21(1, 2);
+    utility::maths::Equation e22(2, 3);
+    utility::maths::Equation e23(3, 5);
+    utility::maths::Equation e24(4, 11);
+
+    equations2.push_back(e21);
+    equations2.push_back(e22);
+    equations2.push_back(e23);
+    equations2.push_back(e24);
+
+    printf("--------------------------- test case 2 -----------------------------\n");
+    for (std::size_t i = 0; i < equations2.size(); ++i) {
+        printf("x == ");
+        equations2[i].print();
+    }
+    int m2 = 1;
+    const int x2 = mod.chinese_remainder(equations2, m2);
+    printf("---------------------------- result ---------------------------------\n");
+    printf("x == %d (mod %d)\n", x2, m2);
+    printf("--------------------------- test case 2 -----------------------------\n");
 }
 
 

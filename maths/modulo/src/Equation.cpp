@@ -1,4 +1,5 @@
 #include "Equation.h"
+#include <cstdio>
 
 utility::maths::Equation::Equation() : m_a(0), m_m(0) {}
 
@@ -23,4 +24,8 @@ int utility::maths::Equation::a() const {
 
 int utility::maths::Equation::m() const {
     return m_m;
+}
+
+void utility::maths::Equation::print() const {
+    printf("%d (mod %d)\n", m_a, m_m);
 }

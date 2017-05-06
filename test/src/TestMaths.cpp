@@ -222,8 +222,8 @@ void utility::test::TestMaths::m_test_chinese_remainder() {
 }
 
 void utility::test::TestMaths::m_test_modulo_inverse() {
-    int a = 108;
-    int m = 21;
+    int a = 189;
+    int m = 3;
     utility::maths::Modulo mod;
     printf("Inverse of [%d (mod %d)] == [%d]\n", a, m, mod.naive_inverse(a, m));
 }

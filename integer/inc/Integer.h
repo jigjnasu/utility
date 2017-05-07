@@ -84,9 +84,11 @@ namespace utility {
             void split(int size, Integer& high, Integer& low) const;
 
             void print() const;
+
             std::size_t size() const;
             std::string get() const;
             std::string get_reverse() const;
+            int get_int() const;
 
         private:
             // It will hold the big number;

@@ -6,6 +6,7 @@
  */
 
 #include "Integer.h"
+#include <cstdlib>
 #include <cstdio>
 
 namespace ui = utility::integer;
@@ -751,6 +752,10 @@ std::string ui::Integer::get() const {
 // Get the reverse number
 std::string ui::Integer::get_reverse() const {
     return m_data;
+}
+
+int ui::Integer::get_int() const {
+    return std::atoi(get().c_str());
 }
 
 // Add *this + class object

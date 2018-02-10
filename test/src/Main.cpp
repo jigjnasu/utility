@@ -11,7 +11,7 @@ void test_algorithms() {
     suite.run(module, ut::TEST_ALGORITMS_SORT_INSERTION);
     suite.run(module, ut::TEST_ALGORITMS_SORT_SELECTION);
     suite.run(module, ut::TEST_ALGORITMS_SORT_MERGE);
-    suite.run(module, ut::TEST_ALGORITMS_SORT_QUICK);    
+    suite.run(module, ut::TEST_ALGORITMS_SORT_QUICK);
 }
 
 void test_common() {
@@ -38,9 +38,11 @@ void test_maths() {
     suite.run(module, ut::TEST_CANTOR_EXPANSION);
     suite.run(module, ut::TEST_PHI);
     suite.run(module, ut::TEST_BINOMIAL_COEFFICIENT);
-    suite.run(module, ut::TEST_CHINESE_REMAINDER);    
+    suite.run(module, ut::TEST_CHINESE_REMAINDER);
+    suite.run(module, ut::TEST_MODULO_INVERSE);
 #endif
-    suite.run(module, ut::TEST_MODULO_INVERSE);    
+    suite.run(module, ut::TEST_PRIME_SIEVE);
+    suite.run(module, ut::TEST_PRIME_SIEVE_SUNDRAM);
 }
 
 void test_permutation() {
@@ -56,7 +58,7 @@ void test_number() {
     suite.run(module, ut::TEST_NUMBER_BINARY);
     suite.run(module, ut::TEST_NUMBER_OCTAL);
     suite.run(module, ut::TEST_NUMBER_DECIMAL);
-    suite.run(module, ut::TEST_NUMBER_HEXA_DECIMAL);    
+    suite.run(module, ut::TEST_NUMBER_HEXA_DECIMAL);
 }
 
 int main() {

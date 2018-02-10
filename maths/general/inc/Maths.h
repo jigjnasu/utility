@@ -24,11 +24,16 @@ namespace utility {
 
             // Wether the number is prime or not.
             bool is_prime(const T& number) const;
-            
+
             // Getting all the prime numbers from 2...n,
             // where n is given
             // Algortim is based on Sieve of Eratosthenes
             std::vector<T> prime_numbers(const std::size_t& n) const;
+
+            // Getting all the prime numbers from 2...n,
+            // where n is given
+            // Algortim is based on Sieve of Sundram
+            std::vector<T> prime_numbers_sieve_sundram(const std::size_t& n) const;
 
             // Calculate the power of x ^ y
             T power(T x, int y) const;
@@ -136,20 +141,36 @@ bool um::Maths<T>::is_prime(const T& number) const {
 // unmark the multiple of first prime numbers.
 template <typename T>
 std::vector<T> um::Maths<T>::prime_numbers(const std::size_t& n) const {
-    std::vector<T> status;
-    for (std::size_t i = 0; i <= n; ++i)
-        status.push_back(i);
+    std::vector<bool> p(n + 1, true);
+    for (std::size_t i = 2; i < p.size(); ++i)
+        if (p[i])
+            for (std::size_t j = (i << 1); j < p.size(); j += i)
+                p[j] = false;
 
-    for (std::size_t i = 2; i < status.size(); ++i)
-        if (status[i] == i)
-            for (std::size_t j = 2 * i; j <= n; j += i)
-                status[j] = 0;
+    std::vector<T> primes;
+    for (std::size_t i = 2; i < p.size(); ++i)
+        if (p[i])
+            primes.push_back(i);
 
-    std::vector<T> prime_numbers;
-    for (std::size_t i = 2; i < status.size(); ++i)
-        if (status[i])
-            prime_numbers.push_back(i);
-    return prime_numbers;
+    return primes;
+}
+
+template <typename T>
+std::vector<T> um::Maths<T>::prime_numbers_sieve_sundram(const std::size_t& n) const {
+    std::vector<bool> p((n - 2) / 2, true);
+    for (std::size_t i = 1; i < p.size(); ++i)
+        for (std::size_t j = 1; (i + j + 2 * i * j) < p.size(); ++j)
+            if (p[i])
+                p[i + j + 2 * i * j] = false;
+
+    std::vector<T> primes;
+    if (n >= 2)
+        primes.push_back(2);
+    for (std::size_t i = 1; i < p.size(); ++i)
+        if (p[i])
+            primes.push_back(2 * i + 1);
+
+    return primes;
 }
 
 template <typename T>
@@ -189,7 +210,7 @@ T um::Maths<T>::fibonacci(const std::size_t& n) const {
         C = A + B;
         ++iter;
     }
-    
+
     return C;
 }
 
@@ -201,7 +222,7 @@ T um::Maths<T>::cantor_expansion(int n) const {
         fact *= i;
         result += (fact * i);
     }
-    
+
     return result;
 }
 
@@ -258,7 +279,7 @@ std::vector<T> um::Maths<T>::unique_random(int max) const {
         if (k != i)
             swap(numbers[i], numbers[k]);
     }
-    
+
     return numbers;
 }
 
@@ -301,7 +322,7 @@ std::vector<T> um::Maths<T>::phi_factors(std::size_t n) const {
     for (std::size_t i = 2; i <= n; ++i)
         if (gcd(i, n) == 1)
             factors.push_back(i);
-    
+
     return factors;
 }
 
@@ -384,7 +405,7 @@ std::vector<int> um::Maths<T>::square_root_continued_fractions(T s) const {
     int d = 1;
     int a = a0;
     fractions.push_back(a);
-    
+
     while (2 * a0 != a) {
         m = (d * a) - m;
         d = (s - (m * m)) / d;
@@ -420,7 +441,7 @@ std::vector< um::Fraction<T> > um::Maths<T>::ordered_fractions(int n) const {
     double d = n;
 
     fractions.push_back(Fraction<T>(a, b));
-    fractions.push_back(Fraction<T>(c, d));    
+    fractions.push_back(Fraction<T>(c, d));
 
     // This is the next sequence based on the previous one.
     double p = 0.0f;
@@ -431,9 +452,9 @@ std::vector< um::Fraction<T> > um::Maths<T>::ordered_fractions(int n) const {
         q = std::floor((n + b) / d) * d - b;
 
         fractions.push_back(Fraction<T>(p, q));
-        
+
         a = c;
-        b = d;        
+        b = d;
         c = p;
         d = q;
     }

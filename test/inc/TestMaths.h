@@ -43,7 +43,9 @@ namespace utility {
             void m_test_binomial_coefficient();
             void m_test_chinese_remainder();
             void m_test_modulo_inverse();
-            
+            void m_test_prime_sieve();
+            void m_test_prime_sieve_sundram();
+
             void m_print_vector(const std::vector<int>& list);
         };
     };

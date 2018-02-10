@@ -24,7 +24,6 @@ void utility::test::TestMaths::execute(int test_case) {
 }
 
 void utility::test::TestMaths::execute_all() {
-    
 }
 
 void utility::test::TestMaths::m_initialize_test_cases_dictionary() {
@@ -41,6 +40,8 @@ void utility::test::TestMaths::m_initialize_test_cases_dictionary() {
     m_test_cases_dictionary[TEST_BINOMIAL_COEFFICIENT] = &TestMaths::m_test_binomial_coefficient;
     m_test_cases_dictionary[TEST_CHINESE_REMAINDER] = &TestMaths::m_test_chinese_remainder;
     m_test_cases_dictionary[TEST_MODULO_INVERSE] = &TestMaths::m_test_modulo_inverse;
+    m_test_cases_dictionary[TEST_PRIME_SIEVE] = &TestMaths::m_test_prime_sieve;
+    m_test_cases_dictionary[TEST_PRIME_SIEVE_SUNDRAM] = &TestMaths::m_test_prime_sieve_sundram;
 }
 
 void utility::test::TestMaths::m_test_factorial() {
@@ -226,6 +227,24 @@ void utility::test::TestMaths::m_test_modulo_inverse() {
     int m = 3;
     utility::maths::Modulo mod;
     printf("Inverse of [%d (mod %d)] == [%d]\n", a, m, mod.naive_inverse(a, m));
+}
+
+void utility::test::TestMaths::m_test_prime_sieve() {
+    int n = 1e+3;
+    utility::maths::Maths<int> maths;
+    const std::vector<int> v = maths.prime_numbers(n);
+    for (std::size_t i = 0; i < v.size(); ++i)
+        printf("%d ", v[i]);
+    printf("\n");
+}
+
+void utility::test::TestMaths::m_test_prime_sieve_sundram() {
+    int n = 1e+3;
+    utility::maths::Maths<int> maths;
+    const std::vector<int> v = maths.prime_numbers_sieve_sundram(n);
+    for (std::size_t i = 0; i < v.size(); ++i)
+        printf("%d ", v[i]);
+    printf("\n");
 }
 
 void utility::test::TestMaths::m_print_vector(const std::vector<int>& list) {

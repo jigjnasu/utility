@@ -27,14 +27,14 @@ namespace utility {
             TEST_ALGORITMS_SORT_INSERTION = 0x0002,
             TEST_ALGORITMS_SORT_SELECTION = 0x0003,
             TEST_ALGORITMS_SORT_MERGE     = 0x0004,
-            TEST_ALGORITMS_SORT_QUICK     = 0x0005,            
+            TEST_ALGORITMS_SORT_QUICK     = 0x0005,
             TEST_ALGORITMS_FINISH         = 0x0006,
         };
 
         // All the test cases in Common
         enum COMMON_TESTS {
             TEST_COMMON_START          = 0x0000,
-            TEST_COMMON_FINISH         = 0x0001,            
+            TEST_COMMON_FINISH         = 0x0001,
         };
 
         // All the test cases in Integer
@@ -60,7 +60,9 @@ namespace utility {
             TEST_BINOMIAL_COEFFICIENT     = 0x000B,
             TEST_CHINESE_REMAINDER        = 0x000C,
             TEST_MODULO_INVERSE           = 0x000D,
-            TEST_MATHS_FINISH             = 0x000E,
+            TEST_PRIME_SIEVE              = 0x000E,
+            TEST_PRIME_SIEVE_SUNDRAM      = 0x0010,
+            TEST_MATHS_FINISH             = 0x0011,
         };
 
         // All the test cases in Permutation

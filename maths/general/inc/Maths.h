@@ -243,7 +243,7 @@ T um::Maths<T>::binomial(T n, T k) const {
 
 template <typename T>
 T um::Maths<T>::gcd(const T& n, const T& d) const {
-    return m_gcd(max(n, d), min(n, d));
+    return m_gcd(n, d);
 }
 
 template <typename T>
@@ -466,9 +466,8 @@ template <typename T>
 T um::Maths<T>::m_gcd(const T& n, const T& d) const {
     if (n % d == 0)
         return d;
-    else if (n % d > 0)
+    else
         return gcd(d, n % d);
-    return 0;
 }
 
 template <typename T>

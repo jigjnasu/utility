@@ -50,7 +50,7 @@ template <typename T>
 std::size_t ua::SelectionSort<T>::m_min_pos(const std::vector<T>& data, std::size_t start_pos) const {
     T min = data[start_pos];
     std::size_t min_pos = start_pos;
-    
+
     for (std::size_t i = start_pos + 1; i < data.size(); ++i) {
         if (data[i] < min) {
             min = data[i];

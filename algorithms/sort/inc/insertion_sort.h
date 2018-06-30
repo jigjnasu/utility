@@ -44,7 +44,7 @@ void ua::InsertionSort<T>::sort(std::vector<T>& data) const {
             m_swap(data[j - 1], data[j]);
             --j;
         }
-    }        
+    }
 }
 
 template <typename T>

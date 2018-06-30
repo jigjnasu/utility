@@ -24,7 +24,7 @@ namespace utility {
             private:
                 void m_build_heap(std::vector<T>& data) const;
                 void m_maxify_heap(std::vector<T>& data, int pos, std::size_t size) const;
-                
+
                 void m_swap(T& a, T& b) const;
                 int m_left(int pos) const;
                 int m_right(int pos) const;
@@ -44,7 +44,7 @@ us::HeapSort<T>::~HeapSort() {}
 template <typename T>
 void us::HeapSort<T>::sort(std::vector<T>& data) const {
     m_build_heap(data);
-    
+
     for (int i = data.size() - 1; i > 0; --i) {
         m_swap(data[i], data[0]);
         m_maxify_heap(data, 0, i);
@@ -63,7 +63,7 @@ void us::HeapSort<T>::m_maxify_heap(std::vector<T>& data, int pos, std::size_t s
     while (1) {
         int largest = pos;
         int left = m_left(pos);
-        int right = m_right(pos);        
+        int right = m_right(pos);
 
         if (left < size && data[left] > data[largest])
             largest = left;
@@ -74,7 +74,7 @@ void us::HeapSort<T>::m_maxify_heap(std::vector<T>& data, int pos, std::size_t s
             break;
         else
             m_swap(data[largest], data[pos]);
-        
+
         pos = largest;
     }
 }

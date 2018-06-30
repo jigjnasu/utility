@@ -22,10 +22,10 @@ namespace utility {
             private:
                 void m_sort(std::vector<T>& data, int start, int end) const;
                 void m_sort(std::string& data, int start, int end) const;
-                
+
                 int m_partition(std::vector<T>& data, int start, int end) const;
                 int m_partition(std::string& data, int start, int end) const;
-                
+
                 void m_swap(T& a, T& b) const;
             };
         };
@@ -81,7 +81,7 @@ int us::QuickSort<T>::m_partition(std::vector<T>& data, int start, int end) cons
             ++i;
         }
     }
-    
+
     m_swap(data[i], data[end]);
     return i;
 }
@@ -99,7 +99,7 @@ int us::QuickSort<T>::m_partition(std::string& data, int start, int end) const {
             ++i;
         }
     }
-    
+
     m_swap(data[i], data[end]);
     return i;
 }

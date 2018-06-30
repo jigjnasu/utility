@@ -25,7 +25,7 @@ namespace utility {
             private:
                 void m_sort(std::vector<T>& data, std::size_t start, std::size_t end) const;
                 void m_sort(std::string& data, std::size_t start, std::size_t end) const;
-            
+
                 void m_merge(std::vector<T>& data, std::size_t start, std::size_t mid, std::size_t end) const;
                 void m_merge(std::string& data, std::size_t start, std::size_t mid, std::size_t end) const;
             };

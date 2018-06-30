@@ -47,11 +47,6 @@ INCLUDE         += -I../algorithms/search/inc/
 LIB             := ../lib/libutility.a
 
 all: $(OBJ_FILES)
-	@echo "-----------------------------------------------------"
-	@echo "Rakesh Kumar"
-	@echo ${OBJ_FILES}
-	@echo "-----------------------------------------------------"
-
 	@echo "Generating Utility static library --> $(LIB)"
 	@$(LD_FLAGS) -o $(LIB) $(OBJ_PATH)/integer.o
 	@echo "Generating Test Suite exe --> $(EXE)"

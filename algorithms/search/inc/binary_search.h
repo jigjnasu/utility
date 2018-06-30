@@ -51,7 +51,7 @@ int ua::BinarySearch<T>::search(const std::vector<T>& data, const T& key) const 
             --end;
         }
     }
-    
+
     return 0;
 }
 

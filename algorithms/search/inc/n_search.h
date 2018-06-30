@@ -49,12 +49,12 @@ int ua::NSearch<T>::search(const std::vector<T>& data, const T& key, int n) cons
             for (int i = 1; i < n; ++i) {
                 if (key < data[start + (i * split)]) {
                     end = start + (i * split) - 1;
-                    start = start + ((i - 1) * split) + 1;                
+                    start = start + ((i - 1) * split) + 1;
                 }
             }
         }
     }
-    
+
     return 0;
 }
 

@@ -1,7 +1,7 @@
 #ifndef UTILITY_ALGORITHMS_SORT_QUICK_SORT_H_
 #define UTILITY_ALGORITHMS_SORT_QUICK_SORT_H_
 
-#include "Maths.h"
+#include "maths.h"
 #include <vector>
 #include <string>
 #include <cstdlib>

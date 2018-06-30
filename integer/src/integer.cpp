@@ -5,7 +5,7 @@
   Date: Sep 18th, 2016
  */
 
-#include "Integer.h"
+#include "integer.h"
 #include <cstdlib>
 #include <cstdio>
 
@@ -22,7 +22,7 @@ ui::Integer::Integer(const std::string& data) : m_sign(false) {
         m_sign = true;
         ++stop;
     }
-    
+
     for (int i = data.size() - 1; i >= stop; --i)
         m_data.push_back(data[i]);
 }
@@ -32,12 +32,12 @@ ui::Integer::Integer(const std::string& data) : m_sign(false) {
 ui::Integer::Integer(int data) : m_sign(false) {
     if (data == 0)
         m_data.push_back('0');
-    
+
     if (data < 0) {
         m_sign = true;
         data *= -1;
     }
-    
+
     while (data) {
         m_data.push_back((data % 10) + '0');
         data /= 10;
@@ -91,7 +91,7 @@ ui::Integer ui::Integer::operator + (const std::string& rhs) const {
     if (rhs[0] == '-') {
         sign = true;
     }
-    
+
     if (m_sign == false && sign == false)
         return m_add_return(rhs, sign);
 
@@ -101,7 +101,7 @@ ui::Integer ui::Integer::operator + (const std::string& rhs) const {
         return number;
     }
 
-    Integer number;    
+    Integer number;
     if (*this > rhs) {
         number.m_sign = m_sign;
         number.m_data = m_subtract_return(*this, rhs);
@@ -113,7 +113,7 @@ ui::Integer ui::Integer::operator + (const std::string& rhs) const {
     } else {
         number.m_data.push_back('0');
         return number;
-    }        
+    }
 }
 
 // Operator overloading +
@@ -164,12 +164,12 @@ void ui::Integer::operator += (const Integer& rhs) {
         m_data = m_subtract_return(*this, rhs);
     } else if (*this < rhs) {
         m_data = m_subtract_return(rhs, *this);
-        m_sign = rhs.m_sign;        
+        m_sign = rhs.m_sign;
     } else {
         m_data_erase();
         m_data.push_back('0');
         m_sign = false;
-    }    
+    }
 }
 
 // Operator overload of +=
@@ -200,7 +200,7 @@ void ui::Integer::operator += (const std::string& rhs) {
         m_data_erase();
         m_data.push_back('0');
         m_sign = false;
-    }    
+    }
 }
 
 // Operator overloading +=
@@ -229,7 +229,7 @@ void ui::Integer::operator += (int rhs) {
         m_data_erase();
         m_data.push_back('0');
         m_sign = false;
-    }    
+    }
 }
 
 // Operator overloading of -
@@ -259,14 +259,14 @@ ui::Integer ui::Integer::operator - (const Integer& rhs) const {
 // which I use for arethmatic operations.
 ui::Integer ui::Integer::operator - (const std::string& rhs) const {
     bool sign = false;
-    
+
     if (rhs[0] == '-')
         sign = true;
-    
+
     if (m_sign == false && sign)
         return m_add_return(rhs, true);
 
-    Integer number;    
+    Integer number;
     if (*this > rhs) {
         number.m_sign = m_sign;
         number.m_data = m_subtract_return(*this, rhs);
@@ -278,7 +278,7 @@ ui::Integer ui::Integer::operator - (const std::string& rhs) const {
     } else {
         number.m_data.push_back('0');
         return number;
-    }    
+    }
 }
 
 // Operator overloading of -
@@ -322,7 +322,7 @@ void ui::Integer::operator -= (const Integer& rhs) {
         m_data_erase();
         m_data.push_back('0');
         m_sign = false;
-    }    
+    }
 }
 
 // Operator overloading of -=
@@ -331,7 +331,7 @@ void ui::Integer::operator -= (const std::string& rhs) {
     bool sign = false;
     if (rhs[0] == '-')
         sign = true;
-    
+
     if (m_sign == false && sign)
         return m_add(rhs, true);
 
@@ -351,7 +351,7 @@ void ui::Integer::operator -= (const std::string& rhs) {
         m_data_erase();
         m_data.push_back('0');
         m_sign = false;
-    }        
+    }
 }
 
 // Operator overloading -=
@@ -362,7 +362,7 @@ void ui::Integer::operator -= (int rhs) {
         sign = true;
         rhs *= -1;
     }
-    
+
     if (m_sign == false && sign)
         return m_add(rhs);
 
@@ -379,7 +379,7 @@ void ui::Integer::operator -= (int rhs) {
         m_data_erase();
         m_data.push_back('0');
         m_sign = false;
-    }    
+    }
 }
 
 // Operator overloading of *
@@ -397,7 +397,7 @@ ui::Integer ui::Integer::operator * (const Integer& rhs) const {
         // while doing mathematics.
         for (std::size_t j = 0; j < i; ++j)
             temp.m_data.push_back('0');
-        
+
         for (std::size_t j = 0; j < rhs.m_data.size(); ++j) {
             int mul = carry + ((m_data[i] - '0') * (rhs.m_data[j] - '0'));
             temp.m_data.push_back((mul % 10) + '0');
@@ -433,7 +433,7 @@ ui::Integer ui::Integer::operator * (const std::string& rhs) const {
         // while doing mathematics.
         for (std::size_t j = 0; j < i; ++j)
             temp.m_data.push_back('0');
-        
+
         for (int j = rhs.size() - 1; j >= stop; --j) {
             int mul = carry + ((m_data[i] - '0') * (rhs[j] - '0'));
             temp.m_data.push_back((mul % 10) + '0');
@@ -459,7 +459,7 @@ ui::Integer ui::Integer::operator * (int rhs) const {
         number.m_sign = true;
 
         if (rhs < 0)
-            rhs *= -1;        
+            rhs *= -1;
     }
 
     int carry = 0;
@@ -492,7 +492,7 @@ void ui::Integer::operator *= (const Integer& rhs) {
         // while doing mathematics.
         for (std::size_t j = 0; j < i; ++j)
             temp.m_data.push_back('0');
-        
+
         for (std::size_t j = 0; j < rhs.m_data.size(); ++j) {
             int mul = carry + ((m_data[i] - '0') * (rhs.m_data[j] - '0'));
             temp.m_data.push_back((mul % 10) + '0');
@@ -528,7 +528,7 @@ void ui::Integer::operator *= (const std::string& rhs) {
         // while doing mathematics.
         for (std::size_t j = 0; j < i; ++j)
             temp.m_data.push_back('0');
-        
+
         for (int j = rhs.size() - 1; j >= stop; --j) {
             int mul = carry + ((m_data[i] - '0') * (rhs[j] - '0'));
             temp.m_data.push_back((mul % 10) + '0');
@@ -592,7 +592,7 @@ bool ui::Integer::operator > (const Integer& rhs) const {
     bool result = false;
     if (m_more_than(rhs))
         result = true;
-    
+
     return result;
 }
 
@@ -600,7 +600,7 @@ bool ui::Integer::operator < (const Integer& rhs) const {
     bool result = false;
     if (m_less_than(rhs))
         result = true;
-    
+
     return result;
 }
 
@@ -620,7 +620,7 @@ bool ui::Integer::operator < (const std::string& rhs) const {
     bool result = false;
     if (m_less_than(rhs))
         result = true;
-    
+
     return result;
 }
 
@@ -844,7 +844,7 @@ ui::Integer ui::Integer::m_add_return(int rhs) const {
         number.m_data.push_back((carry % 10) + '0');
         carry /= 10;
     }
-    
+
     return number;
 }
 
@@ -891,7 +891,7 @@ void ui::Integer::m_add(const std::string& rhs, bool is_sign) {
         ++stop;
 
     int carry = 0;
-    
+
     while (i < m_data.size() && j >= stop) {
         const int sum = carry + (m_data[i] - '0') + (rhs[j--] - '0');
         m_data[i++] = ((sum % 10) + '0');
@@ -960,7 +960,7 @@ void ui::Integer::m_subtract(std::string& A, const std::string& B) const {
 
             if (j == A.size() - 1 && A[j] == '1')
                 A.erase(j);
-            
+
             --A[j];
         }
         ++i;
@@ -990,7 +990,7 @@ ui::Integer ui::Integer::m_divide_return(int rhs, bool sign) {
             n = (n * 10) + (m_data[i--] - '0');
             number.push_back('0');
         }
-        
+
         number.push_back((n / rhs) + '0');
         n %= rhs;
     }

@@ -1,7 +1,7 @@
-#include "TestInteger.h"
-#include "Maths.h"
-#include "TestSuiteCommon.h"
-#include "Integer.h"
+#include "test_integer.h"
+#include "maths.h"
+#include "test_suite_common.h"
+#include "integer.h"
 #include <cstdio>
 
 namespace ut = utility::test;

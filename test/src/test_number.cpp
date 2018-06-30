@@ -1,6 +1,6 @@
-#include "TestNumber.h"
-#include "Number.h"
-#include "TestSuiteCommon.h"
+#include "test_number.h"
+#include "number.h"
+#include "test_suite_common.h"
 #include <cstdio>
 
 namespace ut = utility::test;
@@ -42,7 +42,7 @@ void ut::TestNumber::m_test_binary() {
     printf("[");
     m_print_octal_binary(b1);
     printf("] to [%s]\n", o.c_str());
-    printf("------------------------------------------------------------------------\n");    
+    printf("------------------------------------------------------------------------\n");
 
     // Binary to Decimal
     const std::string b2 = "11001";
@@ -68,7 +68,7 @@ void ut::TestNumber::m_test_octal() {
     un::Number number;
 
     // Octal to Binary
-    printf("------------------------------------------------------------------------\n");    
+    printf("------------------------------------------------------------------------\n");
     const std::string n = "01234567";
     const std::string b = number.convert(un::base_binary, un::base_octal, n);
     printf("Octal to Binary\n");
@@ -78,7 +78,7 @@ void ut::TestNumber::m_test_octal() {
     printf("------------------------------------------------------------------------\n");
 
     // Octal to Decimal
-    printf("------------------------------------------------------------------------\n");    
+    printf("------------------------------------------------------------------------\n");
     const std::string o = "134";
     const std::string d = number.convert(un::base_decimal, un::base_octal, o);
     printf("Octal to Decimal\n");
@@ -86,12 +86,12 @@ void ut::TestNumber::m_test_octal() {
     printf("------------------------------------------------------------------------\n");
 
     // Octal to HexaDecimal
-    printf("------------------------------------------------------------------------\n");    
+    printf("------------------------------------------------------------------------\n");
     const std::string o1 = "134";
     const std::string h = number.convert(un::base_hexa_decimal, un::base_octal, o1);
     printf("Octal to Hexadecimal\n");
     printf("[%s] to [%s]\n", o1.c_str(), h.c_str());
-    printf("------------------------------------------------------------------------\n");    
+    printf("------------------------------------------------------------------------\n");
     printf("------------------------------------------------------------------------\n");
 }
 
@@ -99,29 +99,29 @@ void ut::TestNumber::m_test_decimal() {
     printf("------------------------ Decimal Test Cases ----------------------------\n");
     printf("------------------------------------------------------------------------\n");
     // Decimal to Binary
-    un::Number number;    
+    un::Number number;
     const std::string n = "298";
 
-    printf("------------------------------------------------------------------------\n");    
+    printf("------------------------------------------------------------------------\n");
     printf("Decimal to Binary\n");
     printf("[%s] to [", n.c_str());
     m_print_hexadecimal_binary(number.convert(un::base_binary, un::base_decimal, n));
     printf("]\n");
-    printf("------------------------------------------------------------------------\n");    
+    printf("------------------------------------------------------------------------\n");
 
     // Decimal to Octal
-    printf("------------------------------------------------------------------------\n");    
+    printf("------------------------------------------------------------------------\n");
     printf("Decimal to Octal\n");
     const std::string n1 = "63";
     printf("[%s] to [%s]\n", n1.c_str(), number.convert(un::base_octal, un::base_decimal, n1).c_str());
     printf("------------------------------------------------------------------------\n");
-    
+
     // Decimal to  Hexadecimal
-    printf("------------------------------------------------------------------------\n");    
+    printf("------------------------------------------------------------------------\n");
     printf("Decimal to Hexadecimal\n");
     const std::string n2 = "369";
     printf("[%s] to [%s]\n", n2.c_str(), number.convert(un::base_hexa_decimal, un::base_decimal, n2).c_str());
-    printf("------------------------------------------------------------------------\n");    
+    printf("------------------------------------------------------------------------\n");
     printf("------------------------------------------------------------------------\n");
 }
 
@@ -138,7 +138,7 @@ void ut::TestNumber::m_test_hexa_decimal() {
     printf("[%s] to [", n.c_str());
     m_print_hexadecimal_binary(b);
     printf("]\n");
-    printf("------------------------------------------------------------------------\n");    
+    printf("------------------------------------------------------------------------\n");
 
 
     // Hexadecimal to Octal
@@ -155,7 +155,7 @@ void ut::TestNumber::m_test_hexa_decimal() {
     const std::string h = number.convert(un::base_decimal, un::base_hexa_decimal, n2);
     printf("Hexadecimal to Decimal\n");
     printf("[%s] to [%s]\n", n2.c_str(), h.c_str());
-    printf("------------------------------------------------------------------------\n");    
+    printf("------------------------------------------------------------------------\n");
     printf("------------------------------------------------------------------------\n");
 }
 
@@ -176,7 +176,7 @@ void ut::TestNumber::m_print_octal_binary(const std::string& n) const {
         else
             printf("%c", n[i]);
         ++i;
-    }   
+    }
 }
 
 void ut::TestNumber::m_print_hexadecimal_binary(const std::string& n) const {
@@ -196,5 +196,5 @@ void ut::TestNumber::m_print_hexadecimal_binary(const std::string& n) const {
         else
             printf("%c", n[i]);
         ++i;
-    }    
+    }
 }

@@ -1,7 +1,7 @@
 #ifndef UTILITY_COMMON_COMMON_H_
 #define UTILITY_COMMON_COMMON_H_
 
-#include "MergeSort.h"
+#include "merge_sort.h"
 #include <sstream>
 #include <string>
 
@@ -92,7 +92,7 @@ bool uc::Common<T>::m_is_pandigital_0_to_9(std::string number) const {
 
     utility::algorithms::sort::MergeSort<char> merge_sort;
     merge_sort.sort(number);
-    
+
     for (int i = 0; i < 10; ++i)
         if (i != number[i] - '0')
             return false;

@@ -7,7 +7,7 @@
 #ifndef UTILITY_TEST_INC_TEST_PERMUTATION_H_
 #define UTILITY_TEST_INC_TEST_PERMUTATION_H_
 
-#include "TestCase.h"
+#include "test_case.h"
 
 namespace utility {
     namespace test {

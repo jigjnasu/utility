@@ -1,12 +1,12 @@
-#include "TestFactory.h"
-#include "TestSuiteCommon.h"
-#include "TestAlgorithms.h"
-#include "TestCommon.h"
-#include "TestInteger.h"
-#include "TestMaths.h"
-#include "TestPermutation.h"
-#include "TestString.h"
-#include "TestNumber.h"
+#include "test_factory.h"
+#include "test_suite_common.h"
+#include "test_algorithms.h"
+#include "test_common.h"
+#include "test_integer.h"
+#include "test_maths.h"
+#include "test_permutation.h"
+#include "test_string.h"
+#include "test_number.h"
 #include <cstdio>
 
 namespace ut = utility::test;

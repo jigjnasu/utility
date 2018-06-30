@@ -7,7 +7,7 @@
 #ifndef UTILITY_TEST_INC_TEST_INTEGER_H_
 #define UTILITY_TEST_INC_TEST_INTEGER_H_
 
-#include "TestCase.h"
+#include "test_case.h"
 #include <map>
 
 namespace utility {
@@ -24,7 +24,7 @@ namespace utility {
 
         private:
             std::map<int, ptrFunc> m_test_cases_dictionary;
-            
+
             void m_initialize_test_cases_dictionary();
 
             void m_test_divide();

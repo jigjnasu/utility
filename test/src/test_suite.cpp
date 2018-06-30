@@ -5,8 +5,8 @@
   Date: Dec 17th, 2016
  */
 
-#include "TestSuite.h"
-#include "TestFactory.h"
+#include "test_suite.h"
+#include "test_factory.h"
 
 namespace ut = utility::test;
 

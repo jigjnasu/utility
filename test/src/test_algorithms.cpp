@@ -1,11 +1,11 @@
-#include "TestAlgorithms.h"
-#include "BubbleSort.h"
-#include "InsertionSort.h"
-#include "SelectionSort.h"
-#include "MergeSort.h"
-#include "QuickSort.h"
-#include "Maths.h"
-#include "TestSuiteCommon.h"
+#include "test_algorithms.h"
+#include "bubble_sort.h"
+#include "insertion_sort.h"
+#include "selection_sort.h"
+#include "merge_sort.h"
+#include "quick_sort.h"
+#include "maths.h"
+#include "test_suite_common.h"
 #include <cstdio>
 #include <ctime>
 
@@ -25,7 +25,7 @@ void ut::TestAlgorithms::execute(int test_case) {
 void ut::TestAlgorithms::execute_all() {
     for (int i = TEST_ALGORITMS_START; i < TEST_ALGORITMS_FINISH; ++i)
         if (m_test_cases_dictionary[i])
-            (*this.*m_test_cases_dictionary[i])();        
+            (*this.*m_test_cases_dictionary[i])();
 }
 
 void ut::TestAlgorithms::m_initialize_test_cases_dictionary() {
@@ -33,7 +33,7 @@ void ut::TestAlgorithms::m_initialize_test_cases_dictionary() {
     m_test_cases_dictionary[TEST_ALGORITMS_SORT_INSERTION] = &TestAlgorithms::m_test_sort_insertion;
     m_test_cases_dictionary[TEST_ALGORITMS_SORT_SELECTION] = &TestAlgorithms::m_test_sort_selection;
     m_test_cases_dictionary[TEST_ALGORITMS_SORT_MERGE] = &TestAlgorithms::m_test_sort_merge;
-    m_test_cases_dictionary[TEST_ALGORITMS_SORT_QUICK] = &TestAlgorithms::m_test_sort_quick;    
+    m_test_cases_dictionary[TEST_ALGORITMS_SORT_QUICK] = &TestAlgorithms::m_test_sort_quick;
 }
 
 void ut::TestAlgorithms::m_test_sort_bubble() {
@@ -42,7 +42,7 @@ void ut::TestAlgorithms::m_test_sort_bubble() {
     const int max = 100;
     std::vector<int> data;
     utility::maths::Maths<int> maths;
-    
+
     for (int i = 0; i < 10000; ++i)
         data.push_back(maths.random(min, max));
 
@@ -51,7 +51,7 @@ void ut::TestAlgorithms::m_test_sort_bubble() {
     utility::algorithms::sort::BubbleSort<int> sort;
     sort.sort(data);
     printf("Execution time == [%.8f] seconds\n", (std::clock() - start) / static_cast<double>(CLOCKS_PER_SEC));
-    m_print(data);    
+    m_print(data);
 }
 
 void ut::TestAlgorithms::m_test_sort_insertion() {
@@ -60,7 +60,7 @@ void ut::TestAlgorithms::m_test_sort_insertion() {
     const int max = 100;
     std::vector<int> data;
     utility::maths::Maths<int> maths;
-    
+
     for (int i = 0; i < 10000; ++i)
         data.push_back(maths.random(min, max));
 
@@ -69,7 +69,7 @@ void ut::TestAlgorithms::m_test_sort_insertion() {
     utility::algorithms::sort::InsertionSort<int> sort;
     sort.sort(data);
     printf("Execution time == [%.8f] seconds\n", (std::clock() - start) / static_cast<double>(CLOCKS_PER_SEC));
-    m_print(data);        
+    m_print(data);
 }
 
 void ut::TestAlgorithms::m_test_sort_selection() {
@@ -78,7 +78,7 @@ void ut::TestAlgorithms::m_test_sort_selection() {
     const int max = 100;
     std::vector<int> data;
     utility::maths::Maths<int> maths;
-    
+
     for (int i = 0; i < 10000; ++i)
         data.push_back(maths.random(min, max));
 
@@ -87,7 +87,7 @@ void ut::TestAlgorithms::m_test_sort_selection() {
     utility::algorithms::sort::SelectionSort<int> sort;
     sort.sort(data);
     printf("Execution time == [%.8f] seconds\n", (std::clock() - start) / static_cast<double>(CLOCKS_PER_SEC));
-    m_print(data);    
+    m_print(data);
 }
 
 void ut::TestAlgorithms::m_test_sort_merge() {
@@ -96,7 +96,7 @@ void ut::TestAlgorithms::m_test_sort_merge() {
     const int max = 100;
     std::vector<int> data;
     utility::maths::Maths<int> maths;
-    
+
     for (int i = 0; i < 10000; ++i)
         data.push_back(maths.random(min, max));
 
@@ -105,7 +105,7 @@ void ut::TestAlgorithms::m_test_sort_merge() {
     utility::algorithms::sort::MergeSort<int> sort;
     sort.sort(data);
     printf("Execution time == [%.8f] seconds\n", (std::clock() - start) / static_cast<double>(CLOCKS_PER_SEC));
-    m_print(data);    
+    m_print(data);
 }
 
 void ut::TestAlgorithms::m_test_sort_quick() {
@@ -114,7 +114,7 @@ void ut::TestAlgorithms::m_test_sort_quick() {
     const int max = 100;
     std::vector<int> data;
     utility::maths::Maths<int> maths;
-    
+
     for (int i = 0; i < 10000; ++i)
         data.push_back(maths.random(min, max));
 
@@ -123,12 +123,12 @@ void ut::TestAlgorithms::m_test_sort_quick() {
     utility::algorithms::sort::QuickSort<int> sort;
     sort.sort(data);
     printf("Execution time == [%.8f] seconds\n", (std::clock() - start) / static_cast<double>(CLOCKS_PER_SEC));
-    m_print(data);    
+    m_print(data);
 }
 
 void ut::TestAlgorithms::m_print(const std::vector<int>& data) {
     printf("---------------------------------------------------\n");
     for (std::size_t i = 0; i < data.size(); ++i)
         printf("%d ", data[i]);
-    printf("\n---------------------------------------------------\n");    
+    printf("\n---------------------------------------------------\n");
 }

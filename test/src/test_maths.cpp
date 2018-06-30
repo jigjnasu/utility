@@ -1,10 +1,10 @@
-#include "TestMaths.h"
-#include "Integer.h"
-#include "TestSuiteCommon.h"
-#include "String.h"
-#include "Maths.h"
-#include "Modulo.h"
-#include "Equation.h"
+#include "test_maths.h"
+#include "integer.h"
+#include "test_suite_common.h"
+#include "string.h"
+#include "maths.h"
+#include "modulo.h"
+#include "equation.h"
 #include <vector>
 #include <cstdio>
 #include <iostream>
@@ -88,7 +88,7 @@ void utility::test::TestMaths::m_test_e_continued_fraction() {
 
 void utility::test::TestMaths::m_test_int_sqrt() {
     utility::maths::Maths<int> maths;
-    
+
     for (int i = 0; i < 50; ++i) {
         const int n = maths.random(1, 100000);
         printf("int sqrt of [%8d] == [%8d]\n", n, maths.int_sqrt(n));
@@ -98,7 +98,7 @@ void utility::test::TestMaths::m_test_int_sqrt() {
 void utility::test::TestMaths::m_test_square_root() {
     std::clock_t start = clock();
     utility::maths::Maths<int> maths;
-    
+
     int n = 2;
     std::size_t limit = 100000;
     printf("Square root of [%d] -->\n[%s]\n", n, maths.square_root(n, limit).c_str());
@@ -114,7 +114,7 @@ void utility::test::TestMaths::m_test_ordered_fractions() {
     for (std::size_t i = 0; i < fractions.size(); ++i)
         fractions[i].print();
 
-    printf("Execution time == [%.8f] seconds\n", (clock() - start) / static_cast<double>(CLOCKS_PER_SEC));    
+    printf("Execution time == [%.8f] seconds\n", (clock() - start) / static_cast<double>(CLOCKS_PER_SEC));
 }
 
 void utility::test::TestMaths::m_test_unique_random() {
@@ -160,7 +160,7 @@ void utility::test::TestMaths::m_test_phi_factors(std::size_t n) {
     printf("These are factors which are co-prime to [%lu]\n", n);
     for (std::size_t i = 0; i < factors.size(); ++i)
         printf("%lu ", factors[i]);
-    printf("\n-------------------------------------------------\n");    
+    printf("\n-------------------------------------------------\n");
 }
 
 void utility::test::TestMaths::m_test_binomial_coefficient() {

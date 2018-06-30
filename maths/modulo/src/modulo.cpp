@@ -1,4 +1,4 @@
-#include "Modulo.h"
+#include "modulo.h"
 #include <cstdio>
 
 utility::maths::Modulo::Modulo() {}
@@ -25,7 +25,7 @@ int utility::maths::Modulo::euclid_extended_inverse(int a, int m) const {
     int q = 0;
     int x0 = 0;
     int x1 = 1;
-    
+
     while (a > 1) {
         q = a / m;
         t = m;

@@ -1,6 +1,6 @@
-#include "HexaDecimal.h"
-#include "Decimal.h"
-#include "Maths.h"
+#include "hexa_decimal.h"
+#include "decimal.h"
+#include "maths.h"
 
 namespace un = utility::maths::number;
 

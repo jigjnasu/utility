@@ -8,8 +8,8 @@
 #ifndef UTILITY_MATHS_GENERAL_MATHS_H_
 #define UTILITY_MATHS_GENERAL_MATHS_H_
 
-#include "Integer.h"
-#include "Fraction.h"
+#include "integer.h"
+#include "fraction.h"
 #include <cmath>
 #include <cstdlib>
 #include <vector>
@@ -486,7 +486,7 @@ std::vector<int> um::Maths<T>::m_continued_fractions(T n, T d) const {
         }
     }
 
-    return result;    
+    return result;
 }
 
 #endif // UTILITY_MATHS_GENERAL_MATHS_H_

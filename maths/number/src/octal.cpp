@@ -1,6 +1,6 @@
-#include "Octal.h"
-#include "Decimal.h"
-#include "Maths.h"
+#include "octal.h"
+#include "decimal.h"
+#include "maths.h"
 
 namespace un = utility::maths::number;
 
@@ -35,7 +35,7 @@ std::string un::Octal::fro(const std::string& n) const {
         // As the octal number exapnsion is 3 bits block.
         // Make leading zeros as well.
         const std::size_t size = binary.size();
-        for (std::size_t i = 0; i < bit_block - size; ++i)            
+        for (std::size_t i = 0; i < bit_block - size; ++i)
             binary.push_back('0');
 
         m_swap(binary[0], binary[2]);

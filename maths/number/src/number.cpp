@@ -1,8 +1,8 @@
-#include "Number.h"
-#include "Octal.h"
-#include "Decimal.h"
-#include "HexaDecimal.h"
-#include "Common.h"
+#include "number.h"
+#include "octal.h"
+#include "decimal.h"
+#include "hexa_decimal.h"
+#include "common.h"
 #include <cstdio>
 
 namespace un = utility::maths::number;
@@ -38,11 +38,11 @@ std::string un::Number::convert(un::Base to, un::Base from,
     // Octal to Decimal
     if (un::base_decimal == to && un::base_octal == from)
         return common.to_string(octal.decimal(n));
-        
+
     // Octal to Hexadecimal
     if (un::base_hexa_decimal == to && un::base_octal == from)
         return m_octal_to_hexadecimal(n);
-    
+
     // Decimal to Binary
     if (un::base_binary == to && un::base_decimal == from) {
         std::string number = decimal.fro(common.to_number(n));

@@ -8,7 +8,7 @@
 #ifndef UTILITY_MATHS_MODULO_MODULO_H_
 #define UTILITY_MATHS_MODULO_MODULO_H_
 
-#include "Equation.h"
+#include "equation.h"
 #include <vector>
 
 namespace utility {

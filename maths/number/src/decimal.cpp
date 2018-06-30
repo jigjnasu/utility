@@ -1,4 +1,4 @@
-#include "Decimal.h"
+#include "decimal.h"
 
 const std::string hexadecimal_range = "0123456789ABCDEF";
 
@@ -14,7 +14,7 @@ int un::Decimal::to(const std::string& n) const {
     for (int i = size; i >= 0; --i)
         if (n[i] == '1')
             number += (1 << (size - i));
-    
+
     return number;
 }
 

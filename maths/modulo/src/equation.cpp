@@ -1,4 +1,4 @@
-#include "Equation.h"
+#include "equation.h"
 #include <cstdio>
 
 utility::maths::Equation::Equation() : m_a(0), m_m(0) {}

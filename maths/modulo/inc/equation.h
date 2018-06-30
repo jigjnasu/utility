@@ -17,7 +17,7 @@ namespace utility {
             Equation();
             Equation(int a, int m);
             ~Equation();
-            
+
             Equation(const Equation& rhs);
             Equation& operator = (const Equation& rhs);
 

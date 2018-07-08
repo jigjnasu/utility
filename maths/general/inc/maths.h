@@ -13,6 +13,7 @@
 #include <cmath>
 #include <cstdlib>
 #include <vector>
+#include <random>
 
 namespace utility {
     namespace maths {
@@ -265,7 +266,9 @@ void um::Maths<T>::swap(T& A, T& B) const {
 
 template <typename T>
 T um::Maths<T>::random(const T& min, const T& max) const {
-    return min + rand() % (max - min + 1);
+    std::random_device rd;
+    std::uniform_int_distribution<> dt(min, max);
+    return dt(rd);
 }
 
 template <typename T>

@@ -8,7 +8,7 @@
 #include <vector>
 #include <cstdio>
 #include <iostream>
-#include <ctime>
+#include <chrono>
 
 namespace um = utility::maths;
 
@@ -96,17 +96,20 @@ void utility::test::TestMaths::m_test_int_sqrt() {
 }
 
 void utility::test::TestMaths::m_test_square_root() {
-    std::clock_t start = clock();
+    using clock = std::chrono::steady_clock;
+    clock::time_point start = clock::now();
     utility::maths::Maths<int> maths;
 
     int n = 2;
     std::size_t limit = 100000;
     printf("Square root of [%d] -->\n[%s]\n", n, maths.square_root(n, limit).c_str());
-    printf("Execution time == [%.8f] seconds\n", (clock() - start) / static_cast<double>(CLOCKS_PER_SEC));
+    printf("Execution time == [%16lf] seconds\n",
+           std::chrono::duration<double>(clock::now() - start).count());
 }
 
 void utility::test::TestMaths::m_test_ordered_fractions() {
-    std::clock_t start = clock();
+    using clock = std::chrono::steady_clock;
+    clock::time_point start = clock::now();
     utility::maths::Maths<int> maths;
     const int n = 100;
     std::vector< utility::maths::Fraction<int> > fractions = maths.ordered_fractions(n);
@@ -114,7 +117,8 @@ void utility::test::TestMaths::m_test_ordered_fractions() {
     for (std::size_t i = 0; i < fractions.size(); ++i)
         fractions[i].print();
 
-    printf("Execution time == [%.8f] seconds\n", (clock() - start) / static_cast<double>(CLOCKS_PER_SEC));
+    printf("Execution time == [%16lf] seconds\n",
+           std::chrono::duration<double>(clock::now() - start).count());
 }
 
 void utility::test::TestMaths::m_test_unique_random() {

@@ -7,7 +7,7 @@
 #include "maths.h"
 #include "test_suite_common.h"
 #include <cstdio>
-#include <ctime>
+#include <chrono>
 
 namespace ut = utility::test;
 
@@ -47,10 +47,12 @@ void ut::TestAlgorithms::m_test_sort_bubble() {
         data.push_back(maths.random(min, max));
 
     m_print(data);
-    std::clock_t start = std::clock();
+    using clock = std::chrono::steady_clock;
+    clock::time_point start = clock::now();
     utility::algorithms::sort::BubbleSort<int> sort;
     sort.sort(data);
-    printf("Execution time == [%.8f] seconds\n", (std::clock() - start) / static_cast<double>(CLOCKS_PER_SEC));
+    printf("Execution time == [%16lf] seconds\n",
+           std::chrono::duration<double>(clock::now() - start).count());
     m_print(data);
 }
 
@@ -65,10 +67,12 @@ void ut::TestAlgorithms::m_test_sort_insertion() {
         data.push_back(maths.random(min, max));
 
     m_print(data);
-    std::clock_t start = std::clock();
+    using clock = std::chrono::steady_clock;
+    clock::time_point start = clock::now();
     utility::algorithms::sort::InsertionSort<int> sort;
     sort.sort(data);
-    printf("Execution time == [%.8f] seconds\n", (std::clock() - start) / static_cast<double>(CLOCKS_PER_SEC));
+    printf("Execution time == [%16lf] seconds\n",
+           std::chrono::duration<double>(clock::now() - start).count());
     m_print(data);
 }
 
@@ -83,10 +87,12 @@ void ut::TestAlgorithms::m_test_sort_selection() {
         data.push_back(maths.random(min, max));
 
     m_print(data);
-    std::clock_t start = std::clock();
+    using clock = std::chrono::steady_clock;
+    clock::time_point start = clock::now();
     utility::algorithms::sort::SelectionSort<int> sort;
     sort.sort(data);
-    printf("Execution time == [%.8f] seconds\n", (std::clock() - start) / static_cast<double>(CLOCKS_PER_SEC));
+    printf("Execution time == [%16lf] seconds\n",
+           std::chrono::duration<double>(clock::now() - start).count());
     m_print(data);
 }
 
@@ -101,10 +107,12 @@ void ut::TestAlgorithms::m_test_sort_merge() {
         data.push_back(maths.random(min, max));
 
     m_print(data);
-    std::clock_t start = std::clock();
+    using clock = std::chrono::steady_clock;
+    clock::time_point start = clock::now();
     utility::algorithms::sort::MergeSort<int> sort;
     sort.sort(data);
-    printf("Execution time == [%.8f] seconds\n", (std::clock() - start) / static_cast<double>(CLOCKS_PER_SEC));
+    printf("Execution time == [%16lf] seconds\n",
+           std::chrono::duration<double>(clock::now() - start).count());
     m_print(data);
 }
 
@@ -119,10 +127,12 @@ void ut::TestAlgorithms::m_test_sort_quick() {
         data.push_back(maths.random(min, max));
 
     m_print(data);
-    std::clock_t start = std::clock();
+    using clock = std::chrono::steady_clock;
+    clock::time_point start = clock::now();
     utility::algorithms::sort::QuickSort<int> sort;
     sort.sort(data);
-    printf("Execution time == [%.8f] seconds\n", (std::clock() - start) / static_cast<double>(CLOCKS_PER_SEC));
+    printf("Execution time == [%16lf] seconds\n",
+           std::chrono::duration<double>(clock::now() - start).count());
     m_print(data);
 }
 

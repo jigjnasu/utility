@@ -5,9 +5,10 @@ from os import listdir
 from os.path import isfile, join
 
 def get_datetime(path):
+    st = str(os.stat(path).st_mtime)
     dt = time.strftime('%d_%m_%Y_%H_%M_%S', time.localtime(os.stat(path).st_mtime))
-    ns = int(((os.stat(path).st_mtime_ns % 1000000000))/ 1000)
-    return '{}_{:06d}'.format(dt, ns)
+    ns = int(st.split('.')[1])
+    return '{}_{:08d}'.format(dt, ns)
 
 def convert(path):
     onlyfiles = [f for f in listdir(path) if isfile(join(path, f))]
@@ -16,8 +17,15 @@ def convert(path):
         ext = f.split('.')[1]
         fn = get_datetime(path + '/' + f)
         nn = path + '/' + fn + '.' + ext
-        os.rename(p, nn)
-        print('{} -> {}'.format(p, nn))
+        if os.path.isfile(nn):
+            iter = 1
+            while os.path.isfile(nn) == True:
+                iter += 1
+                nn = path + '/' + fn + "_" + str(iter) + "." + ext
+            os.rename(p, nn)
+        else:
+            os.rename(p, nn)
+            print('{} -> {}'.format(p, nn))
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:

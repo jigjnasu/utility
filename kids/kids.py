@@ -4,9 +4,10 @@ from reportlab.pdfgen import canvas
 from random import randint
 
 class AdwitaAtharv(object):
-    def __init__(self, title, file_name):
+    def __init__(self, title, file_name, student):
         self.title = title
         self.file_name = file_name
+        self.student = student
 
     def generate_sum_sub_problems(self):
         c = canvas.Canvas(self.file_name, pagesize=A4)
@@ -73,8 +74,12 @@ class AdwitaAtharv(object):
 
     def _generate_addition_problem(self):
         """Generate two random 3-digit numbers for column addition."""
-        a = randint(100, 999)
-        b = randint(100, 999)
+        if self.student == 'Adwita':
+            a = randint(100, 999)
+            b = randint(100, 999)
+        else:
+            a = randint(50, 99)
+            b = randint(10, 40)
         return a, b
 
     def _draw_sum_sub_problem(self, op, c, x, y, a, b):
@@ -97,13 +102,21 @@ class AdwitaAtharv(object):
         c.drawCentredString(x + 90 , y, '=')
 
 def generate_adwita_sum_sub_problems():
-    aa = AdwitaAtharv("Adwita's + - problems", '/media/sf_shared/adwita_sum_sub_problems.pdf')
-    aa.generate_sum_sub_problems()
+    for i in range(1, 21):
+        aa = AdwitaAtharv(f"Adwita's + - problems {i}", f'/media/sf_shared/adwita_sum_sub_problems_{i}.pdf', 'Adwita')
+        aa.generate_sum_sub_problems()
 
 def generate_adwita_mul_div_problems():
-    aa = AdwitaAtharv("Adwita's x \u00F7 problems", '/media/sf_shared/adwita_mul_div_problems.pdf')
-    aa.generate_mul_div_problems()
+    for i in range(1, 21):
+        aa = AdwitaAtharv(f"Adwita's x \u00F7 problems {i}", f'/media/sf_shared/adwita_mul_div_problems_{i}.pdf', 'Adwita')
+        aa.generate_mul_div_problems()
+
+def generate_atharv_sum_sub_problems():
+    for i in range(1, 3):
+        aa = AdwitaAtharv(f"Atharv's + - problems {i}", f'/media/sf_shared/atharv_sum_sub_problems_{i}.pdf', 'Atharv')
+        aa.generate_sum_sub_problems()
 
 if __name__ == "__main__":
     #generate_adwita_sum_sub_problems()
-    generate_adwita_mul_div_problems()
+    #generate_adwita_mul_div_problems()
+    generate_atharv_sum_sub_problems()

@@ -103,17 +103,17 @@ class AdwitaAtharv(object):
 
 def generate_adwita_sum_sub_problems():
     for i in range(1, 21):
-        aa = AdwitaAtharv(f"Adwita's + - problems {i}", f'/media/sf_shared/adwita_sum_sub_problems_{i}.pdf', 'Adwita')
+        aa = AdwitaAtharv(f"Superstar Mathematician + - problems {i}", f'adwita_sum_sub_problems_{i}.pdf', 'Adwita')
         aa.generate_sum_sub_problems()
 
 def generate_adwita_mul_div_problems():
     for i in range(1, 21):
-        aa = AdwitaAtharv(f"Adwita's x \u00F7 problems {i}", f'/media/sf_shared/adwita_mul_div_problems_{i}.pdf', 'Adwita')
+        aa = AdwitaAtharv(f"Superstar Mathematician x \u00F7 problems {i}", f'adwita_mul_div_problems_{i}.pdf', 'Adwita')
         aa.generate_mul_div_problems()
 
 def generate_atharv_sum_sub_problems():
-    for i in range(1, 3):
-        aa = AdwitaAtharv(f"Atharv's + - problems {i}", f'/media/sf_shared/atharv_sum_sub_problems_{i}.pdf', 'Atharv')
+    for i in range(1, 6):
+        aa = AdwitaAtharv(f"Superstar Mathematician + - problems {i}", f'atharv_sum_sub_problems_{i}.pdf', 'Atharv')
         aa.generate_sum_sub_problems()
 
 if __name__ == "__main__":

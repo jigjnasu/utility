@@ -118,5 +118,5 @@ def generate_atharv_sum_sub_problems():
 
 if __name__ == "__main__":
     #generate_adwita_sum_sub_problems()
-    #generate_adwita_mul_div_problems()
+    generate_adwita_mul_div_problems()
     generate_atharv_sum_sub_problems()

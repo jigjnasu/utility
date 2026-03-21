@@ -52,11 +52,19 @@ const QUESTIONS = [
   },
   {
     id: 5,
-    question: "A square has an area of 49 cm<sup>2</sup>. The rectangle has a width that is equal to the side length of this square, and its area is 84 cm<sub>2.</sub>.\n\nWhat is the length of the rectangle?",
-    options: [],
-    answer: 3,
+    question: "A square has an area of 49 cm<sup>2</sup>. The rectangle has a width that is equal to the side length of this square, and its area is 84 cm<sup>2.</sup>.\n\nWhat is the length of the rectangle?",
+    options: ["11", "12", "13", "14"],
+    answer: 1,
     subject: "Mathematics"
-  },  
+  },
+  {
+    id: 6,
+    question: "Seven years ago, Om’s age was exactly one third of the age he will be in 9 years’ time.\n\nHow old is Om right now?",
+    options: ["12", "15", "18", "21"],
+    answer: 1,
+    subject: "Mathematics"
+  },
+
 ];
 
 // Export for use in main app

@@ -183,6 +183,20 @@ const QUESTIONS = [
     answer: 4,
     subject: "Mathematics"
   },
+  {
+    id: 24,
+    question: "A clock shows 8:13 am.\n\nWhat it will show 888 minutes later?",
+    options: ["9:11 pm", "10:01 pm", "10:11 pm", "10:51 pm", "11:01 pm"],
+    answer: 4,
+    subject: "Mathematics"
+  },
+  {
+    id: 25,
+    question: "A newspaper is made from a pile of 8 large sheets.\nThe whole pile is folded in half.\nThe pages are numbered from 1 to 36.\n\nWhich other pages are on the same large sheet as page 7?",
+    options: ["6, 29, 30", "6, 27, 28", "8, 27, 28", "8, 29, 30", "8, 31, 32"],
+    answer: 3,
+    subject: "Mathematics"
+  },
 ];
 
 // Export for use in main app

@@ -106,6 +106,20 @@ const QUESTIONS = [
     answer: 2,
     subject: "Mathematics"
   },
+  {
+    id: 13,
+    question: "Sarah has twice as much money as Jane and Mandy has $80 more than Jane\n. If their combined total is $800, how much money does Mandy have?",
+    options: ["$200", "$220", "$260", "$320", "$360"],
+    answer: 2,
+    subject: "Mathematics"
+  },
+  {
+    id: 14,
+    question: "I ordered five boxes of pizza for $47.50, how much should I pay for 7 boxes of pizza?",
+    options: ["$66.50", "$70.00", "$72.50", "$75.00", "$77.50"],
+    answer: 0,
+    subject: "Mathematics"
+  }, 
 ];
 
 // Export for use in main app

@@ -178,8 +178,8 @@ const QUESTIONS = [
   },
   {
     id: 23,
-    question: "",
-    options: [],
+    question: "What 3D shape can be formed using the given 2D shapes?<img src='images/maths_questions_1/q_23.png' class='q-img'>",
+    options: ["Sphere", "Triangular Prism", "Cone", "Square Pyramid", "Cylinder"],
     answer: 4,
     subject: "Mathematics"
   },

@@ -203,7 +203,21 @@ const QUESTIONS = [
     options: ["3", "4", "5", "6", "7"],
     answer: 3,
     subject: "Mathematics"
-  },  
+  },
+  {
+    id: 27,
+    question: "Bonnie grows plums on her farm. She had to discard 1/5 of her harvested plums because they were spoilt. She then split the remaining plums with her neighbour in a 7 : 11 ratio.\nIf the difference between the number of plums Bonnie kept and the number her neighbour received is 24, how many plums did Bonnie originally harvest?",
+    options: ["16", "48", "87", "108", "135"],
+    answer: 4,
+    subject: "Mathematics"
+  },
+  {
+    id: 28,
+    question: "The graph below shows the number of green t-shirts sold at a clothing shop each week.\n<img src='images/maths_questions_1/q_28.png' class='q-img'>\n\nLooking at the graph, during which week did the sales increase the most compared to the previous week?",
+    options: ["Week 1", "Week 2", "Week 4", "Week 7", "Week 8"],
+    answer: 2,
+    subject: "Mathematics"
+  },
 ];
 
 // Export for use in main app

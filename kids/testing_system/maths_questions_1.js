@@ -218,6 +218,20 @@ const QUESTIONS = [
     answer: 2,
     subject: "Mathematics"
   },
+  {
+    id: 29,
+    question: "Rohan has a darboard with scores of 3, 6 and 9. He throws three darts and hit the board each time. Which of the following total scores is impossible to achieve?<img src='images/maths_questions_1/q_29.png' class='q-img'>",
+    options: ["9", "12", "16", "21", "27"],
+    answer: 2,
+    subject: "Mathematics"
+  },
+  {
+    id: 30,
+    question: "",
+    options: [""],
+    answer: 2,
+    subject: "Mathematics"
+  },  
 ];
 
 // Export for use in main app

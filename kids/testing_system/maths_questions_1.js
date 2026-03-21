@@ -197,6 +197,13 @@ const QUESTIONS = [
     answer: 3,
     subject: "Mathematics"
   },
+  {
+    id: 26,
+    question: "Carol goes to the shops with her pocket money.\nShe spends 1/4 of it in the first shop, and 1/8 of it in each of the other shops that she visits.\nShe has 2/16 of her pocket money left at the end.\n\nHow many shops does Carol visit altogether?",
+    options: ["3", "4", "5", "6", "7"],
+    answer: 3,
+    subject: "Mathematics"
+  },  
 ];
 
 // Export for use in main app

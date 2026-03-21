@@ -239,6 +239,34 @@ const QUESTIONS = [
     answer: 0,
     subject: "Mathematics"
   },
+  {
+    id: 32,
+    question: "A triangle has one right-angle and one ange of 25 degrees.\n\nWhat is the measure of the third angle?",
+    options: ["55", "60", "65", "70", "75"],
+    answer: 2,
+    subject: "Mathematics"
+  },
+  {
+    id: 33,
+    question: "Bees have 6 legs. Spiders have 8 legs.\nJoshua saw a picture of spiders and bees and counted 36 legs altogether.\n\nHow many beeds dis Joshua see in the picture?",
+    options: ["2", "3", "4", "5", "6"],
+    answer: 0,
+    subject: "Mathematics"
+  },
+  {
+    id: 34,
+    question: "Danzel spent 3/5 of his money on dinner and a movie.\nThe dinner was twice as much as the movie which cost $24.00\n\nHow much money has he got left?",
+    options: ["$29.00", "$32.00", "$40.00", "$48.00", "$56.00"],
+    answer: 1,
+    subject: "Mathematics"
+  },
+  {
+    id: 35,
+    question: "Six children played in a chess competition.\nEach child played against every other child exactly once.\n\nHow many games were played in total?",
+    options: ["15", "12", "10", "6", "3"],
+    answer: 0,
+    subject: "Mathematics"
+  },
 ];
 
 // Export for use in main app

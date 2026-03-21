@@ -257,7 +257,7 @@ const QUESTIONS = [
     id: 34,
     question: "Danzel spent 3/5 of his money on dinner and a movie.\nThe dinner was twice as much as the movie which cost $24.00\n\nHow much money has he got left?",
     options: ["$29.00", "$32.00", "$40.00", "$48.00", "$56.00"],
-    answer: 1,
+    answer: 3,
     subject: "Mathematics"
   },
   {

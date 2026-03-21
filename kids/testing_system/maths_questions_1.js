@@ -38,7 +38,7 @@ const QUESTIONS = [
   },
   {
     id: 3,
-    question: "The length of a rectangle is three times its width. If the perimeter of the rectangle is 48 cm.\n\nwhat is the area of the rectangle?",
+    question: "The length of a rectangle is three times its width. If the perimeter of the rectangle is 48 cm.\n\nwhat is the length of the rectangle?",
     options: ["18", "16", "20", "22", "24"],
     answer: 0,
     subject: "Mathematics"
@@ -143,7 +143,7 @@ const QUESTIONS = [
   },
   {
     id: 18,
-    question: "A builder uses tiles measuring 50 cm by 20 cm to cover 4 m<suop>2</sup> of wall.\n\nHow many tiles does he use?",
+    question: "A builder uses tiles measuring 50 cm by 20 cm to cover 4 m<sup>2</sup> of wall.\n\nHow many tiles does he use?",
     options: ["25", "35", "40", "45", "50"],
     answer: 2,
     subject: "Mathematics"
@@ -157,7 +157,7 @@ const QUESTIONS = [
   },
   {
     id: 20,
-    question: "Daniel drives 240 km from Hilltown to Lakeside at a constant speed of 80 km/h. He stops for a 300-minute break. After the break, he drives another 360 km to Brookfield at 90 km/h.\n\nWhat is Daniel's total travel time, including break?",
+    question: "Daniel drives 240 km from Hilltown to Lakeside at a constant speed of 80 km/h. He stops for a 30-minute break. After the break, he drives another 360 km to Brookfield at 90 km/h.\n\nWhat is Daniel's total travel time, including break?",
     options: ["6 hours 35 minutes", "7 hours 00 minutes", "7 hours 30 minutes", "8 hours 10 minutes", "8 hours 30 minutes"],
     answer: 2,
     subject: "Mathematics"
@@ -248,7 +248,7 @@ const QUESTIONS = [
   },
   {
     id: 33,
-    question: "Bees have 6 legs. Spiders have 8 legs.\nJoshua saw a picture of spiders and bees and counted 36 legs altogether.\n\nHow many beeds dis Joshua see in the picture?",
+    question: "Bees have 6 legs. Spiders have 8 legs.\nJoshua saw a picture of spiders and bees and counted 36 legs altogether.\n\nHow many bees dis Joshua see in the picture?",
     options: ["2", "3", "4", "5", "6"],
     answer: 0,
     subject: "Mathematics"

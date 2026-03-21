@@ -91,7 +91,14 @@ const QUESTIONS = [
     options: ["30 grams", "40 grams", "45 grams", "60 grams", "65 grams"],
     answer: 3,
     subject: "Mathematics"
-  },  
+  },
+  {
+    id: 11,
+    question: "Bart is training for an upcoming weightlifting competition. He records the total weight he lifts on each weekday. His training log shows the following total weights lifted each day:\n\n<img src='images/maths_questions_1/q_11.png' class='q-img'>\n\nWhat is the average weight lifted per day over these five days?",
+    options: ["55 kg", "58 kg", "60 kg", "63 kg", "66 kg"],
+    answer: 3,
+    subject: "Mathematics"
+  },   
 ];
 
 // Export for use in main app

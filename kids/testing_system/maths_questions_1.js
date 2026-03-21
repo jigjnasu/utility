@@ -227,11 +227,18 @@ const QUESTIONS = [
   },
   {
     id: 30,
-    question: "",
-    options: [""],
-    answer: 2,
+    question: "Emily has a jar of jelly beans. She ate 3/9 of the jelly beans on Monday, 4/9 on Tuesday, and gave away 1/9 to her friend on Wednesday. If she has 15 jelly beans left.\n\nWhat was the original amount of jar?",
+    options: ["135", "140", "145", "150", "165"],
+    answer: 0,
     subject: "Mathematics"
-  },  
+  },
+  {
+    id: 31,
+    question: "A 1.5 litre bottle of lemonade concentrate makes enough drink to fill five 300 ml cups.\nHow many bottles of lemonade concentrate are needed to fill 30 glasses if each can hold 250 ml of lemonade?",
+    options: ["5", "6", "7", "8", "10"],
+    answer: 0,
+    subject: "Mathematics"
+  },
 ];
 
 // Export for use in main app

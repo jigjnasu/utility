@@ -220,7 +220,7 @@ const QUESTIONS = [
   },
   {
     id: 29,
-    question: "Rohan has a darboard with scores of 3, 6 and 9. He throws three darts and hit the board each time. Which of the following total scores is impossible to achieve?<img src='images/maths_questions_1/q_29.png' class='q-img'>",
+    question: "Rohan has a darboard with scores of 3, 6 and 9. He throws three darts and hit the board each time. Which of the following total scores is impossible to achieve?<img src='images/maths_questions_1/q_29.png' class='q-img' style='width: 50%; height: auto;'>",
     options: ["9", "12", "16", "21", "27"],
     answer: 2,
     subject: "Mathematics"

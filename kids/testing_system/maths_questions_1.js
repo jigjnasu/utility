@@ -119,7 +119,21 @@ const QUESTIONS = [
     options: ["$66.50", "$70.00", "$72.50", "$75.00", "$77.50"],
     answer: 0,
     subject: "Mathematics"
-  }, 
+  },
+  {
+    id: 15,
+    question: "Ethan had some money. He gave $10 to Jack, then gave three quarters of what was left to Lily. Lily gave half of her money to Noah, who received $9.\n\nWhat was Eathan’s original amount of money?",
+    options: ["$34", "$35", "$36", "$37", "$38"],
+    answer: 0,
+    subject: "Mathematics"
+  },
+  {
+    id: 16,
+    question: "A paint mixture contains red, yellow and white paint in the ratio 4:3:8. If the total volume is 1200 ml.\n\nWhat is the difference in volume between the white and yellow paint?",
+    options: [350, 400, 450, 500, 550],
+    answer: 1,
+    subject: "Mathematics"
+  },
 ];
 
 // Export for use in main app

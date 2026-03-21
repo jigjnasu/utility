@@ -94,11 +94,18 @@ const QUESTIONS = [
   },
   {
     id: 11,
-    question: "Bart is training for an upcoming weightlifting competition. He records the total weight he lifts on each weekday. His training log shows the following total weights lifted each day:\n\n<img src='images/maths_questions_1/q_11.png' class='q-img'>\n\nWhat is the average weight lifted per day over these five days?",
+    question: "Bart is training for an upcoming weightlifting competition. He records the total weight he lifts on each weekday. His training log shows the following total weights lifted each day:\n<img src='images/maths_questions_1/q_11.png' class='q-img'>\nWhat is the average weight lifted per day over these five days?",
     options: ["55 kg", "58 kg", "60 kg", "63 kg", "66 kg"],
     answer: 3,
     subject: "Mathematics"
-  },   
+  },
+  {
+    id: 12,
+    question: "Tim decides to put tiles around his pool. The diagram below shows the dimensions of the total area to be tiled (shaded in grey) and the pool area (white).\n<img src='images/maths_questions_1/q_12.png' class='q-img'>\nWhat is the area of the shaded region that will be tiled?",
+    options: ["42 m<sup>2</sup>", "55 m<sup>2</sup>", "63 m<sup>2</sup>", "69 m<sup>2</sup>", "74 m<sup>2</sup>"],
+    answer: 2,
+    subject: "Mathematics"
+  },
 ];
 
 // Export for use in main app

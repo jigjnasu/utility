@@ -33,7 +33,7 @@ const QUESTIONS = [
     id: 2,
     question: "Adwita has a party at 1:00 pm. She spent 55 minutes in prepration of it and another 37 minutes. Cake cooled for another 26 minutes.What is the latest time Adwita should start preparing the cake?",
     options: ["10:52 am", "11:22 am", "11:02 am", "11:52 am"],
-    answer: 3,
+    answer: 2,
     subject: "Mathematics"
   },
 ];

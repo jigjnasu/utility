@@ -24,10 +24,17 @@ const QUIZ_CONFIG = {
 const QUESTIONS = [
   {
     id: 1,
-    question: "Adwita has a gift box with 5 kg chocolates and every chocolate has 5 g weight. She want to make a bag of 20 chocolates, how many total bag she can make?",
+    question: "Adwita has a gift box with 5 kg chocolates and every chocolate has 5 g weight. She want to make a bag of 20 chocolates.<br>How many total bag she can make?",
     options: ["40", "50", "60", "70"],
     answer: 1,
     subject: "Mathsematics"
+  },
+  {
+    id: 2,
+    question: "Adwita has a party at 1:00 pm. She spent 55 minutes in prepration of it and another 37 minutes. Cake cooled for another 26 minutes.<br>What is the latest time Adwita should start preparing the cake?",
+    options: ["10:52 am", "11:22 am", "11:02 am", "11:52 am"],
+    answer: 2,
+    subject: "Mathematics"
   },
   {
     id: 2,

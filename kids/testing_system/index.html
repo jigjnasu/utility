@@ -849,7 +849,7 @@ const App = (() => {
 
     qs('#q-subject').textContent    = q.subject || 'General';
     qs('#q-number').textContent     = `Question ${idx + 1} of ${tot}`;
-    qs('#q-text').textContent       = q.question;
+    qs('#q-text').innerHTML         = q.question.replace(/\n/g, '<br>');
     qs('#footer-progress').textContent = `${idx + 1} / ${tot}`;
 
     // Flag

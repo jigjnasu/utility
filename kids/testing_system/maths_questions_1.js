@@ -134,6 +134,55 @@ const QUESTIONS = [
     answer: 1,
     subject: "Mathematics"
   },
+  {
+    id: 17,
+    question: "If 48 is 80% of a number, what is the number?",
+    options: ["50", "55", "60", "65", "70"],
+    answer: 2,
+    subject: "Mathematics"
+  },
+  {
+    id: 18,
+    question: "A builder uses tiles measuring 50 cm by 20 cm to cover 4 m<suop>2</sup> of wall.\n\nHow many tiles does he use?",
+    options: ["25", "35", "40", "45", "50"],
+    answer: 2,
+    subject: "Mathematics"
+  },
+  {
+    id: 19,
+    question: "Emma started her train journey at 9:45 pm and reached her destination at 6:20 am the next day.\n\nHow long was Emma’s train journey?",
+    options: ["7 hours 35 minutes", "8 hours 35 minutes", "8 hours 55 minutes", "9 hours 25 minutes", "9 hours 35 minutes"],
+    answer: 1,
+    subject: "Mathematics"
+  },
+  {
+    id: 20,
+    question: "Daniel drives 240 km from Hilltown to Lakeside at a constant speed of 80 km/h. He stops for a 300-minute break. After the break, he drives another 360 km to Brookfield at 90 km/h.\n\nWhat is Daniel's total travel time, including break?",
+    options: ["6 hours 35 minutes", "7 hours 00 minutes", "7 hours 30 minutes", "8 hours 10 minutes", "8 hours 30 minutes"],
+    answer: 2,
+    subject: "Mathematics"
+  },
+  {
+    id: 21,
+    question: "From a milk container 20 % set aside for tea, then 3/5 of the remainder used for baking. If 160 ml remain.\n\nwhat was the container's total volume?",
+    options: ["400 ml", "450 ml", "500 ml", "550 ml", "600 ml"],
+    answer: 2,
+    subject: "Mathematics"
+  },
+  {
+    id: 22,
+    question: "A factory uses 600 kg of steel to produce 8 machines.\nIt also uses 900 kg of steel to produce 12 generator.\n\nHow much steel is needed to produce 6 machines and 9 generators?",
+    options: ["950 kg", "1000 kg", "1050 kg", "1100 kg", "1125 kg"],
+    answer: 4,
+    subject: "Mathematics"
+  },
+  {
+    id: 23,
+    question: "",
+    options: [],
+    answer: 4,
+    subject: "Mathematics"
+  },
 ];
 
 // Export for use in main app

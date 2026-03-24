@@ -956,7 +956,7 @@ const App = (() => {
     const passed = r.passed;
     const hero = qs('#result-hero');
     hero.className = 'result-hero ' + (passed ? 'pass' : 'fail');
-    qs('#result-emoji').textContent  = passed ? '🎉' : '😔';
+    qs('#result-emoji').textContent  = passed ? '🎉' : '😊';
     qs('#result-score').textContent  = `${r.score}%`;
     qs('#result-verdict').textContent= passed ? 'Congratulations!' : 'Keep Practicing!';
     qs('#result-subtitle').textContent = `You scored ${r.correct} out of ${r.total}. Pass mark: ${r.passMark}%`;

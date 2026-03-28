@@ -191,9 +191,37 @@ const QUESTIONS = [
     subject: "Mathsematics"
   },
   {
+    id: 25,
+    question: "Mia rolls two six sided dice.\nWhat is the probability that the sum is less than 9?",
+    options: ["5/12", "1/2", "7/12", "13/18", "3/4"],
+    answer: 3,
+    subject: "Mathsematics"
+  },
+  {
+    id: 26,
+    question: "A bottle of cleaning solution is used in two stages.\nFirst, 30% of the solution is used.\nThen 35 ml more is used.\nAfter both uses, 105 ml remains.\nWhat was the original volume?",
+    options: ["150 ml", "200 ml", "250 ml", "300 ml", "350 ml"],
+    answer: 1,
+    subject: "Mathsematics"
+  },
+  {
     id: 27,
     question: "A gardner grew tomatoes. 1/3 of the crop was unusable. The remaining tomatoes were shared with a neighbour in the ratio 4:7. If the neighbour received 42 more tomatoes than the gardner.\nHow many tomatoes did the gardner harvest originally?",
     options: ["140", "150", "154", "157", "164"],
+    answer: 4,
+    subject: "Mathsematics"
+  },
+  {
+    id: 28,
+    question: "Morning sessions start at 8:15 am, with three 55 minutes lectures and a 25 minute break. After 1:10 hour lunch, there are two 65 minute workshops.\nHow long is the total college day?",
+    options: ["6 hours 5 minutes", "6 hours 10 minutes", "6 hours 15 minutes", "6 hours 20 minutes", "6 hours 30 minutes"],
+    answer: 4,
+    subject: "Mathsematics"
+  },
+  {
+    id: 29,
+    question: "A cook uses &frac35; kg of meat to make 4 hamburgers.\nHow many kilograms of meat are needed to make 80 hamburgers?",
+    options: ["28", "24", "20", "16", "12"],
     answer: 4,
     subject: "Mathsematics"
   },
@@ -203,7 +231,29 @@ const QUESTIONS = [
     options: ["30", "35", "40", "45", "50"],
     answer: 2,
     subject: "Mathsematics"
+  },
+  {
+    id: 31,
+    question: "What is the difference between 33.3 and 3.33?",
+    options: ["29.97", "30.97", "30.00", "30.03", "36.63"],
+    answer: 0,
+    subject: "Mathsematics"
   },  
+  {
+    id: 32,
+    question: "Two apples and an orange cost $3.00.\nAn apple and two oranges cost $3.30.\nHow much an apple cost?",
+    options: ["$0.90", "$1.00", "$1.10", "$1.20", "$1.30"],
+    answer: 0,
+    subject: "Mathsematics"
+  },  
+  {
+    id: 33,
+    question: "Kathy and her two sisters shared $80.\nHer eldest sister received 3 times Kathy's amount and her younger sister received one quarter of the total.\nHow much did Kathy get?",
+    options: ["$15", "$20", "$25", "$30", "$35"],
+    answer: 0,
+    subject: "Mathsematics"
+  },  
+
   {
     id: 34,
     question: "The average test score for a class of 9 students is 70 out of 100.\nA new student joins the class.\nIf the teacher wanted the class average to be 72, what score must the new student achieve?",
@@ -211,6 +261,13 @@ const QUESTIONS = [
     answer: 2,
     subject: "Mathsematics"
   },  
+  {
+    id: 35,
+    question: "The country of Wakanda has a currency called 'Wakam'.\nThey have coins of the following types:\n 1 Wakam, 2 Wakams, 5 Wakams\n 10 Wakams, 20 Wakams, 50 Wakams.\nAdam bought an item that costs 79 Wakams.\nWhat is the least number of coins Adam can use to pay for the item?",
+    options: ["7", "6", "5", "4", "3"],
+    answer: 2,
+    subject: "Mathsematics"
+  },
 ];
 
 // Export for use in main app

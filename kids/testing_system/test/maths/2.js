@@ -71,7 +71,13 @@ const QUESTIONS = [
     answer: 0,
     subject: "Mathsematics"
   },
-
+  {
+    id: 7,
+    question: "Noah buys sushi for $36, soup for $12, and green tea for $12. The restaurant offers a 25% discount.\nIf Noah pays $60, how much change does he get?",
+    options: ["$11", "$12", "$13", "$14", "$15"],
+    answer: 4,
+    subject: "Mathsematics"
+  },
   {
     id: 27,
     question: "A gardner grew tomatoes. 1/3 of the crop was unusable. The remaining tomatoes were shared with a neighbour in the ratio 4:7. If the neighbour received 42 more tomatoes than the gardner.\nHow many tomatoes did the gardner harvest originally?",

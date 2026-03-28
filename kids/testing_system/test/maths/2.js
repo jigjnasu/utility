@@ -140,12 +140,19 @@ const QUESTIONS = [
     options: ["8", "9", "11", "13", "15"],
     answer: 1,
     subject: "Mathsematics"
+  },
+  {
+    id: 18,
+    question: "The diagram shows three views of the same cube. The cube also has a blank face.\n<img src='images/maths/2/q_18.png' class='q-img'>\nWhat is opposite of <img src='images/maths/2/a_18_e.png' class='q-img'>\n",
+    options: ["Blank face", "<img src='images/maths/2/a_18_b.png' class='q-img'>", "<img src='images/maths/2/a_18_c.png' class='q-img'>", "<img src='images/maths/2/a_18_d.png' class='q-img'>", "<img src='images/maths/2/a_18_e.png' class='q-img'>"],
+    answer: 2,
+    subject: "Mathsematics"
   },  
   {
     id: 20,
-    question: "Mia and Leo are playing a game to practise balancing weights. They find that the scale stays balanced when they match the right number of strawberries to the number of pizza slices.\n\n",
-    options: [""],
-    answer: 1,
+    question: "Mia and Leo are playing a game to practise balancing weights. They find that the scale stays balanced when they match the right number of strawberries to the number of pizza slices.\n<img src='images/maths/2/q_20.png' class='q-img'>\nIf they want to balance 12 pizza slices on one side, how many strawberries will they need on the other side to keep the scale balanced?",
+    options: ["15", "12", "10", "8", "7"],
+    answer: 3,
     subject: "Mathsematics"
   },
   {

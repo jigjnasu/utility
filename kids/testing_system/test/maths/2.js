@@ -45,7 +45,7 @@ const QUESTIONS = [
   },
   {
     id: 4,
-    question: "Calculate the value of X.\n4 X 7 - &2/3; X 9 = X",
+    question: "Calculate the value of Y.\n4 x 7 - &frac23; x 9 = Y",
     options: ["18", "22", "30", "2/3", "4/5"],
     answer: 1,
     subject: "Mathsematics"

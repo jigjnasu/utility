@@ -129,11 +129,25 @@ const QUESTIONS = [
   },
   {
     id: 16,
-    question: "According to the bar graph shown below, the graph displays the number of people who chose each movie genre as their favourite.\nWhat percentage of people selected either Comedy or Sci-Fi as their favourite movie genre?",
+    question: "According to the bar graph shown below, the graph displays the number of people who chose each movie genre as their favourite.\n<img src='images/maths/2/q_16.png' class='q-img'>\nWhat percentage of people selected either Comedy or Sci-Fi as their favourite movie genre?",
     options: ["35%", "40%", "45%", "50%", "55%"],
     answer: 1,
     subject: "Mathsematics"
+  },
+  {
+    id: 17,
+    question: "A grade of 100 students was surveyed on their favourite colour out of the three options. They were only allowed to pick from red, blue and green.Boys ard girls are surveyed for the data given below.\n<img src='images/maths/2/q_17.png' class='q-img'>\nOut of 100 students surveyed, how many boys like the colour Green?",
+    options: ["8", "9", "11", "13", "15"],
+    answer: 1,
+    subject: "Mathsematics"
   },  
+  {
+    id: 20,
+    question: "Mia and Leo are playing a game to practise balancing weights. They find that the scale stays balanced when they match the right number of strawberries to the number of pizza slices.\n\n",
+    options: [""],
+    answer: 1,
+    subject: "Mathsematics"
+  },
   {
     id: 27,
     question: "A gardner grew tomatoes. 1/3 of the crop was unusable. The remaining tomatoes were shared with a neighbour in the ratio 4:7. If the neighbour received 42 more tomatoes than the gardner.\nHow many tomatoes did the gardner harvest originally?",

@@ -163,12 +163,47 @@ const QUESTIONS = [
     subject: "Mathsematics"
   },
   {
+    id: 21,
+    question: "1&frac12; bottles of soda are requried to fill one jug.\nFor his birthday party, Jim needs 12 jugs filled.\nHow many bottles of soda must he buy for his party?",
+    options: ["18", "17", "16", "15", "14"],
+    answer: 0,
+    subject: "Mathsematics"
+  },
+  {
+    id: 22,
+    question: "Which of these statements is/are correct?\nX&nbsp;&nbsp;&nbsp;&nbsp;&frac25; + &frac25; is less than &frac35;\nY&nbsp;&nbsp;&nbsp;&nbsp;1 - &frac13; is more than &frac13;\nY&nbsp;&nbsp;&nbsp;&nbsp;<sup>2</sup>&frasl;<sub>4</sub> x &frac12; is more than &frac18;",
+    options: ["statement X only", "statement Y only", "statement Z only", "statement X and Y only", "statement Y and Z only"],
+    answer: 4,
+    subject: "Mathsematics"
+  },
+  {
+    id: 23,
+    question: "A square garden has an area of 36 m<sup>2</sup>. A triangular flower bed has its base equal to the side of a square and must have the same area as the square. What must be the height of the triangular flower bed?",
+    options: ["6", "8", "10", "12", "14"],
+    answer: 3,
+    subject: "Mathsematics"
+  },
+  {
+    id: 24,
+    question: "A car rental company fuels 6 cars with 240 litres of petrol per week.\nIt fuels 10 vans with 600 litres of petrol per week.\nHow much petrol is required for 9 cars and 5 vans per week?",
+    options: ["660 litres", "760 litres", "460 litres", "800 litres", "750 litres"],
+    answer: 0,
+    subject: "Mathsematics"
+  },
+  {
     id: 27,
     question: "A gardner grew tomatoes. 1/3 of the crop was unusable. The remaining tomatoes were shared with a neighbour in the ratio 4:7. If the neighbour received 42 more tomatoes than the gardner.\nHow many tomatoes did the gardner harvest originally?",
     options: ["140", "150", "154", "157", "164"],
     answer: 4,
     subject: "Mathsematics"
   },
+  {
+    id: 30,
+    question: "Noah has a 16 cm by 10 cm rectangle.\nHe removes 2 cm squares from each corner and folds it into a box.\nHow many 2 cm cubes can fit into the box?",
+    options: ["30", "35", "40", "45", "50"],
+    answer: 2,
+    subject: "Mathsematics"
+  },  
   {
     id: 34,
     question: "The average test score for a class of 9 students is 70 out of 100.\nA new student joins the class.\nIf the teacher wanted the class average to be 72, what score must the new student achieve?",

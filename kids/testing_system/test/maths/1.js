@@ -94,14 +94,14 @@ const QUESTIONS = [
   },
   {
     id: 11,
-    question: "Bart is training for an upcoming weightlifting competition. He records the total weight he lifts on each weekday. His training log shows the following total weights lifted each day:\n<img src='images/maths_questions_1/q_11.png' class='q-img'>\nWhat is the average weight lifted per day over these five days?",
+    question: "Bart is training for an upcoming weightlifting competition. He records the total weight he lifts on each weekday. His training log shows the following total weights lifted each day:\n<img src='images/maths/1/q_11.png' class='q-img'>\nWhat is the average weight lifted per day over these five days?",
     options: ["55 kg", "58 kg", "60 kg", "63 kg", "66 kg"],
     answer: 3,
     subject: "Mathematics"
   },
   {
     id: 12,
-    question: "Tim decides to put tiles around his pool. The diagram below shows the dimensions of the total area to be tiled (shaded in grey) and the pool area (white).\n<img src='images/maths_questions_1/q_12.png' class='q-img'>\nWhat is the area of the shaded region that will be tiled?",
+    question: "Tim decides to put tiles around his pool. The diagram below shows the dimensions of the total area to be tiled (shaded in grey) and the pool area (white).\n<img src='images/maths/1/q_12.png' class='q-img'>\nWhat is the area of the shaded region that will be tiled?",
     options: ["42 m<sup>2</sup>", "55 m<sup>2</sup>", "63 m<sup>2</sup>", "69 m<sup>2</sup>", "74 m<sup>2</sup>"],
     answer: 3,
     subject: "Mathematics"
@@ -178,7 +178,7 @@ const QUESTIONS = [
   },
   {
     id: 23,
-    question: "What 3D shape can be formed using the given 2D shapes?<img src='images/maths_questions_1/q_23.png' class='q-img'>",
+    question: "What 3D shape can be formed using the given 2D shapes?<img src='images/maths/1/q_23.png' class='q-img'>",
     options: ["Sphere", "Triangular Prism", "Cone", "Square Pyramid", "Cylinder"],
     answer: 4,
     subject: "Mathematics"
@@ -213,14 +213,14 @@ const QUESTIONS = [
   },
   {
     id: 28,
-    question: "The graph below shows the number of green t-shirts sold at a clothing shop each week.\n<img src='images/maths_questions_1/q_28.png' class='q-img'>\n\nLooking at the graph, during which week did the sales increase the most compared to the previous week?",
+    question: "The graph below shows the number of green t-shirts sold at a clothing shop each week.\n<img src='images/maths/1/q_28.png' class='q-img'>\n\nLooking at the graph, during which week did the sales increase the most compared to the previous week?",
     options: ["Week 1", "Week 2", "Week 4", "Week 7", "Week 8"],
     answer: 2,
     subject: "Mathematics"
   },
   {
     id: 29,
-    question: "Rohan has a darboard with scores of 3, 6 and 9. He throws three darts and hit the board each time. Which of the following total scores is impossible to achieve?<img src='images/maths_questions_1/q_29.png' class='q-img' style='width: 50%; height: auto;'>",
+    question: "Rohan has a darboard with scores of 3, 6 and 9. He throws three darts and hit the board each time. Which of the following total scores is impossible to achieve?<img src='images/maths/1/q_29.png' class='q-img' style='width: 50%; height: auto;'>",
     options: ["9", "12", "16", "21", "27"],
     answer: 2,
     subject: "Mathematics"

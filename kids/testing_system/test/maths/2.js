@@ -45,9 +45,9 @@ const QUESTIONS = [
   },
   {
     id: 4,
-    question: "A chef uses 1/5 of a 5 kg sugar bag, 3/4 of an 8 kg flour bag, and 3 kg of butter to make 200 items.\nWhat is the weight of one item?",
-    options: ["30 g", "35 g", "40 g", "45 g", "50 g"],
-    answer: 4,
+    question: "Calculate the value of X.\n4 X 7 - &2/3; X 9 = X",
+    options: ["18", "22", "30", "2/3", "4/5"],
+    answer: 1,
     subject: "Mathsematics"
   },
   {

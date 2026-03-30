@@ -88,6 +88,26 @@ const QUESTIONS = [
               "Neither Jamal nor Angel."],
     answer: 3,
     subject: "Thinking Skills"
+  },
+  {
+    id: 8,
+    question: "Lily wants to join the school gardening club. On the website, it says, “Students who already know about plants will be chosen first.”n\Lily: “I don’t know much about plants. There is no point in applying if they are looking for experienced students only.”\n\nWhich of the following shows the mistake that Lily has made?",
+    options: ["Lily assumed that the gardening club did not accept students who don’t know much about plants.",
+              "Even though Lily doesn’t know much about plants, she can still progress her application because she may have been one of the only people to apply. ",
+              "Lily doesn’t like gardening, so she shouldn’t apply anyway.",
+              "Since Lily has not joined the gardening club before, she will not be accepted."],
+    answer: 0,
+    subject: "Thinking Skills"
+  },
+  {
+    id: 9,
+    question: "Elena's clock advances by 2 minutes every 3 hours. She adjusts her clock at 6:00 AM.\nElena: By 9:00 PM my clock will be perfect since it will advance 12 minutes.\n\nWhich of the following sentences shows the mistake that Elena has made?",
+    options: ["Elena's clock might not be reliable.",
+              "The clock's brand isn't mentioned.",
+              "Elena's miscalculation in counting the hours.",
+              "She didn't factor in daylight saving adjustments."],
+    answer: 2,
+    subject: "Thinking Skills"
   },  
 ];
 

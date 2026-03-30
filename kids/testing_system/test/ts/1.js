@@ -162,6 +162,13 @@ const QUESTIONS = [
     options: ["$37", "$40", "$54", "$80"],
     answer: 1,
     subject: "Thinking Skills"
+  },
+  {
+    id: 16,
+    question: "Bruce is looking at the side of a large stack of cubes, as shown in the diagram below:\n<img src='images/ts/1/q_16.png' class='q-img'>\nNote: Cubes cannot float. They must remain attached to the ground or to another cube.\n\nHow many cubes can Bruce remove while keeping the same view?",
+    options: ["3", "4", "5", "6"],
+    answer: 1,
+    subject: "Thinking Skills"
   },  
 ];
 

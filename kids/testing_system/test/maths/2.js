@@ -80,9 +80,9 @@ const QUESTIONS = [
   },
   {
     id: 9,
-    question: "What is the area of a circle whose radius is 7 cm?",
-    options: ["124 cm<sup>2</sup>", "134 cm<sup>2</sup>", "144 cm<sup>2</sup>", "154 cm<sup>2</sup>", "164 cm<sup>2</sup>"],
-    answer: 3,
+    question: "There are 6 blue cubes, 3 yellow cubes, and 1 black cube in a bag.\nIf one cube is chosen at random without looking, what is the probability of drawing the black cube expressed as a percentage?",
+    options: ["1%", "5%", "10%", "20%", "25%"],
+    answer: 2,
     subject: "Mathsematics"
   },
   {

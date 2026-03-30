@@ -108,6 +108,26 @@ const QUESTIONS = [
               "She didn't factor in daylight saving adjustments."],
     answer: 2,
     subject: "Thinking Skills"
+  },
+  {
+    id: 10,
+    question: "Advertisement: “Coffee has caffeine that helps you stay awake. If you don’t sleep well and always feel tired, drinking coffee will give you energy every day.”\n\nWhich of the following, if true, most weakens the advertisement’s claim?",
+    options: ["Making coffee at home is cheaper than buying it from a café",
+              "Drinking coffee often makes it stop working as well to keep you awake",
+              "Most people spend $5.00 on coffee every day",
+              "Getting good sleep is very important for staying healthy"],
+    answer: 1,
+    subject: "Thinking Skills"
+  },
+  {
+    id: 11,
+    question: "Marty built a tower using three blocks. Below is the aerial view of his tower.\n<img src='images/ts/1/q_11.png' class='q-img'>\n\nWhich of the following cannot represent his tower when viewed from the side?",
+    options: ["<img src='images/ts/1/ts_11_a.png' class='q-img'>",
+              "<img src='images/ts/1/ts_11_b.png' class='q-img'>",
+              "<img src='images/ts/1/ts_11_c.png' class='q-img'>",
+              "<img src='images/ts/1/ts_11_d.png' class='q-img'>"],
+    answer: 2,
+    subject: "Thinking Skills"
   },  
 ];
 

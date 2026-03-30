@@ -128,6 +128,40 @@ const QUESTIONS = [
               "<img src='images/ts/1/ts_11_d.png' class='q-img'>"],
     answer: 2,
     subject: "Thinking Skills"
+  },
+  {
+    id: 12,
+    question: "“An airport has several tall flashing lights to warn people of incoming flights. When no flights are incoming, the lights flash yellow, blue, yellow.”\nAva: The airport’s lights are flashing red, orange, red. This means there are flights incoming.\nHenry: The airport’s lights are off. This means the airport is closed.\n\nIf the quoted passage is true, whose reasoning is correct?",
+    options: ["Ava only",
+              "Henry only",
+              "Both Ava and Henry",
+              "Neither Ava nor Henry"],
+    answer: 3,
+    subject: "Thinking Skills"
+  },
+  {
+    id: 13,
+    question: "Three television channels are hosting a movie marathon on New Year’s Eve. Each channel is showing four one-hour-long movies from 5:00 pm to 9:00 pm. The table below shows the schedule for the marathon:\n<img src='images/ts/1/q_13.png' class='q-img'>\nWilliam decides to watch four different movies during this time. He wants to watch Lion’s Den, Anger, and Green Light.\n\nWhich of the following movies can he not watch?",
+    options: ["Animal Kingdom",
+              "Orange",
+              "Exploration",
+              "Spiderweb"],
+    answer: 3,
+    subject: "Thinking Skills"
+  },
+  {
+    id: 14,
+    question: "Ronda’s business sells pens, notepads and staplers. The graph below shows what percentage of the total items sold each day is due to each individual item.\n<img src='images/ts/1/q_14_a.png' class='q-img'>\nThe table below shows the total number of items she sold each day.\n<img src='images/ts/1/q_14_b.png' class='q-img'>\n\nHow many pens were sold on Tuesday?",
+    options: ["10", "20", "30", "40"],
+    answer: 2,
+    subject: "Thinking Skills"
+  },
+  {
+    id: 15,
+    question: "Ronda’s business sells pens, notepads and staplers. The graph below shows what percentage of the total items sold each day is due to each individual item.\n<img src='images/ts/1/q_14_a.png' class='q-img'>\nThe table below shows the total number of items she sold each day.\n<img src='images/ts/1/q_14_b.png' class='q-img'>\n\nIf staplers cost $2.00, how much did Ronda earn from selling staplers on Wednesday and Thursday combined?",
+    options: ["$37", "$40", "$54", "$80"],
+    answer: 1,
+    subject: "Thinking Skills"
   },  
 ];
 

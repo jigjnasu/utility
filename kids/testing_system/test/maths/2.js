@@ -207,8 +207,8 @@ const QUESTIONS = [
   {
     id: 27,
     question: "A gardner grew tomatoes. 1/3 of the crop was unusable. The remaining tomatoes were shared with a neighbour in the ratio 4:7. If the neighbour received 42 more tomatoes than the gardner.\nHow many tomatoes did the gardner harvest originally?",
-    options: ["140", "150", "154", "157", "164"],
-    answer: 4,
+    options: ["221", "224", "230", "231", "233"],
+    answer: 3,
     subject: "Mathsematics"
   },
   {

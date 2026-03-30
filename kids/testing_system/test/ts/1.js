@@ -169,6 +169,23 @@ const QUESTIONS = [
     options: ["3", "4", "5", "6"],
     answer: 1,
     subject: "Thinking Skills"
+  },
+  {
+    id: 17,
+    question: "Wayne and Gemma are talking about their favourite pizza toppings. Wayne ranks his four favourite toppings:\n* He likes Ham more than Cheese.\n* He likes Vegetarian more than BBQ.\n* He likes BBQ more than Cheese.\n* He likes Ham more than Vegetarian.\n\nWhich of these is Wayne’s second favourite topping?",
+    options: ["Ham", "Vegetarian", "BBQ", "Cheese"],
+    answer: 1,
+    subject: "Thinking Skills"
+  },
+  {
+    id: 18,
+    question: "Barry builds a 3D sculpture from clay and views it from above. Here is a diagram of what he sees:\n<img src='images/ts/1/q_18.png' class='q-img'>\n\nWhich of the following could be the side view of the same sculpture from the direction of the arrow in the diagram above?",
+    options: ["<img src='images/ts/1/ts_18_a.png' class='q-img'>",
+              "<img src='images/ts/1/ts_18_b.png' class='q-img'>",
+              "<img src='images/ts/1/ts_18_c.png' class='q-img'>",
+              "<img src='images/ts/1/ts_18_d.png' class='q-img'>"],
+    answer: 3,
+    subject: "Thinking Skills"
   },  
 ];
 

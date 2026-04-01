@@ -288,6 +288,16 @@ const QUESTIONS = [
               "Neither Dan nor Pat"],
     answer: 1,
     subject: "Thinking Skills"
+  },
+  {
+    id: 30,
+    question: "The total amount of money it takes for the renovation of a house is $20,000.\n<img src='images/ts/1/q_30.png' class='q-img'>\n\How much does it cost for Kitchen?",
+    options: ["$2,500",
+              "$5,000",
+              "$7,000",
+              "$10,000"],
+    answer: 0,
+    subject: "Thinking Skills"
   },  
 ];
 

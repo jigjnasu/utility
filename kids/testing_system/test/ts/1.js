@@ -188,9 +188,20 @@ const QUESTIONS = [
     subject: "Thinking Skills"
   },
   {
-    id: 18,
+    id: 19,
     question: "There are six towns (Armadale, Bali, California, Detroit, England and Filand) in a region.\nBali is north of California and northeast of Armadale. California is noth of Detroit and west of England. Finland is east of England.\n\nWhich town is northwest of Detroit?",
     options: ["Armadale", "England", "Filand", "California"],
+    answer: 0,
+    subject: "Thinking Skills"
+  },
+  {
+    id: 20,
+    question: "Luke, Jayden, Rohan and Max are seated around a table on a train. Two of them are facing forwards (in direction of travel), while the other two are facing backwards. Two of them have window seats while the other two have aisle seats.\n I know that:\nLuke is sitting diagonally opposite Rohan.\nMax is facing forwards\nJayden is next to Luke\n\nWhich one of the following do I also know?",
+    options: ["Luke is sitting opposite Max",
+              "Rohan is traveling backwards",
+              "Rohan has a window seat",
+              "Jayden has an aisle seat"
+    ],
     answer: 0,
     subject: "Thinking Skills"
   },  

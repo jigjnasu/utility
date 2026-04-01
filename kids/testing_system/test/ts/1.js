@@ -278,6 +278,16 @@ const QUESTIONS = [
               "29.1"],
     answer: 0,
     subject: "Thinking Skills"
+  },
+  {
+    id: 29,
+    question: "Whenever Jim is angry, he goes for a walk.\nWhen he goes for a walk, he always listens to sad music.\n<b>Dan:</b> Jim is listening to sad music so he must be angry\n<b>Pat:</b> If Jim is angry, he will listen to sad music.\n\nIf the information above is true, whose reasoning is correct?",
+    options: ["Dan only",
+              "Pat only",
+              "Both Dan and Pat",
+              "Neither Dan nor Pat"],
+    answer: 1,
+    subject: "Thinking Skills"
   },  
 ];
 

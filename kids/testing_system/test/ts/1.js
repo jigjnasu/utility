@@ -204,6 +204,13 @@ const QUESTIONS = [
     ],
     answer: 1,
     subject: "Thinking Skills"
+  },
+  {
+    id: 21,
+    question: "The girls and boys in a class were asked to name their favourite subject.\n<img src='images/ts/1/q_21.png' class='q-img'>\n\Which subject was chosen by the most children?",
+    options: ["Science", "Music", "Sport", "Art"],
+    answer: 1,
+    subject: "Thinking Skills"
   },  
 ];
 

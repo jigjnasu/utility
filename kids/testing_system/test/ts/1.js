@@ -218,6 +218,16 @@ const QUESTIONS = [
     options: ["2", "3", "4", "5"],
     answer: 2,
     subject: "Thinking Skills"
+  },
+  {
+    id: 23,
+    question: "Gabriel thinks that helmets should be free when people buy bikes so that people are more likely to wear helmets and stay safe.\n\nWhich one of the following statements, if true best supports Gabriel’s idea?",
+    options: ["Providing helments would be very expensive for shops selling bikes.",
+              "Helmets are uncomfortable and it is wasteful to give helmets to everyone.",
+              "Some people will still not wear helmets.",
+              "This would mean there are less head injuries that occur."],
+    answer: 3,
+    subject: "Thinking Skills"
   },  
 ];
 

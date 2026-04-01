@@ -268,6 +268,16 @@ const QUESTIONS = [
               "Toby is furthest to the left."],
     answer: 3,
     subject: "Thinking Skills"
+  },
+  {
+    id: 28,
+    question: "The table shows the final scores of four teams in a competition:\n\n|Team|Points|\n|------|-------|\n| Blue |   71.0   |\n| Red | 37.9 |\n| Green |  50.8  |\n| Yellow | 43.6 |\n\nHow many more points were scored by the team that came first than the team that came second?",
+    options: ["20.2",
+              "22.0",
+              "27.4",
+              "29.1"],
+    answer: 0,
+    subject: "Thinking Skills"
   },  
 ];
 

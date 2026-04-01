@@ -258,6 +258,16 @@ const QUESTIONS = [
               "Car S"],
     answer: 2,
     subject: "Thinking Skills"
+  },
+  {
+    id: 27,
+    question: "Toby is standing to the left of Lisa. Kristen is to the right of Toby.\n\nWhich of the following statement is true?",
+    options: ["Kristen is furthest to the right.",
+              "Lisa is always in the middle.",
+              "Lisa is furthest to the right.",
+              "Toby is furthest to the left."],
+    answer: 3,
+    subject: "Thinking Skills"
   },  
 ];
 

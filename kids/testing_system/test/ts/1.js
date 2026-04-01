@@ -186,6 +186,13 @@ const QUESTIONS = [
               "<img src='images/ts/1/ts_18_d.png' class='q-img'>"],
     answer: 3,
     subject: "Thinking Skills"
+  },
+  {
+    id: 18,
+    question: "There are six towns (Armadale, Bali, California, Detroit, England and Filand) in a region.\nBali is north of California and northeast of Armadale. California is noth of Detroit and west of England. Finland is east of England.\n\nWhich town is northwest of Detroit?",
+    options: ["Armadale", "England", "Filand", "California"],
+    answer: 0,
+    subject: "Thinking Skills"
   },  
 ];
 

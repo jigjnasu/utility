@@ -211,6 +211,13 @@ const QUESTIONS = [
     options: ["Science", "Music", "Sport", "Art"],
     answer: 1,
     subject: "Thinking Skills"
+  },
+  {
+    id: 22,
+    question: "Alan and Alex played a game. To score points they had to throw hoops around the sticks. Throwing a hoop around stick A scores more points than throwing a hoop around stick B.\n\n\Alan scored 10 points by throwing 3 hoops around stick B and 1 hoop around stick A.\nAlex scored 12 points by throwing 2 hoops around each stick.\n\nHow many points are scored for throwing a hoop around stick A?",
+    options: ["2", "3", "4", "5"],
+    answer: 2,
+    subject: "Thinking Skills"
   },  
 ];
 

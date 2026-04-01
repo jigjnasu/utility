@@ -196,13 +196,13 @@ const QUESTIONS = [
   },
   {
     id: 20,
-    question: "Luke, Jayden, Rohan and Max are seated around a table on a train. Two of them are facing forwards (in direction of travel), while the other two are facing backwards. Two of them have window seats while the other two have aisle seats.\n I know that:\nLuke is sitting diagonally opposite Rohan.\nMax is facing forwards\nJayden is next to Luke\n\nWhich one of the following do I also know?",
-    options: ["Luke is sitting opposite Max",
-              "Rohan is traveling backwards",
-              "Rohan has a window seat",
-              "Jayden has an aisle seat"
+    question: "You can only play the game if you are over 15 years of age and your parents allow you.\n\nIf this is true, which one of the sentences must also be true?",
+    options: ["Jack must have played the game since he was 18 and his parents allow him.",
+              "Adam can play the game since he is 22 and got permission from his parents.",
+              "Alex is 15 and does not get scared easily, thus he can play the game.",
+              "Alan can play the game even though he is 14 because his parents let him."
     ],
-    answer: 0,
+    answer: 1,
     subject: "Thinking Skills"
   },  
 ];

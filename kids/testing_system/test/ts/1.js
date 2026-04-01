@@ -228,6 +228,36 @@ const QUESTIONS = [
               "This would mean there are less head injuries that occur."],
     answer: 3,
     subject: "Thinking Skills"
+  }, 
+  {
+    id: 24,
+    question: "Sam's house is 2 stories, brown with a white door. The only other brown house on his street is Matt's house.\n<b>Jeff:</b> This house is brown so it must be Sam's house.\n<b>Harry:</b> The house which is white cannot be Sam's or Matt's house.\n\nIf the information in the above is true, whose reasoning is correct?",
+    options: ["Jeff only.",
+              "Harry only.",
+              "Both Jeff and Harry.",
+              "Neither Jeff nor Harry."],
+    answer: 1,
+    subject: "Thinking Skills"
+  },
+  {
+    id: 25,
+    question: "Sam's house is 2 stories, brown with a white door. The only other brown house on his street is Matt's house.\n<b>Jeff:</b> This house is brown so it must be Sam's house.\n<b>Harry:</b> The house which is white cannot be Sam's or Matt's house.\n\nIf the information in the above is true, whose reasoning is correct?",
+    options: ["Jeff only.",
+              "Harry only.",
+              "Both Jeff and Harry.",
+              "Neither Jeff nor Harry."],
+    answer: 1,
+    subject: "Thinking Skills"
+  },
+  {
+    id: 26,
+    question: "Car P travels 30 km in 20 minutes.\nCar Q travels 90 km in 60 minutes.\nCar R travels 25 km in 15 minutes.\nCar S travels 45 km in 30 minutes.\n\nWhich car has the highest average speed?",
+    options: ["Car P",
+              "Car Q",
+              "Car R",
+              "Car S"],
+    answer: 2,
+    subject: "Thinking Skills"
   },  
 ];
 

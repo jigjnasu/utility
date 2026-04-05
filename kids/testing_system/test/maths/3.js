@@ -24,11 +24,18 @@ const QUIZ_CONFIG = {
 const QUESTIONS = [
   {
     id: 1,
-    question: "A pole stands 1.5 meters above the ground. If <frac>{3}{8} of the pole is underground, how long is the entire pole?",
+    question: "A pole stands 1.5 meters above the ground. If &frac38; of the pole is underground.\n\n how long is the entire pole?",
     options: ["3.6 m", "2.4 m", "4.2 m", "2.0 m", "1.8 m"],
     answer: 1,
     subject: "Mathematics"
   },
+  {
+    id: 2,
+    question: "Puja exercises from 6:45 am to 7:10 am every day of the week.\n\nFor how long does Puja exercise each week?",
+    options: ["2 hours 55 minutes", "2 hours 15 minutes", "1 hours 55 minutes", "1 hours 45 minutes", "1 hours 25 minutes"],
+    answer: 0,
+    subject: "Mathematics"
+  },  
 ];
 
 // Export for use in main app

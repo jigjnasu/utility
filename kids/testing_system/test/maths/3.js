@@ -98,7 +98,14 @@ const QUESTIONS = [
     options: ["5:45 pm", "6:15 pm", "6:25 pm", "7:15 pm", "7:45 pm"],
     answer: 2,
     subject: "Mathematics"
-  },   
+  },
+  {
+    id: 12,
+    question: "Three angles around a point are in the ratio 5:7:8.\n\nWhat is the size of the smallest angle?",
+    options: ["50°", "70°", "80°", "90°", "100°"],
+    answer: 3,
+    subject: "Mathematics"
+  },  
 ];
 
 // Export for use in main app

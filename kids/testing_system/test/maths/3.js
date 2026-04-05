@@ -84,6 +84,13 @@ const QUESTIONS = [
     options: ["10", "12", "9", "15", "7"],
     answer: 1,
     subject: "Mathematics"
+  },
+  {
+    id: 10,
+    question: "Mia has $7.20 and buys as many $0.60 pencils as possible.\n\nHow much money remains after Mia buys the pencils?",
+    options: ["0.00", "0.20", "0.40", "0.60", "0.80"],
+    answer: 0,
+    subject: "Mathematics"
   },  
 ];
 

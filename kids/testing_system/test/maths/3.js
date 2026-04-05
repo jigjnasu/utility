@@ -24,10 +24,10 @@ const QUIZ_CONFIG = {
 const QUESTIONS = [
   {
     id: 1,
-    question: "",
-    options: [""],
-    answer: 3,
-    subject: "Mathsematics"
+    question: "A pole stands 1.5 meters above the ground. If <frac>{3}{8} of the pole is underground, how long is the entire pole?",
+    options: ["3.6 m", "2.4 m", "4.2 m", "2.0 m", "1.8 m"],
+    answer: 1,
+    subject: "Mathematics"
   },
 ];
 

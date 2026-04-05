@@ -63,7 +63,14 @@ const QUESTIONS = [
     options: ["18", "24", "28", "26", "20"],
     answer: 4,
     subject: "Mathematics"
-  },   
+  },
+  {
+    id: 7,
+    question: "Mia bought one kg bag of apples. There were seven apples of similar size.\n\nAbout how much does one apple weigh?",
+    options: ["1400 grams", "140 grams", "14 grams", "4 grams", "0.14 grams"],
+    answer: 1,
+    subject: "Mathematics"
+  },  
 ];
 
 // Export for use in main app

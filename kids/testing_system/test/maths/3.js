@@ -42,7 +42,14 @@ const QUESTIONS = [
     options: ["16", "17", "18", "19", "20"],
     answer: 4,
     subject: "Mathematics"
-  },  
+  },
+  {
+    id: 4,
+    question: "Katara is the oldest child in her family. She has two younger brothers who are twins. At this moment, the sum of all their ages is 24 years, and Katara is exactly twice as old as each of her brothers.\n\nWhat will the total of all their ages be in 5 years’ time?",
+    options: ["27", "30", "33", "36", "39"],
+    answer: 4,
+    subject: "Mathematics"
+  },
 ];
 
 // Export for use in main app

@@ -38,7 +38,7 @@ const QUESTIONS = [
   },
   {
     id: 3,
-    question: "Karen has seedlings line the one shown.\n<img src='images/maths/3/q_3.png' class='q-img'>\nShe wants to plant the seedlings in 6 rows with the same number of seedlings in each row.\nKaren will have 2 seedlings left over.\n\nHow many seedlings could Karen have?",
+    question: "Karen has seedlings line the one shown.\n<img src='images/maths/3/q_3.png' style=height: auto; width: 20vw;' class='q-img'>\nShe wants to plant the seedlings in 6 rows with the same number of seedlings in each row.\nKaren will have 2 seedlings left over.\n\nHow many seedlings could Karen have?",
     options: ["16", "17", "18", "19", "20"],
     answer: 4,
     subject: "Mathematics"

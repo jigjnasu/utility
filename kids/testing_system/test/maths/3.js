@@ -77,6 +77,13 @@ const QUESTIONS = [
     options: ["2 trips", "3 trips", "4 trips", "9 trips", "10 trips"],
     answer: 0,
     subject: "Mathematics"
+  },
+  {
+    id: 9,
+    question: "The average of three numbers is 9. If two of the numbers are 5 and 10.\n\nWhat is the third number?",
+    options: ["10", "12", "9", "15", "7"],
+    answer: 1,
+    subject: "Mathematics"
   },  
 ];
 

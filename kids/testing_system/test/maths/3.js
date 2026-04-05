@@ -70,7 +70,7 @@ const QUESTIONS = [
     options: ["1400 grams", "140 grams", "14 grams", "4 grams", "0.14 grams"],
     answer: 1,
     subject: "Mathematics"
-  },  
+  },
 ];
 
 // Export for use in main app

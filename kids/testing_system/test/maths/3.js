@@ -50,6 +50,13 @@ const QUESTIONS = [
     answer: 1,
     subject: "Mathematics"
   },
+  {
+    id: 5,
+    question: "A speedboat moves at a constant speed of 40 kilometres per hour.\n\nIf the speedboat continues at this speed for 210 minutes, how far will it travel during this period?",
+    options: ["120 km", "130 km", "140 km", "150 km", "160 km"],
+    answer: 2,
+    subject: "Mathematics"
+  },  
 ];
 
 // Export for use in main app

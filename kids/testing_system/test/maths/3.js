@@ -91,7 +91,14 @@ const QUESTIONS = [
     options: ["0.00", "0.20", "0.40", "0.60", "0.80"],
     answer: 0,
     subject: "Mathematics"
-  },  
+  }, 
+  {
+    id: 11,
+    question: "A football training session lasts 160 minutes. If it begins at 3:45 pm, when does it finish?",
+    options: ["5:45 pm", "6:15 pm", "6:25 pm", "7:15 pm", "7:45 pm"],
+    answer: 2,
+    subject: "Mathematics"
+  },   
 ];
 
 // Export for use in main app

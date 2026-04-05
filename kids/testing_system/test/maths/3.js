@@ -56,7 +56,14 @@ const QUESTIONS = [
     options: ["120 km", "130 km", "140 km", "150 km", "160 km"],
     answer: 2,
     subject: "Mathematics"
-  },  
+  },
+  {
+    id: 6,
+    question: "Which number should logically replace the empty box?\n\n<img src='images/maths/3/q_6.png' class='q-img'>",
+    options: ["18", "24", "28", "26", "20"],
+    answer: 4,
+    subject: "Mathematics"
+  },   
 ];
 
 // Export for use in main app

@@ -35,6 +35,13 @@ const QUESTIONS = [
     options: ["2 hours 55 minutes", "2 hours 15 minutes", "1 hours 55 minutes", "1 hours 45 minutes", "1 hours 25 minutes"],
     answer: 0,
     subject: "Mathematics"
+  },
+  {
+    id: 3,
+    question: "Karen has seedlings line the one shown.\n<img src='images/maths/3/q_3.png' class='q-img'>\nShe wants to plant the seedlings in 6 rows with the same number of seedlings in each row.\nKaren will have 2 seedlings left over.\n\nHow many seedlings could Karen have?",
+    options: ["16", "17", "18", "19", "20"],
+    answer: 4,
+    subject: "Mathematics"
   },  
 ];
 

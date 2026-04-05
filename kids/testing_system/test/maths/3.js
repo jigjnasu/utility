@@ -71,6 +71,13 @@ const QUESTIONS = [
     answer: 1,
     subject: "Mathematics"
   },
+  {
+    id: 8,
+    question: "A school has two tweleve seater buses and three eight seater buses. They want to take the 96 children out on an excursion. Assuming each bus travels at the same speed and they operate together.\n\nWhat's the minimum number of trips needed by bus?",
+    options: ["2 trips", "3 trips", "4 trips", "9 trips", "10 trips"],
+    answer: 0,
+    subject: "Mathematics"
+  },  
 ];
 
 // Export for use in main app

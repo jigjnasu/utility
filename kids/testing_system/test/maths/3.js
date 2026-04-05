@@ -38,16 +38,16 @@ const QUESTIONS = [
   },
   {
     id: 3,
-    question: "Karen has seedlings line the one shown.\n<img src='images/maths/3/q_3.png' style=height: auto; width: 20vw;' class='q-img'>\nShe wants to plant the seedlings in 6 rows with the same number of seedlings in each row.\nKaren will have 2 seedlings left over.\n\nHow many seedlings could Karen have?",
+    question: "Karen has seedlings line the one shown.\n<img src='images/maths/3/q_3.png' class='q-img'>\nShe wants to plant the seedlings in 6 rows with the same number of seedlings in each row.\nKaren will have 2 seedlings left over.\n\nHow many seedlings could Karen have?",
     options: ["16", "17", "18", "19", "20"],
     answer: 4,
     subject: "Mathematics"
   },
   {
     id: 4,
-    question: "Katara is the oldest child in her family. She has two younger brothers who are twins. At this moment, the sum of all their ages is 24 years, and Katara is exactly twice as old as each of her brothers.\n\nWhat will the total of all their ages be in 5 years’ time?",
-    options: ["27", "30", "33", "36", "39"],
-    answer: 4,
+    question: "Determine the area of the shaded triangle drawn on the Cartesian plane below.<img src='images/maths/3/q_4.png' style='height: auto; width: 75%;' class='q-img'>",
+    options: ["27 cm²", "28 cm²", "29 cm²", "30 cm²", "31 cm²"],
+    answer: 1,
     subject: "Mathematics"
   },
 ];

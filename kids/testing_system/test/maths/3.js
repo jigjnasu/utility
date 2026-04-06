@@ -105,6 +105,13 @@ const QUESTIONS = [
     options: ["50°", "70°", "80°", "90°", "100°"],
     answer: 3,
     subject: "Mathematics"
+  },
+  {
+    id: 13,
+    question: "Liam travels 280 km from Oak Town to Riverdale at 70 km/h. He rests for 45 minutes. After the break, he drives 360 km to Sundridge at 90 km/h.\n\nWhat is Liam's total travel time?",
+    options: ["7 hours 15 minutes", "7 hours 45 minutes", "8 hours 15 minutes", "8 hours 45 minutes", "9 hours 15 minutes"],
+    answer: 3,
+    subject: "Mathematics"
   },  
 ];
 

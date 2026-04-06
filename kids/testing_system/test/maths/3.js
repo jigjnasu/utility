@@ -224,7 +224,14 @@ const QUESTIONS = [
     options: ["75 litres", "80 litres", "85 litres", "88 litres", "90 litres"],
     answer: 4,
     subject: "Mathematics"
-  },  
+  }, 
+  {
+    id: 30,
+    question: "A rectangle has a length that is 3 times its width. If the area is 48 cm², what is its perimeter?",
+    options: ["20 cm", "24 cm", "18 cm", "16 cm", "26 cm"],
+    answer: 3,
+    subject: "Mathematics"
+  },    
   {
     id: 32,
     question: "A square has an area of 144 cm². A rectangle has a width that is 3 cm more than the side of the square . If the area of the rectangle is 240 cm², what is the length of the rectangle?",

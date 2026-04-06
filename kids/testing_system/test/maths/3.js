@@ -210,7 +210,14 @@ const QUESTIONS = [
     options: ["60 ml", "70 ml", "80 ml", "90 ml", "100 ml"],
     answer: 0,
     subject: "Mathematics"
-  },     
+  },
+  {
+    id: 28,
+    question: "One egg has a mass of about 60 grams. Pat had one kilogram of eggs. About how many eggs did Pat have?",
+    options: ["10", "12", "16", "20", "24"],
+    answer: 2,
+    subject: "Mathematics"
+  },      
 ];
 
 // Export for use in main app

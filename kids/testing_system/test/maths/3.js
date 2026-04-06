@@ -182,7 +182,13 @@ const QUESTIONS = [
     options: ["670 m", "720 m", "750 m", "790 m", "820 m"],
     answer: 1,
     subject: "Mathematics"
-  },       
+  },
+  {
+    id: 24,
+    question: "Seth surveys the colours of cars in a parking lot, where only red and blue cars are present. He observes that the ratio of red to blue cars is 2 : 7.\nIf there are a total of 63 cars in the parking lot, what is the difference between the number of red and blue cars?",
+    options: ["14", "35", "49", "52", "56"],
+    answer: 1,
+    subject: "Mathematics"  
 ];
 
 // Export for use in main app

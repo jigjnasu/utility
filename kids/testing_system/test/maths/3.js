@@ -217,7 +217,14 @@ const QUESTIONS = [
     options: ["10", "12", "16", "20", "24"],
     answer: 2,
     subject: "Mathematics"
-  },      
+  },
+  {
+    id: 35,
+    question: "A farmer has chickens, turkeys and geese. Turkeys are &frac14; the total of chickens and geese. Geese are half the number of chickens. There are 24 more chickens than geese.\n\nHow many turkeys are there?",
+    options: ["12", "16", "18", "20", "22"],
+    answer: 2,
+    subject: "Mathematics"
+  },        
 ];
 
 // Export for use in main app

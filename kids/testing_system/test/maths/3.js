@@ -231,7 +231,14 @@ const QUESTIONS = [
     options: ["20 cm", "24 cm", "18 cm", "16 cm", "26 cm"],
     answer: 3,
     subject: "Mathematics"
-  },    
+  },
+  {
+    id: 31,
+    question: "Tiles of dimentions 25 cm x 25 cm are used to cover 5 m².\n\nHow many tiles are needed?",
+    options: ["80", "90", "70", "85", "75"],
+    answer: 0,
+    subject: "Mathematics"
+  },      
   {
     id: 32,
     question: "A square has an area of 144 cm². A rectangle has a width that is 3 cm more than the side of the square . If the area of the rectangle is 240 cm², what is the length of the rectangle?",

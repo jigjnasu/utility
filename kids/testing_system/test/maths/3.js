@@ -190,6 +190,13 @@ const QUESTIONS = [
     answer: 1,
     subject: "Mathematics"
   },
+  {
+    id: 25,
+    question: "Edward was preparing for a race. He trained from Monday to Saturday every week in April and May. He started on the first day of April, a Thursday, and finished on the last day of May.\n\nIn total, how  many days did Edward train?",
+    options: ["60", "58", "56", "54", "52"],
+    answer: 4,
+    subject: "Mathematics"
+  },  
 ];
 
 // Export for use in main app

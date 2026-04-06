@@ -119,7 +119,14 @@ const QUESTIONS = [
     options: ["120", "80", "110", "140", "70"],
     answer: 0,
     subject: "Mathematics"
-  },  
+  },
+  {
+    id: 15,
+    question: "A textile mill produced 1,500 meters of cloth. 40% is used for shirts and 20% for trousers.\n\nHow many meters remain?",
+    options: ["550 m", "600 m", "650 m", "700 m", "750 m"],
+    answer: 1,
+    subject: "Mathematics"
+  },   
 ];
 
 // Export for use in main app

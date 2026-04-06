@@ -199,7 +199,7 @@ const QUESTIONS = [
   },
   {
     id: 26,
-    question: "What is the value of x?\n\n7 x (x + 1) - 5 x 1 = 58",
+    question: "What is the value of y?\n\n7 x (y + 1) - 5 x 1 = 58",
     options: ["4", "5", "7", "8", "9"],
     answer: 3,
     subject: "Mathematics"

@@ -126,6 +126,20 @@ const QUESTIONS = [
     options: ["550 m", "600 m", "650 m", "700 m", "750 m"],
     answer: 1,
     subject: "Mathematics"
+  },
+  {
+    id: 15,
+    question: "Raj saved $164 to buy a laptop, which is 8% of the laptop's price.\n\nWhat is the price of the laptop?",
+    options: ["$1980", "$2050", "$2100", "$2200", "$2300"],
+    answer: 1,
+    subject: "Mathematics"
+  },
+  {
+    id: 15,
+    question: "Raj saved $164 to buy a laptop, which is 8% of the laptop's price.\n\nWhat is the price of the laptop?",
+    options: ["$1980", "$2050", "$2100", "$2200", "$2300"],
+    answer: 1,
+    subject: "Mathematics"
   },   
 ];
 

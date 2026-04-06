@@ -175,7 +175,14 @@ const QUESTIONS = [
     options: ["35%", "40%", "45%", "50%", "55%"],
     answer: 1,
     subject: "Mathematics"
-  },     
+  },
+  {
+    id: 23,
+    question: "The number line below shows the distance between Harry’s house, his local library, and his school.\n<img src='images/maths/3/q_23.png' class='q-img'>\nThe distance between Harry’s house and the library is 450 m.\nWhat is the distance between Harry’s house and his school?",
+    options: ["670 m", "720 m", "750 m", "790 m", "820 m"],
+    answer: 1,
+    subject: "Mathematics"
+  },       
 ];
 
 // Export for use in main app

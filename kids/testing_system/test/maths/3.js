@@ -203,7 +203,14 @@ const QUESTIONS = [
     options: ["4", "5", "7", "8", "9"],
     answer: 3,
     subject: "Mathematics"
-  },    
+  },
+  {
+    id: 27,
+    question: "Three glasses together hold 250 ml of juice. The first holds 30 ml more than the second, and the third holds 20 ml less than the second.\n\nWhat volume of juice is in the third glass?",
+    options: ["60 ml", "70 ml", "80 ml", "90 ml", "100 ml"],
+    answer: 0,
+    subject: "Mathematics"
+  },     
 ];
 
 // Export for use in main app

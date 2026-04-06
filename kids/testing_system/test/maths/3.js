@@ -161,7 +161,14 @@ const QUESTIONS = [
     options: ["8 kg", "10 kg", "11 kg", "13 kg", "15 kg"],
     answer: 0,
     subject: "Mathematics"
-  },  
+  },
+  {
+    id: 21,
+    question: "If one side of a cube in X has a length of 2 cm, what is the volume of Y?<img src='images/maths/3/q_21.png' class='q-img'>",
+    options: ["160 cm³", "320 cm³", "640 cm³", "128 cm³", "480 cm³"],
+    answer: 1,
+    subject: "Mathematics"
+  },    
 ];
 
 // Export for use in main app

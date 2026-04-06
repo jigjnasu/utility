@@ -219,6 +219,13 @@ const QUESTIONS = [
     subject: "Mathematics"
   },
   {
+    id: 32,
+    question: "A square has an area of 144 cm². A rectangle has a width that is 3 cm more than the side of the square . If the area of the rectangle is 240 cm², what is the length of the rectangle?",
+    options: ["16 cm", "18 cm", "20 cm", "22 cm", "24 cm"],
+    answer: 0,
+    subject: "Mathematics"
+  },  
+  {
     id: 35,
     question: "A farmer has chickens, turkeys and geese. Turkeys are &frac14; the total of chickens and geese. Geese are half the number of chickens. There are 24 more chickens than geese.\n\nHow many turkeys are there?",
     options: ["12", "16", "18", "20", "22"],

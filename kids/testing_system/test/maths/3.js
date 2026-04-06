@@ -128,17 +128,17 @@ const QUESTIONS = [
     subject: "Mathematics"
   },
   {
-    id: 15,
+    id: 16,
     question: "Raj saved $164 to buy a laptop, which is 8% of the laptop's price.\n\nWhat is the price of the laptop?",
     options: ["$1980", "$2050", "$2100", "$2200", "$2300"],
     answer: 1,
     subject: "Mathematics"
   },
   {
-    id: 15,
-    question: "Raj saved $164 to buy a laptop, which is 8% of the laptop's price.\n\nWhat is the price of the laptop?",
-    options: ["$1980", "$2050", "$2100", "$2200", "$2300"],
-    answer: 1,
+    id: 17,
+    question: "The numbers groups follow the same rule.\n[5, 17, 3], [3, 14, 4], [2, ? , 7]\n\nChoose the number that completes the last group.",
+    options: ["16", "18", "20", "22", "24"],
+    answer: 0,
     subject: "Mathematics"
   },   
 ];

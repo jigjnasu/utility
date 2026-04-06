@@ -224,6 +224,13 @@ const QUESTIONS = [
     options: ["16 cm", "18 cm", "20 cm", "22 cm", "24 cm"],
     answer: 0,
     subject: "Mathematics"
+  },
+  {
+    id: 34,
+    question: "Mia is 4 years older than Hannah.\nHannah is 3 years younger than Carter.\nSophie is 7 years older than Mia.\nHow many years older is Sophie than Carter?",
+    options: ["5, years", "6 years", "7 years", "8 years", "9 years"],
+    answer: 3,
+    subject: "Mathematics"
   },  
   {
     id: 35,

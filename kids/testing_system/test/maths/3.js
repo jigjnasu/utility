@@ -154,7 +154,14 @@ const QUESTIONS = [
     options: ["6:24 pm", "7:24 pm", "8:24 pm", "9:24 am", "10:24 pm"],
     answer: 3,
     subject: "Mathematics"
-  },     
+  },
+  {
+    id: 20,
+    question: "Ben lost 4 kg in weight and he's now 3 kg less than Dan who is 9 kg more than Jim. Jason is 47 kg which is 2 kg less than Ben's original weight.\n\nWhat is the weight difference between Jason and Jim?",
+    options: ["8 kg", "10 kg", "11 kg", "13 kg", "15 kg"],
+    answer: 0,
+    subject: "Mathematics"
+  },  
 ];
 
 // Export for use in main app

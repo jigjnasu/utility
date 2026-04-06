@@ -233,6 +233,13 @@ const QUESTIONS = [
     subject: "Mathematics"
   },
   {
+    id: 33,
+    question: "The sum of ages of children is 36 years. The eldest child is twice as old as the yonguest, and the middle child is 4 years older than the youngest. How old is the eldest child?",
+    options: ["12 years", "14 years", "16 years", "18 years", "20 years"],
+    answer: 2,
+    subject: "Mathematics"
+  },  
+  {
     id: 34,
     question: "Mia is 4 years older than Hannah.\nHannah is 3 years younger than Carter.\nSophie is 7 years older than Mia.\nHow many years older is Sophie than Carter?",
     options: ["5, years", "6 years", "7 years", "8 years", "9 years"],

@@ -140,7 +140,21 @@ const QUESTIONS = [
     options: ["16", "18", "20", "22", "24"],
     answer: 0,
     subject: "Mathematics"
-  },   
+  },
+  {
+    id: 18,
+    question: "Of a certain audience, <sup>3</sup>/<sub>10</sub> dislike pets, and of the remaining people, <sup>1</sup>/<sub>4</sub> dislike dogs. If 90 people dislike dogs, how many people are in the audience?",
+    options: ["16", "18", "20", "22", "24"],
+    answer: 0,
+    subject: "Mathematics"
+  },
+  {
+    id: 19,
+    question: "Perth time is four and half hours behind Sydney time. A plane leaves Sydney at 5:54 pm Friday and files to Perth. The flight takes 8 hours.\n\nWhat time is it in Perth when the flight arrives?",
+    options: ["6:24 pm", "7:24 pm", "8:24 pm", "9:24 am", "10:24 pm"],
+    answer: 3,
+    subject: "Mathematics"
+  },     
 ];
 
 // Export for use in main app

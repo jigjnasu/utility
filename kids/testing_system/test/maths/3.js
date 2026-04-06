@@ -196,7 +196,14 @@ const QUESTIONS = [
     options: ["60", "58", "56", "54", "52"],
     answer: 4,
     subject: "Mathematics"
-  },  
+  },
+  {
+    id: 26,
+    question: "What is the value of x?\n\n7 x (x + 1) - 5 x 1 = 58",
+    options: ["4", "5", "7", "8", "9"],
+    answer: 3,
+    subject: "Mathematics"
+  },    
 ];
 
 // Export for use in main app

@@ -112,6 +112,13 @@ const QUESTIONS = [
     options: ["7 hours 15 minutes", "7 hours 45 minutes", "8 hours 15 minutes", "8 hours 45 minutes", "9 hours 15 minutes"],
     answer: 3,
     subject: "Mathematics"
+  },
+  {
+    id: 14,
+    question: "Four-Fifths of the dogs at a shelter were sleeping. Two-thirds of the remaining dogs were eating. If 8 dogs were doing neither, how many dogs are there?",
+    options: ["120", "80", "110", "140", "70"],
+    answer: 0,
+    subject: "Mathematics"
   },  
 ];
 

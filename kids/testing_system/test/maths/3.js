@@ -219,6 +219,13 @@ const QUESTIONS = [
     subject: "Mathematics"
   },
   {
+    id: 29,
+    question: "Mason has 300 litres of fuel. He uses 22% for transportation and 48% of the original amount for machinery.\n\nHow many litres remain?",
+    options: ["75 litres", "80 litres", "85 litres", "88 litres", "90 litres"],
+    answer: 4,
+    subject: "Mathematics"
+  },  
+  {
     id: 32,
     question: "A square has an area of 144 cm². A rectangle has a width that is 3 cm more than the side of the square . If the area of the rectangle is 240 cm², what is the length of the rectangle?",
     options: ["16 cm", "18 cm", "20 cm", "22 cm", "24 cm"],

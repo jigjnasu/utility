@@ -168,7 +168,14 @@ const QUESTIONS = [
     options: ["160 cm³", "320 cm³", "640 cm³", "128 cm³", "480 cm³"],
     answer: 1,
     subject: "Mathematics"
-  },    
+  },
+  {
+    id: 22,
+    question: "According to the bar graph shown below, the graph displays the number of people who chose each movie genre as their favourite.\n<img src='images/maths/3/q_22.png' class='q-img'>\n\nWhat percentage of people selected either Comedy or Sci-Fi as their favourite movie genre?",
+    options: ["35%", "40%", "45%", "50%", "55%"],
+    answer: 1,
+    subject: "Mathematics"
+  },     
 ];
 
 // Export for use in main app

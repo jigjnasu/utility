@@ -103,7 +103,14 @@ const QUESTIONS = [
   {
     id: 10,
     question: "At a zoo trip, I can only choose four animals to visit.\nI must choose one animal from each of the following groups:<img src='ts/images/t1_10.jpeg' class='q-img'>\nI know I want to see the kangaroo, quokka and emu.\n\nWhich one of the following animals can I not choose for my trip?",
-    options: ["Echidna", "Crocodile", "Galah", "Goanna "],
+    options: ["Echidna", "Crocodile", "Galah", "Goanna"],
+    answer: 0,
+    subject: "Thinking Skills"
+  },
+  {
+    id: 11,
+    question: "I have the following blocks in a construction set:\n• 90 red blocks\n• 10 blue blocks\n• 24 green blocks\n• 55 yellow blocks\nThe table below shows the blocks and quantities needed to make 4 toy models.<img src='ts/images/t1_11.jpeg' class='q-img'>\n\n",
+    options: ["Robot", "Car", "Castle", "Rocket"],
     answer: 0,
     subject: "Thinking Skills"
   }  

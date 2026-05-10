@@ -109,9 +109,20 @@ const QUESTIONS = [
   },
   {
     id: 11,
-    question: "I have the following blocks in a construction set:\n• 90 red blocks\n• 10 blue blocks\n• 24 green blocks\n• 55 yellow blocks\nThe table below shows the blocks and quantities needed to make 4 toy models.<img src='ts/images/t1_11.jpeg' class='q-img'>\n\n",
+    question: "I have the following blocks in a construction set:\n• 90 red blocks\n• 10 blue blocks\n• 24 green blocks\n• 55 yellow blocks\nThe table below shows the blocks and quantities needed to make 4 toy models.<img src='ts/images/t1_11.jpeg' class='q-img'>\n\nWhich of the toy models can you make twice using only the blocks you have?",
     options: ["Robot", "Car", "Castle", "Rocket"],
     answer: 0,
+    subject: "Thinking Skills"
+  },
+  {
+    id: 12,
+    question: "Magnets can attract metal objects without touching them. This is called magnetic force. We know magnets can pull things like paper clips and nails towards them through the air. Since magnets can work without touching objects, this proves that magnetic force can travel through any material, even thick walls. People often say they can stick magnets to their refrigerators through papers and photos, which confirms this idea.\n\nWhich of the following, if true, most weakens the above argument?",
+    options: ["Magnets come in different strengths and sizes, and stronger magnets can pull metal objects from further away.",
+              "When a thick piece of lead is placed between a magnet and a paper clip, the magnet cannot attract the paper clip anymore.",
+              "Children enjoy playing with magnets because they can make metal toys move without touching them.",
+              "Some metals, like aluminium and copper, are not attracted to metals at all."
+    ],
+    answer: 1,
     subject: "Thinking Skills"
   }  
 ]

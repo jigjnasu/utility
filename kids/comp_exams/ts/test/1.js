@@ -68,5 +68,43 @@ const QUESTIONS = [
               "<img src='ts/images/t1_5_d.jpeg' class='q-img'>"],
     answer: 1,
     subject: "Thinking Skills"
+  },
+  {
+    id: 6,
+    question: "‘Fast fashion’ means clothes that are made quickly and cheaply so that people can buy new styles often. Some people like fast fashion because it helps them get trendy clothes at low prices. However, it is important to think about how these clothes are made and how long they last. Fast fashion can hurt the environment, so we should try to buy only what we need and take care of our clothes.\n\nWhich of the following, if true, most strengthens the argument?",
+    options: ["Many people enjoy wearing the latest fashion styles each season.",
+              "Some clothing shops now offer discounts for recycling old clothes.",
+              "Fast fashion items often wear out quickly and creates waste that goes into landfills.",
+              "Cheap clothes made in large factories can cause workers to be fatigued due to the large workload."],
+    answer: 2,
+    subject: "Thinking Skills"
+  },
+  {
+    id: 7,
+    question: "Olivia is using a secret code to send messages. The code is shown in the table below:\n<img src='ts/images/t1_7.jpeg' class='q-img'>\nShe sends a one word message: “srststrsrpnongfg”\n\nWhat message did Olivia send?",
+    options: ["STUNG", "STROKE", "SPOKE", "STRONG"],
+    answer: 3,
+    subject: "Thinking Skills"
+  },
+  {
+    id: 8,
+    question: "Coach Johnson is looking at the scores from the swimming competition. He noticed that when swimmers wear their goggles, they always finish top 3. When swimmers finish top 3, they always win a medal.\nTara and Van are both swimmers.\nTara: “If I wear my goggles, I will be sure to win a medal!”\nVan: “If I finish second, I must have worn my goggles.”\n\nIf the information above is true, whose reasoning is correct?",
+    options: ["Tara only.", "Van only.", "Both Tara and Van.", "Neither Tara or Van."],
+    answer: 0,
+    subject: "Thinking Skills"
+  },
+  {
+    id: 9,
+    question: "Seats are arranged around a circular table, evenly spaced apart. The seats are labelled clockwise, in order: 1, 2, 3, … and so on.\n\nIf Seat 2 is opposite to Seat 6, how many seats are there in total?",
+    options: ["6", "7", "8", "9"],
+    answer: 2,
+    subject: "Thinking Skills"
+  },
+  {
+    id: 10,
+    question: "At a zoo trip, I can only choose four animals to visit.\nI must choose one animal from each of the following groups:<img src='ts/images/t1_10.jpeg' class='q-img'>\nI know I want to see the kangaroo, quokka and emu.\n\nWhich one of the following animals can I not choose for my trip?",
+    options: ["Echidna", "Crocodile", "Galah", "Goanna "],
+    answer: 0,
+    subject: "Thinking Skills"
   }  
 ]

@@ -120,5 +120,16 @@ const QUESTIONS = [
     ],
     answer: 2,
     subject: "Thinking Skills"
-  },    
+  },
+  {
+    id: 10,
+    question: "Below is the net of a cube.\n<img src='ts/images/t2_10.png' class='q-img'>\n\nWhich of the following cubes cannot be made using this net?",
+    options: ["James and John cannot be sisters",
+              "James and John are not twins",
+              "Older people are always taller than younger people",
+              "Taller people can reach higher than shorter people"
+    ],
+    answer: 3,
+    subject: "Thinking Skills"
+  },  
 ]

@@ -131,5 +131,126 @@ const QUESTIONS = [
     options: ["Harris only.", "Emma only.", "Both Harris and Emma.", "Neither Harris nor Emma."],
     answer: 1,
     subject: "Thinking Skills"
-  }
+  },
+  {
+    id: 14,
+    question: "Succulent plants are plants that have thick tissues that take up and hold large amounts of water. The stored water keeps them alive during dry periods. Cactus is a type of succulent plant. Australia only has one native cactus species, found in Queensland’s rainforest.\nJulie: “If I see a succulent in Queensland’s rainforest, it is a cactus.”\nGeorge: “There is one native succulent plant species found in Australia.”\n\n.If the information above is true, whose reasoning is correct?",
+    options: ["Julie only.", "George only.", "Both Julie and George.", "Neither Julie nor George."],
+    answer: 3,
+    subject: "Thinking Skills"
+  },
+  {
+    id: 15,
+    question: "A shawl is made of four identical pieces of a special patterned fabric. They have been rotated and sewn together so that there are no gaps between them.\n<img src='ts/images/t1_15.jpeg' class='q-img'>\nThe middle of the shawl has a hole in it.\n\nWhich one of the following shows the fabric missing from the hole?",
+    options: ["<img src='ts/images/t1_15_a.jpeg' class='q-img'>",
+              "<img src='ts/images/t1_15_b.jpeg' class='q-img'>",
+              "<img src='ts/images/t1_15_c.jpeg' class='q-img'>",
+              "<img src='ts/images/t1_15_d.jpeg' class='q-img'>"],
+    answer: 0,
+    subject: "Thinking Skills"
+  },
+  {
+    id: 16,
+    question: "A matrix is shown below:\n<img src='ts/images/t1_16.jpeg' class='q-img'>\n\nWhich one of the following figures should replace the question mark?",
+    options: ["<img src='ts/images/t1_16_a.jpeg' class='q-img'>",
+              "<img src='ts/images/t1_16_b.jpeg' class='q-img'>",
+              "<img src='ts/images/t1_16_c.jpeg' class='q-img'>",
+              "<img src='ts/images/t1_16_d.jpeg' class='q-img'>"],
+    answer: 1,
+    subject: "Thinking Skills"
+  },
+  {
+    id: 17,
+    question: "Three friends (Alex, Ben and Chloe) are each a different age (7, 8, and 9). They each like a different sport.\nThe following facts are known:\n• The friend who is 8 years old does not like basketball.\n• Alex is older than the friend who like netball.\n• Ben is 9 years old and does not like swimming.• Chloe likes netball.\n\nWhich of these statements is false?",
+    options: ["Alex is 8 years old.",
+              "Alex does not like netball.",
+              "Ben is older than Alex.",
+              "Chloe is older than Ben."],
+    answer: 3,
+    subject: "Thinking Skills"
+  },
+  {
+    id: 18,
+    question: "Taylor argues cheap clothes should not be sold at shops as they promote unethical practices by companies such as using child labour and other cost-cutting measures that may be illegal.\n\nWhich of the following, if true, most weakens Taylor’s argument?",
+    options: ["An examination was conducted into labour practices at companies which sell cheap clothes, and no evidence was produced of illegal measures.",
+              "Some people may not be able to afford more expensive clothes.",
+              "Not everyone likes the quality of cheap clothes and will buy more expensive clothes anyways.",
+              "Shops which sell expensive clothes may do the same thing."],
+    answer: 0,
+    subject: "Thinking Skills"
+  },
+  {
+    id: 19,
+    question: "Each year at the school science fair, the prize is awarded to the student project with the highest overall ratings from a panel of judges.\nRobin: “Projects that win the prize are usually those that are score full marks from the judges. This year, no one scored full marks, so no one will win the prize.”\n\nWhich one of the following sentences shows the mistake that Robin has made?",
+    options: ["Robin incorrectly assumed that scoring full marks is a requirement to win the prize.",
+              "Last year, the prize was not awarded to anyone unless full marks were scored.",
+              "Robin overlooks the possibility that the judging criteria might have changed from previous years.",
+              "Some students have scored high marks from the panel of judges."],
+    answer: 0,
+    subject: "Thinking Skills"
+  },
+  {
+    id: 20,
+    question: "For the month of December, a gift-wrapping service is available at the local shopping centre for the Christmas holiday season. It opens on the Tuesday the 2nd of December and its last day available is Wednesday the 24th of December. In between, it runs on every Tuesday, Wednesday and Saturday.\n\nHow many days in total is the service available during this holiday season?",
+    options: ["9", "10", "11", "12"],
+    answer: 2,
+    subject: "Thinking Skills"
+  },
+  {
+    id: 21,
+    question: "Sharon argues that students should be allowed to use mobile phones in class. She says, “Phones can be useful learning tools when used responsibly.”\n\nWhich of the following statements best supports Sharon’s claim?",
+    options: ["Some students use their phones to communicate with people during class",
+              "Students can use phone apps to help with maths and language learning.",
+              "Most schools do not allow phone use during lessons.",
+              "Teachers often remind students not to be distracted by their phones in class."
+    ],
+    answer: 1,
+    subject: "Thinking Skills"
+  },
+  {
+    id: 22,
+    question: "Four drivers compete in a motor car race\nTony finishes ahead of Allen\nKevin finishes third\nMike finished ahead of Allen\n\nWhich driver came in last place?",
+    options: ["Tony",
+              "Allen",
+              "Kevin",
+              "Mike"
+    ],
+    answer: 1,
+    subject: "Thinking Skills"
+  },
+  {
+    id: 23,
+    question: "Imani wants to learn how to bake. Her parents agreed, but gave her the following rules:\n• If she spends more than $30 on baking supplies, then we won’t be buying any new video games this month.\n• If Imani follows the recipe carefully, then we will let her bake in her own time.\n• Imani won’t follow the recipe carefully if she doesn’t read the instructions first.\n\nWhich of the following outcomes is not possible?",
+    options: ["Imani receives a new video game and can bake in her own time.",
+              "Imani reads the instructions first and follows the recipe carefully.",
+              "Imani bakes in her own time, even though she didn’t read the instructions first.",
+              "Imani doesn’t receive any new video games this month despite following the recipe carefully."
+    ],
+    answer: 2,
+    subject: "Thinking Skills"
+  },
+  {
+    id: 24,
+    question: "Aaron built a prism using identical blocks.\nHe glued the blocks together and glued one surface onto a board. He paints the rest of the prism blue.\n<img src='ts/images/t1_24.jpeg' class='q-img'>\n\nHow many blocks will have exactly two painted faces?",
+    options: ["10", "12", "14", "16"],
+    answer: 1,
+    subject: "Thinking Skills"
+  },
+  {
+    id: 25,
+    question: "Five students competed in the school’s Spelling Bee. Each student competed against every other student exactly once, with no ties. Andy won 2 games, Edward won 1 game, Sofia won 3 games, and Gina did not win any games.\n\nHow many games did Bill win?",
+    options: ["1", "2", "3", "4"],
+    answer: 3,
+    subject: "Thinking Skills"
+  },
+  {
+    id: 26,
+    question: "A cohort of 120 students were asked their favourite subject out of the following: English, Mathematics, Physics and Chemistry.\n• 15 students chose English as their favourite subject.\n• Twice as many students chose Physics compared to English as their favourite subject.\n• There was 1 and a half times more students who chose Mathematics as their favourite subject compared to Chemistry.\n\nWhich one of the pie charts below could correctly represent the information about the students’ choices?",
+    options: ["<img src='ts/images/t1_26_a.jpeg' class='q-img'>",
+              "<img src='ts/images/t1_26_b.jpeg' class='q-img'>",
+              "<img src='ts/images/t1_26_c.jpeg' class='q-img'>",
+              "<img src='ts/images/t1_26_d.jpeg' class='q-img'>"],
+    answer: 2,
+    subject: "Thinking Skills"
+  }  
 ]

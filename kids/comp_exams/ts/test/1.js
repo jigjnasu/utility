@@ -124,5 +124,12 @@ const QUESTIONS = [
     ],
     answer: 1,
     subject: "Thinking Skills"
-  }  
+  },
+  {
+    id: 13,
+    question: "To join the school’s choir club, you must be able to follow the rhythm and have good discipline.\nHarris: “Emma can sing all the notes perfectly without mistakes. The only problem is that she sometimes gets confused with the rhythm and can’t keep the beat. Nevertheless, she will join the school’s choir club.”\nEmma: “Harris always follows the rhythm perfectly and never misses a beat, however, he is sometimes unable to follow the rules. He won’t be able to join the school’s choir club.”\n\nIf the information above is true, whose reasoning is correct?",
+    options: ["Harris only.", "Emma only.", "Both Harris and Emma.", "Neither Harris nor Emma."],
+    answer: 1,
+    subject: "Thinking Skills"
+  }
 ]

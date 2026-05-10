@@ -58,5 +58,15 @@ const QUESTIONS = [
               "There may be other clothing that he wears when he plays soccer."],
     answer: 0,
     subject: "Thinking Skills"
+  },
+  {
+    id: 5,
+    question: "A model of a tower is shown below.\n<img src='ts/images/t1_5.jpeg' class='q-img'>\n\nWhich of the following shows a side view of the model?",
+    options: ["<img src='ts/images/t1_5_a.jpeg' class='q-img'>",
+              "<img src='ts/images/t1_5_b.jpeg' class='q-img'>",
+              "<img src='ts/images/t1_5_c.jpeg' class='q-img'>",
+              "<img src='ts/images/t1_5_d.jpeg' class='q-img'>"],
+    answer: 1,
+    subject: "Thinking Skills"
   }  
 ]

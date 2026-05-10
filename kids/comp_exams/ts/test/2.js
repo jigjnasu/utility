@@ -124,12 +124,37 @@ const QUESTIONS = [
   {
     id: 10,
     question: "Below is the net of a cube.\n<img src='ts/images/t2_10.png' class='q-img'>\n\nWhich of the following cubes cannot be made using this net?",
-    options: ["James and John cannot be sisters",
-              "James and John are not twins",
-              "Older people are always taller than younger people",
-              "Taller people can reach higher than shorter people"
+    options: ["<img src='ts/images/t2_10_a.png' class='q-img'>",
+              "<img src='ts/images/t2_10_b.png' class='q-img'>",
+              "<img src='ts/images/t2_10_c.png' class='q-img'>",
+              "<img src='ts/images/t2_10_d.png' class='q-img'>"
     ],
     answer: 3,
+    subject: "Thinking Skills"
+  },
+  {
+    id: 11,
+    question: "“Kevin always eats junk food when he is excited.”\nJohn: If Kevin is eating junk food, it must mean he is excited.\nSid: If Kevin is excited, he will definitely eat junk food.\n\nIf the quoted statement is true, whose reasoning is correct?",
+    options: ["John only",
+              "Sid only",
+              "Both John and Sid",
+              "Neither John nor Sid"
+    ],
+    answer: 1,
+    subject: "Thinking Skills"
+  },
+  {
+    id: 12,
+    question: "The graph below shows the number of books being returned and borrowed from Castle Hill Library from Monday, May 10th to Friday, May 14th.\n<img src='ts/images/t2_12.png' class='q-img'>\n\nHow many books were returned over the five-day period?",
+    options: ["100", "230", "250", "280"],
+    answer: 1,
+    subject: "Thinking Skills"
+  },
+  {
+    id: 13,
+    question: "The graph below shows the number of books being returned and borrowed from Castle Hill Library from Monday, May 10th to Friday, May 14th.\n<img src='ts/images/t2_12.png' class='q-img'>\n\nThe head librarian counted the number of books in the library before it opened on Monday, May 10th. If there were 500 books in the library, how many books are in the library at closing on Wednesday?",
+    options: ["460", "480", "500", "520"],
+    answer: 2,
     subject: "Thinking Skills"
   },  
 ]

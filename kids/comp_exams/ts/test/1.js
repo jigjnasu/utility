@@ -134,7 +134,7 @@ const QUESTIONS = [
   },
   {
     id: 14,
-    question: "Succulent plants are plants that have thick tissues that take up and hold large amounts of water. The stored water keeps them alive during dry periods. Cactus is a type of succulent plant. Australia only has one native cactus species, found in Queensland’s rainforest.\nJulie: “If I see a succulent in Queensland’s rainforest, it is a cactus.”\nGeorge: “There is one native succulent plant species found in Australia.”\n\n.If the information above is true, whose reasoning is correct?",
+    question: "Succulent plants are plants that have thick tissues that take up and hold large amounts of water. The stored water keeps them alive during dry periods. Cactus is a type of succulent plant. Australia only has one native cactus species, found in Queensland’s rainforest.\nJulie: “If I see a succulent in Queensland’s rainforest, it is a cactus.”\nGeorge: “There is one native succulent plant species found in Australia.”\n\nIf the information above is true, whose reasoning is correct?",
     options: ["Julie only.", "George only.", "Both Julie and George.", "Neither Julie nor George."],
     answer: 3,
     subject: "Thinking Skills"

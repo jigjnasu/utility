@@ -252,5 +252,41 @@ const QUESTIONS = [
               "<img src='ts/images/t1_26_d.jpeg' class='q-img'>"],
     answer: 2,
     subject: "Thinking Skills"
+  },
+  {
+    id: 27,
+    question: "Oliver wishes to buy snacks for a party. The store sells the following items:\n• Chips for $2.50\n• Juice for $1.80\n• Chocolate for $1.00\n\nOliver has a total of $12.50. If she buys at least one of each item, what is the maximum number of Juice he can buy in total?",
+    options: ["3", "4", "5", "6"],
+    answer: 2,
+    subject: "Thinking Skills"
+  },
+  {
+    id: 28,
+    question: "When students skip a grade at school, it is usually because they show exceptional academic ability compared to their peers. Sometimes, a student will skip a grade because they have received special test scores showing they are ready for harder schoolwork.\nJamal: “The principal said Max is going to skip a grade, even though his test scores are just average! He must be showing exceptional academic ability in the classroom.”\nAngel: “If his academic work was exceptional and he also had high test scores, the principal definitely would let him skip a grade.”\n\nIf the information above is true, whose reasoning is correct?",
+    options: ["Jamal only.", "Angel only.", "Both Jamal and Angel.", "Neither Jamal nor Angel."],
+    answer: 3,
+    subject: "Thinking Skills"
+  },
+  {
+    id: 29,
+    question: "Lily wants to join the school gardening club. On the website, it says, “Students who already know about plants will be chosen first.”\nLily: “I don’t know much about plants. There is no point in applying if they are looking for experienced students only.”\n\nWhich of the following shows the mistake that Lily has made?",
+    options: ["Lily assumed that the gardening club did not accept students who don’t know much about plants.",
+              "Even though Lily doesn’t know much about plants, she can still progress her application because she may have been one of the only people to apply.",
+              "Lily doesn’t like gardening, so she shouldn’t apply anyway.",
+              "Since Lily has not joined the gardening club before, she will not be accepted."
+    ],
+    answer: 0,
+    subject: "Thinking Skills"
+  },
+  {
+    id: 30,
+    question: "Elena's clock advances by 2 minutes every 3 hours. She adjusts her clock at 6:00 AM.\nElena: By 9:00 PM my clock will be perfect since it will advance 12 minutes.\n\nWhich of the following sentences shows the mistake that Elena has made?",
+    options: ["Elena's clock might not be reliable.",
+              "The clock's brand isn't mentioned.",
+              "Elena's miscalculation in counting the hours.",
+              "She didn't factor in daylight saving adjustments."
+    ],
+    answer: 2,
+    subject: "Thinking Skills"
   }  
 ]

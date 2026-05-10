@@ -156,5 +156,27 @@ const QUESTIONS = [
     options: ["460", "480", "500", "520"],
     answer: 2,
     subject: "Thinking Skills"
-  },  
+  },
+  {
+    id: 14,
+    question: "Education Expert: “Teachers should take a training course every few years and pass it to keep teaching.”\n\nWhich of the following, if true, most supports the expert’s claim?",
+    options: ["Teachers who take new courses become better at helping students",
+              "Teachers may need extra time to attend training courses",
+              "Some teachers find it hard to use computers in class",
+              "Students enjoy learning when teachers include games in lessons"
+    ],
+    answer: 0,
+    subject: "Thinking Skills"
+  },
+  {
+    id: 15,
+    question: "Marty built a tower using three blocks. Below is the aerial view of his tower.\n<img src='ts/images/t2_15.png' class='q-img'>\n\nWhich of the following cannot represent his tower when viewed from the side?",
+    options: ["<img src='ts/images/t2_15_a.png' class='q-img'>",
+              "<img src='ts/images/t2_15_b.png' class='q-img'>",
+              "<img src='ts/images/t2_15_c.png' class='q-img'>",
+              "<img src='ts/images/t2_15_d.png' class='q-img'>"
+    ],
+    answer: 2,
+    subject: "Thinking Skills"
+  }  
 ]
